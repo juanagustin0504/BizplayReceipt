@@ -1,0 +1,6 @@
+framework module Pods_BizplayReceipt {
+  umbrella header "Pods-BizplayReceipt-umbrella.h"
+
+  export *
+  module * { export * }
+}
