@@ -159,6 +159,9 @@
                                 <rect key="frame" x="160" y="563" width="21" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chkboxOffIcon"/>
+                                <connections>
+                                    <action selector="onClickAutoLogin:" destination="8bm-s3-Qoj" eventType="touchUpInside" id="6r3-NQ-i6U"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="자동로그인" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkV-qc-fhh">
                                 <rect key="frame" x="189" y="563" width="65" height="21"/>
