@@ -158,6 +158,9 @@
                                 <rect key="frame" x="214" y="487" width="180" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="비밀번호 찾기"/>
+                                <connections>
+                                    <segue destination="0pT-uV-xbO" kind="show" id="INM-Mv-ANv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2Y-hv-joH">
                                 <rect key="frame" x="160" y="563" width="21" height="21"/>
@@ -283,6 +286,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJn-qm-U9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3624.6376811594205" y="142.63392857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Vt9-eI-G4L">
+            <objects>
+                <viewController id="0pT-uV-xbO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dt4-EA-cSU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dVT-XN-Rc9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="goR-yr-9hp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KEb-Eq-uxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2730" y="-599"/>
         </scene>
     </scenes>
     <resources>

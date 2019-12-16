@@ -18,6 +18,7 @@
 		76C09FA023A7648B0015AA42 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C09F9F23A7648B0015AA42 /* CustomFont.swift */; };
 		76C09FA223A764A20015AA42 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C09FA123A764A20015AA42 /* CustomColor.swift */; };
 		76C09FAE23A7764C0015AA42 /* IDSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C09FAD23A7764C0015AA42 /* IDSearchViewController.swift */; };
+		76C09FB023A77C1F0015AA42 /* PWSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C09FAF23A77C1F0015AA42 /* PWSearchViewController.swift */; };
 		E37672F78CF672BCA8DEECCF /* Pods_BizplayReceipt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C0C3DCAD3962A5BACB2A31 /* Pods_BizplayReceipt.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		76C09F9F23A7648B0015AA42 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		76C09FA123A764A20015AA42 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		76C09FAD23A7764C0015AA42 /* IDSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSearchViewController.swift; sourceTree = "<group>"; };
+		76C09FAF23A77C1F0015AA42 /* PWSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWSearchViewController.swift; sourceTree = "<group>"; };
 		7EA5E570CF7C7F65EBFAF19A /* Pods-BizplayReceipt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BizplayReceipt.release.xcconfig"; path = "Target Support Files/Pods-BizplayReceipt/Pods-BizplayReceipt.release.xcconfig"; sourceTree = "<group>"; };
 		87C0C3DCAD3962A5BACB2A31 /* Pods_BizplayReceipt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BizplayReceipt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7581D8C54DF397DD56E3EF /* Pods-BizplayReceipt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BizplayReceipt.debug.xcconfig"; path = "Target Support Files/Pods-BizplayReceipt/Pods-BizplayReceipt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				769C23F423A74F8200D92396 /* AppDelegate.swift */,
 				769C23FA23A74F8200D92396 /* Main.storyboard */,
+				76C09FAF23A77C1F0015AA42 /* PWSearchViewController.swift */,
 				76C09FAD23A7764C0015AA42 /* IDSearchViewController.swift */,
 				76C09F9F23A7648B0015AA42 /* CustomFont.swift */,
 				76C09FA123A764A20015AA42 /* CustomColor.swift */,
@@ -225,6 +228,7 @@
 				76C09FA023A7648B0015AA42 /* CustomFont.swift in Sources */,
 				769C241123A7517500D92396 /* IntroViewController.swift in Sources */,
 				76C09FA223A764A20015AA42 /* CustomColor.swift in Sources */,
+				76C09FB023A77C1F0015AA42 /* PWSearchViewController.swift in Sources */,
 				76C09F9E23A75AD00015AA42 /* MyReceiptViewController.swift in Sources */,
 				769C240F23A7514E00D92396 /* LoginViewController.swift in Sources */,
 				76C09FAE23A7764C0015AA42 /* IDSearchViewController.swift in Sources */,
