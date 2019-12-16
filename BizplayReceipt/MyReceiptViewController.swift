@@ -10,6 +10,12 @@ import UIKit
 
 class MyReceiptViewController: UIViewController {
 
+    @IBOutlet weak var btnRcpt: UIButton!
+    @IBOutlet weak var btnAlarm: UIButton!
+    @IBOutlet weak var btnMore: UIButton!
+    
+    static var pageIndex: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +26,40 @@ class MyReceiptViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: label)
         self.navigationItem.hidesBackButton = true
         
+        mnChageAlpha()
         
     }
+    
+    @IBAction func onRcpt(_ sender: UIButton) {
+        MyReceiptViewController.pageIndex = 0
+        mnChageAlpha()
+    }
+    
+    @IBAction func onAlarm(_ sender: UIButton) {
+        MyReceiptViewController.pageIndex = 1
+        mnChageAlpha()
+    }
+    
+    @IBAction func onMore(_ sender: UIButton) {
+        MyReceiptViewController.pageIndex = 2
+        mnChageAlpha()
+    }
+    
+    func mnChageAlpha() {
+        let index = MyReceiptViewController.pageIndex
+        if index == 0 {
+            btnRcpt.alpha = 1.0
+            btnAlarm.alpha = 0.5
+            btnMore.alpha = 0.5
+        } else if index == 1 {
+            btnRcpt.alpha = 0.5
+            btnAlarm.alpha = 1.0
+            btnMore.alpha = 0.5
+        } else if index == 2 {
+            btnRcpt.alpha = 0.5
+            btnAlarm.alpha = 0.5
+            btnMore.alpha = 1.0
+        }
+    }
+    
 }

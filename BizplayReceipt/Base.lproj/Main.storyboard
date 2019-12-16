@@ -266,22 +266,36 @@
                                 <rect key="frame" x="0.0" y="0.0" width="140" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="mnRcptOnIcon"/>
+                                <connections>
+                                    <action selector="onRcpt:" destination="JkN-y5-2Sh" eventType="touchUpInside" id="Fs6-ly-iku"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjZ-so-qy9">
                                 <rect key="frame" x="137" y="0.0" width="140" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="mnAlarmOnIcon"/>
+                                <connections>
+                                    <action selector="onAlarm:" destination="JkN-y5-2Sh" eventType="touchUpInside" id="Kk7-Ot-c2W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Y0-fV-2Hh">
                                 <rect key="frame" x="274" y="0.0" width="140" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="mnMoreOnIcon"/>
+                                <connections>
+                                    <action selector="onMore:" destination="JkN-y5-2Sh" eventType="touchUpInside" id="tMg-9F-REe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="g8g-Pc-oNN"/>
                     </view>
                     <navigationItem key="navigationItem" id="qGQ-Qc-kFL"/>
+                    <connections>
+                        <outlet property="btnAlarm" destination="AjZ-so-qy9" id="y0c-EF-L3b"/>
+                        <outlet property="btnMore" destination="2Y0-fV-2Hh" id="TLj-Z4-vci"/>
+                        <outlet property="btnRcpt" destination="PuD-3R-C3W" id="w7O-XS-Ok2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJn-qm-U9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
