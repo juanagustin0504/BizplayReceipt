@@ -133,7 +133,7 @@ class DataAccess {
                 return
             }
             
-        }
+        }.resume()
     }
     
     private func convertToDictionary(jsonString : String) -> [String:Any]? {
