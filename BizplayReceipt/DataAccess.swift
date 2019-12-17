@@ -41,7 +41,7 @@ class DataAccess {
         request = URLRequest(url: url)
         request.httpMethod = "POST"
         let strQuery = queryString(body: body)
-        let jsonBody = "_JSON_=\(strQuery)"
+        let jsonBody = "JSONData=\(strQuery)"
         
         #if DEBUG
         print("\n\nRequest ----------------------------------------\n")

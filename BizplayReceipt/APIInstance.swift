@@ -10,6 +10,6 @@ import Foundation
 
 class APIInstance {
     
-    let baseServerURL = "http://serpcms.dev.wecontent.co.kr/gw/METCGateWay/"
+    let baseServerURL = "http://serpcms.dev.wecontent.co.kr/gw/METCGateWay?"
     
 }

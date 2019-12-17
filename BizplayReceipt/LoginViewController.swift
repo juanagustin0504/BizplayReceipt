@@ -105,11 +105,12 @@ class LoginViewController: UIViewController {
 //
 //        self.present(alert, animated: true, completion: nil)
         
-        guard let userId = txtLoginID.text else { return }
+        guard let userId = txtLoginID.text else { return } // ivy@ivy.bz
         guard let password = txtLoginPW.text else { return }
         
-        let reqBody = LoginModel.LoginRequest(BIZ_NO: "1", USER_ID: userId, PWD: password)
-        DataAccess.manager.fetch(api: "SCMS_METC_R002", body: reqBody, responseType: LoginModel.LoginResponse.self) { result in
+//        let reqBody = LoginModel.LoginRequest(BIZ_NO: "1", USER_ID: userId, PWD: password)
+        let reqBody = Request.LoginRequestData(BIZ_NO: "1000000001", USER_ID: userId, PWD: password)
+        DataAccess.manager.fetch(api: "SCMS_METC_R002", body: reqBody, responseType: Response.LoginResponseData.self) { result in
             switch result {
             case .failure(let error):
                 print("error: ", error.localizedDescription)

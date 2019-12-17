@@ -23,6 +23,8 @@
 		76DE8AF923A89CDF00186466 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE8AF823A89CDF00186466 /* Extension.swift */; };
 		76DE8AFB23A89D1500186466 /* APIInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE8AFA23A89D1500186466 /* APIInstance.swift */; };
 		76DE8B0023A89EA300186466 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE8AFF23A89EA300186466 /* LoginModel.swift */; };
+		76DE8B0223A8A8D700186466 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE8B0123A8A8D700186466 /* Request.swift */; };
+		76DE8B0423A8AA0C00186466 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE8B0323A8AA0C00186466 /* Response.swift */; };
 		E37672F78CF672BCA8DEECCF /* Pods_BizplayReceipt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C0C3DCAD3962A5BACB2A31 /* Pods_BizplayReceipt.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		76DE8AF823A89CDF00186466 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		76DE8AFA23A89D1500186466 /* APIInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInstance.swift; sourceTree = "<group>"; };
 		76DE8AFF23A89EA300186466 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		76DE8B0123A8A8D700186466 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		76DE8B0323A8AA0C00186466 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		7EA5E570CF7C7F65EBFAF19A /* Pods-BizplayReceipt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BizplayReceipt.release.xcconfig"; path = "Target Support Files/Pods-BizplayReceipt/Pods-BizplayReceipt.release.xcconfig"; sourceTree = "<group>"; };
 		87C0C3DCAD3962A5BACB2A31 /* Pods_BizplayReceipt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BizplayReceipt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7581D8C54DF397DD56E3EF /* Pods-BizplayReceipt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BizplayReceipt.debug.xcconfig"; path = "Target Support Files/Pods-BizplayReceipt/Pods-BizplayReceipt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				76DE8AFF23A89EA300186466 /* LoginModel.swift */,
+				76DE8B0123A8A8D700186466 /* Request.swift */,
+				76DE8B0323A8AA0C00186466 /* Response.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,10 +252,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				76C09FA023A7648B0015AA42 /* CustomFont.swift in Sources */,
+				76DE8B0223A8A8D700186466 /* Request.swift in Sources */,
 				769C241123A7517500D92396 /* IntroViewController.swift in Sources */,
 				76DE8AFB23A89D1500186466 /* APIInstance.swift in Sources */,
 				76C09FA223A764A20015AA42 /* CustomColor.swift in Sources */,
 				76C09FB023A77C1F0015AA42 /* PWSearchViewController.swift in Sources */,
+				76DE8B0423A8AA0C00186466 /* Response.swift in Sources */,
 				76C09F9E23A75AD00015AA42 /* MyReceiptViewController.swift in Sources */,
 				76DE8AF923A89CDF00186466 /* Extension.swift in Sources */,
 				76DE8B0023A89EA300186466 /* LoginModel.swift in Sources */,

@@ -1,23 +1,25 @@
 //
-//  LoginModel.swift
-//  ZeroPay
+//  Response.swift
+//  BizplayReceipt
 //
-//  Created by iMac007 on 21/08/2019.
-//  Copyright © 2019 Webcash. All rights reserved.
+//  Created by Webcash on 2019/12/17.
+//  Copyright © 2019 WebCash. All rights reserved.
 //
 
 import Foundation
 
-struct LoginModel {
+struct Response {
     
-    struct LoginRequest : Encodable {
-        let BIZ_NO  : String
-        let USER_ID : String
-        let PWD     : String
+    struct LoginResponse: Decodable {
+        let RSLT_CD     : String
+        let RSLT_MSG    : String
+        let API_SEQ_NO  : String
+        let RESP_DATE   : String
+        let RESP_TIME   : String
+        let RESP_DATA   : LoginResponseData
     }
     
-    
-    struct LoginResponse : Decodable {
+    struct LoginResponseData : Decodable {
         let USE_INTT_ID     : String
         let BIZ_NM          : String
         let BIZ_NO          : String
@@ -30,6 +32,6 @@ struct LoginModel {
         let RPPR_NM         : String
         let TRCO_BADGE_YN   : String
         let SMSG_BADGE_YN   : String
-        
     }
+    
 }
