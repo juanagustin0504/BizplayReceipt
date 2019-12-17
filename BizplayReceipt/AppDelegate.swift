@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  비플 영수증
+//  BizplayReceipt
 //
 //  Created by Webcash on 2019/12/13.
 //  Copyright © 2019 WebCash. All rights reserved.

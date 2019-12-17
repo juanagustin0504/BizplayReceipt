@@ -96,14 +96,27 @@ class LoginViewController: UIViewController {
     
     @IBAction func onLoginBtn(_ sender: UIButton) {
         
-        let alert = UIAlertController(title: "알림", message: "로그인", preferredStyle: .alert)
-        let action = UIAlertAction(title: "확인", style: .cancel, handler: {(action) in
-            self.performSegue(withIdentifier: "LoginToMyRcpt", sender: nil)
-        })
+//        let alert = UIAlertController(title: "알림", message: "로그인", preferredStyle: .alert)
+//        let action = UIAlertAction(title: "확인", style: .cancel, handler: {(action) in
+//            self.performSegue(withIdentifier: "LoginToMyRcpt", sender: nil)
+//        })
+//
+//        alert.addAction(action)
+//
+//        self.present(alert, animated: true, completion: nil)
         
-        alert.addAction(action)
+        guard let userId = txtLoginID.text else { return }
+        guard let password = txtLoginPW.text else { return }
         
-        self.present(alert, animated: true, completion: nil)
+        let reqBody = LoginModel.LoginRequest(BIZ_NO: "1", USER_ID: userId, PWD: password)
+        DataAccess.manager.fetch(api: "SCMS_METC_R002", body: reqBody, responseType: LoginModel.LoginResponse.self) { result in
+            switch result {
+            case .failure(let error):
+                print("error: ", error.localizedDescription)
+            case .success(let response):
+                print(response.BIZ_NM)
+            }
+        }
         
     }
     
