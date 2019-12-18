@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QA5-xe-3ax">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gXE-x9-Ifa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -11,22 +11,11 @@
         <!--Intro View Controller-->
         <scene sceneID="FXZ-U3-pbc">
             <objects>
-                <viewController id="NNX-XJ-oTb" customClass="IntroViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroViewController_sid" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NNX-XJ-oTb" customClass="IntroViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PxT-Au-DwU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqh-Wb-vEP">
-                                <rect key="frame" x="0.0" y="793" width="414" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
-                                <state key="normal" title="로그인">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8bm-s3-Qoj" kind="show" id="fim-aL-nIp"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azq-JD-seC">
                                 <rect key="frame" x="0.0" y="793" width="414" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -75,6 +64,17 @@
                                 <color key="textColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqh-Wb-vEP">
+                                <rect key="frame" x="0.0" y="793" width="414" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotoLoginVC:" destination="NNX-XJ-oTb" eventType="touchUpInside" id="4hT-2x-L6d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="BMN-le-NSO"/>
@@ -83,12 +83,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usQ-XT-SG0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826.0869565217392" y="142.63392857142856"/>
+            <point key="canvasLocation" x="3652.1739130434785" y="142.63392857142856"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="xGq-jo-R6u">
             <objects>
-                <viewController id="8bm-s3-Qoj" customClass="LoginViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController_sid" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8bm-s3-Qoj" customClass="LoginViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pou-dg-1G4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,6 @@
                                 <state key="normal" title="로그인"/>
                                 <connections>
                                     <action selector="onLoginBtn:" destination="8bm-s3-Qoj" eventType="touchUpInside" id="b2C-eC-Uyq"/>
-                                    <segue destination="JkN-y5-2Sh" kind="show" identifier="LoginToMyRcpt" id="xlb-QT-ipX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63j-LJ-smm">
@@ -151,7 +150,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="아이디 찾기"/>
                                 <connections>
-                                    <segue destination="qpP-an-r9N" kind="show" id="ec2-Un-auc"/>
+                                    <action selector="gotoIDSearchScreen:" destination="8bm-s3-Qoj" eventType="touchUpInside" id="7pF-3U-Eh8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jx-zU-4LR">
@@ -159,7 +158,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="비밀번호 찾기"/>
                                 <connections>
-                                    <segue destination="0pT-uV-xbO" kind="show" id="INM-Mv-ANv"/>
+                                    <action selector="gotoPWSearchScreen:" destination="8bm-s3-Qoj" eventType="touchUpInside" id="u7U-cm-MgF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2Y-hv-joH">
@@ -200,8 +199,8 @@
                     <navigationItem key="navigationItem" id="d8d-gD-7Oh"/>
                     <connections>
                         <outlet property="btnAutuLogin" destination="O2Y-hv-joH" id="enh-Oe-IPz"/>
-                        <outlet property="btnFindID" destination="63j-LJ-smm" id="pqF-Jo-s9F"/>
-                        <outlet property="btnFindPW" destination="4Jx-zU-4LR" id="bdA-P4-WEs"/>
+                        <outlet property="btnFindID" destination="63j-LJ-smm" id="O6S-MM-nuF"/>
+                        <outlet property="btnFindPW" destination="4Jx-zU-4LR" id="1WH-dk-lgK"/>
                         <outlet property="btnLogin" destination="efc-Kc-QqZ" id="LT1-47-v2D"/>
                         <outlet property="lblLoginID" destination="KnG-qd-tvp" id="GAM-hP-TOG"/>
                         <outlet property="lblLoginPW" destination="Z9K-IB-RWX" id="CJo-vh-gWb"/>
@@ -211,12 +210,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vuu-FG-WYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2730.434782608696" y="142.63392857142856"/>
+            <point key="canvasLocation" x="4550.7246376811599" y="142.63392857142856"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="EJd-oS-oWt">
             <objects>
-                <viewController id="qpP-an-r9N" customClass="IDSearchViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IDSearchViewController_sid" id="qpP-an-r9N" customClass="IDSearchViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uuw-KO-Is1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,29 +307,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVx-Jy-zl9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2728.985507246377" y="860.49107142857144"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="kP7-Ym-PNy">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="QA5-xe-3ax" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N3Z-bw-VcS">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NNX-XJ-oTb" kind="relationship" relationship="rootViewController" id="Lv7-Wg-R4p"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T86-ck-6wu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="915.94202898550736" y="142.63392857142856"/>
+            <point key="canvasLocation" x="4551" y="856"/>
         </scene>
         <!--My Receipt View Controller-->
         <scene sceneID="5CH-8a-7LI">
             <objects>
-                <viewController storyboardIdentifier="my_rcpt" id="JkN-y5-2Sh" customClass="MyReceiptViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyReceiptViewController_sid" id="JkN-y5-2Sh" customClass="MyReceiptViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4TC-jh-Ovl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -380,12 +362,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJn-qm-U9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3624.6376811594205" y="142.63392857142856"/>
+            <point key="canvasLocation" x="5444.9275362318849" y="142.63392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="Vt9-eI-G4L">
             <objects>
-                <viewController id="0pT-uV-xbO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PWSearchViewController_sid" id="0pT-uV-xbO" customClass="PWSearchViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dt4-EA-cSU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,10 +378,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEb-Eq-uxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2730" y="-599"/>
+            <point key="canvasLocation" x="4551" y="-604"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kUY-PE-HcX">
+            <objects>
+                <viewController id="J0f-gu-M3D" customClass="MGViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KyE-ro-NrM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bizplayLogoBig" translatesAutoresizingMaskIntoConstraints="NO" id="Ixj-Ob-VJZ">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright bizplay. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScU-rp-N6C">
+                                <rect key="frame" x="87" y="841" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.25490196079999999" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Obr-yN-baM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gUd-jR-lJ1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTa-P3-4Or" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2663.768115942029" y="141.96428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LOs-Zb-LUG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gXE-x9-Ifa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2XD-gl-Sba">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J0f-gu-M3D" kind="relationship" relationship="rootViewController" id="ZB7-5u-dCo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAd-S6-6qo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753.6231884057972" y="141.96428571428569"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bizplayLogoBig" width="170" height="55"/>
         <image name="bizplayLogoSmall" width="111" height="36"/>
         <image name="chkboxOffIcon" width="21" height="21"/>
         <image name="introImg01" width="204" height="357"/>

@@ -10,7 +10,12 @@ import UIKit
 
 class IntroViewController: UIViewController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    @IBAction func gotoLoginVC(_ sender: UIButton) {
+        
+        let mainSb = UIStoryboard(name: "Main", bundle: nil)
+        let loginVc = mainSb.instantiateViewController(withIdentifier: "LoginViewController_sid")
+        self.navigationController?.pushViewController(loginVc, animated: true)
+        
     }
+    
 }

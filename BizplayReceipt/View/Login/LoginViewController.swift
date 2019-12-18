@@ -25,6 +25,12 @@ class LoginViewController: UIViewController {
     var isALChecked: Bool = false
     var isLoginPWSecure: Bool = false
     
+    let loginViewModel = LoginViewModel()
+    
+    // test id
+    private let userIdValue = "mm0101"
+    private let pwdValue = "qwer1234!"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -94,6 +100,24 @@ class LoginViewController: UIViewController {
         }
     }
     
+    private func requestLoginWithBizNo() {
+        loginViewModel.requestLogin_WithBizNo(userId: userIdValue, pwd: pwdValue) { (error) in
+            if error == nil {
+                self.gotoMyReceiptScreen()
+            } else {
+                self.alertMessage(title: "안내", message: error?.localizedDescription, action: nil)
+            }
+        }
+    }
+    
+    private func gotoMyReceiptScreen() {
+        DispatchQueue.main.async {
+            let mainSb = UIStoryboard(name: "Main", bundle: nil)
+            let myReceiptVc = mainSb.instantiateViewController(withIdentifier: "MyReceiptViewController_sid")
+            self.navigationController?.pushViewController(myReceiptVc, animated: true)
+        }
+    }
+    
     @IBAction func onLoginBtn(_ sender: UIButton) {
         
 //        let alert = UIAlertController(title: "알림", message: "로그인", preferredStyle: .alert)
@@ -109,15 +133,36 @@ class LoginViewController: UIViewController {
 //        guard let password = txtLoginPW.text else { return }
         
 //        let reqBody = LoginModel.LoginRequest(BIZ_NO: "1", USER_ID: userId, PWD: password)
-        let reqBody = Request.LoginRequestData(BIZ_NO: "1000000001", USER_ID: "ivy@ivy.bz", PWD: "")
-        DataAccess.manager.fetch(api: "SCMS_METC_R002", body: reqBody, responseType: Response.LoginResponseData.self) { result in
-            switch result {
-            case .failure(let error):
-                print("error: ", error.localizedDescription)
-            case .success(let response):
-                print(response.BIZ_NM)
+//        let reqBody = Request.LoginRequestData(BIZ_NO: "1000000001", USER_ID: "ivy@ivy.bz", PWD: "")
+//        DataAccess.manager.fetch(api: "SCMS_METC_R002", body: reqBody, responseType: Response.LoginResponseData.self) { result in
+//            switch result {
+//            case .failure(let error):
+//                print("error: ", error.localizedDescription)
+//            case .success(let response):
+//                print(response.BIZ_NM)
+//            }
+//        }
+        loginViewModel.requestLogin(userId: userIdValue, pwd: pwdValue) { (error) in
+            if error == nil {
+                self.requestLoginWithBizNo()
+            } else {
+                self.alertMessage(title: "안내", message: error?.localizedDescription, action: nil)
             }
         }
+        
+    }
+    
+    @IBAction func gotoIDSearchScreen(_ sender: UIButton) {
+        let mainSb = UIStoryboard(name: "Main", bundle: nil)
+        let idSearchVC = mainSb.instantiateViewController(withIdentifier: "IDSearchViewController_sid")
+        self.navigationController?.pushViewController(idSearchVC, animated: true)
+        
+    }
+    
+    @IBAction func gotoPWSearchScreen(_ sender: UIButton) {
+        let mainSb = UIStoryboard(name: "Main", bundle: nil)
+        let pwSearchVC = mainSb.instantiateViewController(withIdentifier: "PWSearchViewController_sid")
+        self.navigationController?.pushViewController(pwSearchVC, animated: true)
         
     }
     
