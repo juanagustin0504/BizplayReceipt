@@ -10,20 +10,20 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var lblLoginID: UILabel!
-    @IBOutlet weak var lblLoginPW: UILabel!
+    @IBOutlet weak var lblLoginID: UILabel!     // 아이디 로그인 상자 테두리
+    @IBOutlet weak var lblLoginPW: UILabel!     // 비밀번호 로그인 상자 테두리
     
-    @IBOutlet weak var txtLoginID: UITextField!
-    @IBOutlet weak var txtLoginPW: UITextField!
+    @IBOutlet weak var txtLoginID: UITextField! // 아이디 값 받아오는 텍스트 필드
+    @IBOutlet weak var txtLoginPW: UITextField! // 비밀번호 값 받아오는 텍스트 필드
     
-    @IBOutlet weak var btnLogin: UIButton!
-    @IBOutlet weak var btnFindID: UIButton!
-    @IBOutlet weak var btnFindPW: UIButton!
+    @IBOutlet weak var btnLogin: UIButton!      // 로그인 버튼
+    @IBOutlet weak var btnFindID: UIButton!     // 아이디 찾기 버튼
+    @IBOutlet weak var btnFindPW: UIButton!     // 비밀번호 찾기 버튼
     
-    @IBOutlet weak var btnAutuLogin: UIButton!
+    @IBOutlet weak var btnAutuLogin: UIButton!  // 자동로그인 버튼
     
-    var isALChecked: Bool = false
-    var isLoginPWSecure: Bool = false
+    var isALChecked: Bool = false               // 자동로그인 체크 되어 있는지
+    var isLoginPWSecure: Bool = false           // 비밀번호 보이게 할지 말지
     
     let loginViewModel = LoginViewModel()
     
