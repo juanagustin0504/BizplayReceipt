@@ -41,12 +41,6 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = .dodgerBlue
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
-//        self.lblLoginID.layer.borderWidth = 1.0
-//        self.lblLoginID.layer.cornerRadius = 3.0
-//        self.lblLoginID.layer.borderColor = UIColor.lightPeriwinkle.cgColor
-//        self.lblLoginPW.layer.borderWidth = 1.0
-//        self.lblLoginPW.layer.cornerRadius = 3.0
-//        self.lblLoginPW.layer.borderColor = UIColor.lightPeriwinkle.cgColor
         setTextBoxStyle(lblLoginID, borderWidth: 1.0, cornerRadius: 3.0, borderColor: .lightPeriwinkle)
         setTextBoxStyle(lblLoginPW, borderWidth: 1.0, cornerRadius: 3.0, borderColor: .lightPeriwinkle)
         
@@ -119,29 +113,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onLoginBtn(_ sender: UIButton) {
-        
-//        let alert = UIAlertController(title: "알림", message: "로그인", preferredStyle: .alert)
-//        let action = UIAlertAction(title: "확인", style: .cancel, handler: {(action) in
-//            self.performSegue(withIdentifier: "LoginToMyRcpt", sender: nil)
-//        })
-//
-//        alert.addAction(action)
-//
-//        self.present(alert, animated: true, completion: nil)
-        
-//        guard let userId = txtLoginID.text else { return } // ivy@ivy.bz
-//        guard let password = txtLoginPW.text else { return }
-        
-//        let reqBody = LoginModel.LoginRequest(BIZ_NO: "1", USER_ID: userId, PWD: password)
-//        let reqBody = Request.LoginRequestData(BIZ_NO: "1000000001", USER_ID: "ivy@ivy.bz", PWD: "")
-//        DataAccess.manager.fetch(api: "SCMS_METC_R002", body: reqBody, responseType: Response.LoginResponseData.self) { result in
-//            switch result {
-//            case .failure(let error):
-//                print("error: ", error.localizedDescription)
-//            case .success(let response):
-//                print(response.BIZ_NM)
-//            }
-//        }
         loginViewModel.requestLogin(userId: userIdValue, pwd: pwdValue) { (error) in
             if error == nil {
                 self.requestLoginWithBizNo()
