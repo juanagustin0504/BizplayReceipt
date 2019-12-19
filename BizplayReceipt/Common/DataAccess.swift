@@ -10,7 +10,7 @@ import Foundation
 
 class DataAccess {
     
-    private static var sharedInstance   = DataAccess()
+    private static var sharedInstance = DataAccess()
     private static var sessionConfig: URLSessionConfiguration!
     private static var session: URLSession!
     
