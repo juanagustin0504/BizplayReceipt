@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76454CF423B07DCA00E4A1DF /* CompanySelectionPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76454CF323B07DCA00E4A1DF /* CompanySelectionPopup.swift */; };
+		76454CF623B07DDA00E4A1DF /* PopupSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76454CF523B07DDA00E4A1DF /* PopupSB.storyboard */; };
+		76454CF823B07F1C00E4A1DF /* CompanyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76454CF723B07F1C00E4A1DF /* CompanyCustomCell.swift */; };
 		7659AED623A9E19C00AFF5A0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */; };
 		769C23F523A74F8200D92396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769C23F423A74F8200D92396 /* AppDelegate.swift */; };
 		769C23FC23A74F8200D92396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769C23FA23A74F8200D92396 /* Main.storyboard */; };
@@ -33,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76454CF323B07DCA00E4A1DF /* CompanySelectionPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanySelectionPopup.swift; sourceTree = "<group>"; };
+		76454CF523B07DDA00E4A1DF /* PopupSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopupSB.storyboard; sourceTree = "<group>"; };
+		76454CF723B07F1C00E4A1DF /* CompanyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCustomCell.swift; sourceTree = "<group>"; };
 		7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = BizplayReceipt/IntroViewController.swift; sourceTree = SOURCE_ROOT; };
 		769C23F123A74F8200D92396 /* 비플 영수증.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "비플 영수증.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		769C23F423A74F8200D92396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +77,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76454CF223B07DA900E4A1DF /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				76454CF323B07DCA00E4A1DF /* CompanySelectionPopup.swift */,
+				76454CF523B07DDA00E4A1DF /* PopupSB.storyboard */,
+				76454CF723B07F1C00E4A1DF /* CompanyCustomCell.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
 		769C23E823A74F8200D92396 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +138,7 @@
 		76A07BBE23A9DE2F00CFB20B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				76454CF223B07DA900E4A1DF /* Popup */,
 				76A07BBF23A9DE3D00CFB20B /* DataAccess.swift */,
 				76A07BC123A9DE3D00CFB20B /* DeviceInfo.swift */,
 				76A07BC023A9DE3D00CFB20B /* Extension.swift */,
@@ -219,6 +236,7 @@
 				769C240123A74F8300D92396 /* LaunchScreen.storyboard in Resources */,
 				769C240923A750DF00D92396 /* GoogleService-Info.plist in Resources */,
 				769C23FE23A74F8300D92396 /* Assets.xcassets in Resources */,
+				76454CF623B07DDA00E4A1DF /* PopupSB.storyboard in Resources */,
 				769C23FC23A74F8200D92396 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,12 +251,14 @@
 				76C09FA023A7648B0015AA42 /* CustomFont.swift in Sources */,
 				76A07BB923A9DE0700CFB20B /* MGModel.swift in Sources */,
 				76A07BBA23A9DE0700CFB20B /* MGViewModel.swift in Sources */,
+				76454CF423B07DCA00E4A1DF /* CompanySelectionPopup.swift in Sources */,
 				76A07BC923A9DE3D00CFB20B /* ShareInstance.swift in Sources */,
 				76A07BB423A9DDBA00CFB20B /* LoginViewModel.swift in Sources */,
 				76C09FA223A764A20015AA42 /* CustomColor.swift in Sources */,
 				76C09FB023A77C1F0015AA42 /* PWSearchViewController.swift in Sources */,
 				76A07BC623A9DE3D00CFB20B /* Extension.swift in Sources */,
 				76A07BBB23A9DE0700CFB20B /* MGViewController.swift in Sources */,
+				76454CF823B07F1C00E4A1DF /* CompanyCustomCell.swift in Sources */,
 				76A07BCA23A9DE3D00CFB20B /* Request.swift in Sources */,
 				76C09F9E23A75AD00015AA42 /* MyReceiptViewController.swift in Sources */,
 				76A07BC723A9DE3D00CFB20B /* DeviceInfo.swift in Sources */,

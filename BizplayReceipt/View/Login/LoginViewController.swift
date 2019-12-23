@@ -34,6 +34,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // -------------------------- UI Style & Setting -------------------------- // 
         self.navigationItem.setHidesBackButton(true, animated: true)
         self.navigationItem.title = "로그인"
         self.navigationController?.navigationBar.isTranslucent = false
@@ -55,7 +56,7 @@ class LoginViewController: UIViewController {
         setBtnStyle(btnFindPW, bgColor: .lightGreyBlue)
         
         self.btnAutuLogin.setImage(UIImage(named: "chkboxOffIcon"), for: .normal)
-        
+        // ------------------------------------------------------------------------ //
     }
     
     func setTextBoxStyle(_ lbl: UILabel, borderWidth: CGFloat, cornerRadius: CGFloat, borderColor: UIColor) {
@@ -68,6 +69,16 @@ class LoginViewController: UIViewController {
         btn.backgroundColor = bgColor
         btn.tintColor = txtColor
         btn.layer.cornerRadius = radius
+    }
+    
+    private func popupCompanySelectionAction(data: [LoginModel.REC]?) {
+        DispatchQueue.main.async {
+            let popupSb = UIStoryboard(name: "PopupSB", bundle: nil)
+            let companyPopup = popupSb.instantiateViewController(withIdentifier: "CompanySelectionPopup_sid") as! CompanySelectionPopup
+            companyPopup.serverData = data
+            companyPopup.delegate = self
+            self.present(companyPopup, animated: true)
+        }
     }
     
     @IBAction func onClickAutoLogin(_ sender: UIButton) {
@@ -94,30 +105,16 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func requestLoginWithBizNo() {
-        loginViewModel.requestLogin_WithBizNo(userId: userIdValue, pwd: pwdValue) { (error) in
-            if error == nil {
-                self.gotoMyReceiptScreen()
-            } else {
-                self.alertMessage(title: "안내", message: error?.localizedDescription, action: nil)
-            }
-        }
-    }
-    
-    private func gotoMyReceiptScreen() {
-        DispatchQueue.main.async {
-            let mainSb = UIStoryboard(name: "Main", bundle: nil)
-            let myReceiptVc = mainSb.instantiateViewController(withIdentifier: "MyReceiptViewController_sid")
-            self.navigationController?.pushViewController(myReceiptVc, animated: true)
-        }
-    }
-    
     @IBAction func onLoginBtn(_ sender: UIButton) {
-        loginViewModel.requestLogin(userId: userIdValue, pwd: pwdValue) { (error) in
+        loginViewModel.requestLogin(userId: txtLoginID.text!, pwd: txtLoginPW.text!) { (error) in
             if error == nil {
-                self.requestLoginWithBizNo()
+                let data = self.loginViewModel.SCMS_METC_R001_Response?.REC
+                self.popupCompanySelectionAction(data: data)
             } else {
-                self.alertMessage(title: "안내", message: error?.localizedDescription, action: nil)
+                DispatchQueue.main.async {
+                    self.alertMessage(title: "안내", message: error?.localizedDescription, action: nil)
+                }
+                
             }
         }
         
@@ -137,4 +134,29 @@ class LoginViewController: UIViewController {
         
     }
     
+    private func requestLoginWithBizNo() {
+        loginViewModel.requestLogin_WithBizNo(userId: userIdValue, pwd: pwdValue) { (error) in
+            if error == nil {
+                self.gotoMyReceiptScreen()
+            } else {
+                self.alertMessage(title: "알림", message: error?.localizedDescription, action: nil)
+            }
+        }
+    }
+    
+    private func gotoMyReceiptScreen() {
+        DispatchQueue.main.async {
+            let mainSb = UIStoryboard(name: "Main", bundle: nil)
+            let myReceiptVc = mainSb.instantiateViewController(withIdentifier: "MyReceiptViewController_sid")
+            self.navigationController?.pushViewController(myReceiptVc, animated: true)
+        }
+    }
+    
+}
+
+extension LoginViewController: CompanySelectionPopupDelegate {
+    func didSelectCompany(bizNo: String) {
+        ShareInstance.manager.BIZ_NO = bizNo
+        self.requestLoginWithBizNo()
+    }
 }
