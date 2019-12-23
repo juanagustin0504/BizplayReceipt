@@ -112,7 +112,7 @@ class LoginViewController: UIViewController {
                 self.popupCompanySelectionAction(data: data)
             } else {
                 DispatchQueue.main.async {
-                    self.alertMessage(title: "안내", message: error?.localizedDescription, action: nil)
+                    self.alertMessage(title: "알림", message: error?.localizedDescription, action: nil)
                 }
                 
             }

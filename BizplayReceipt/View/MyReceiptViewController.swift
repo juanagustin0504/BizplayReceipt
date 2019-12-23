@@ -14,6 +14,8 @@ class MyReceiptViewController: UIViewController {
     @IBOutlet weak var btnAlarm: UIButton!
     @IBOutlet weak var btnMore: UIButton!
     
+    @IBOutlet weak var receiptTableView: UITableView!
+    
     static var pageIndex: Int = 0
     
     override func viewDidLoad() {
@@ -61,5 +63,17 @@ class MyReceiptViewController: UIViewController {
             btnMore.alpha = 1.0
         }
     }
+    
+}
+
+extension MyReceiptViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
     
 }
