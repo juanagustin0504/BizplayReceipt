@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var btnFindID: UIButton!     // 아이디 찾기 버튼
     @IBOutlet weak var btnFindPW: UIButton!     // 비밀번호 찾기 버튼
     
-    @IBOutlet weak var btnAutuLogin: UIButton!  // 자동로그인 버튼
+    @IBOutlet weak var btnAutoLogin: UIButton!  // 자동로그인 버튼
     
     var isALChecked: Bool = false               // 자동로그인 체크 되어 있는지
     var isLoginPWSecure: Bool = false           // 비밀번호 보이게 할지 말지
@@ -55,8 +55,10 @@ class LoginViewController: UIViewController {
         setBtnStyle(btnFindID, bgColor: .lightGreyBlue)
         setBtnStyle(btnFindPW, bgColor: .lightGreyBlue)
         
-        self.btnAutuLogin.setImage(UIImage(named: "chkboxOffIcon"), for: .normal)
+        self.btnAutoLogin.setImage(UIImage(named: "chkboxOffIcon"), for: .normal)
+        txtLoginID.clearButtonMode = .whileEditing
         // ------------------------------------------------------------------------ //
+        
     }
     
     func setTextBoxStyle(_ lbl: UILabel, borderWidth: CGFloat, cornerRadius: CGFloat, borderColor: UIColor) {
@@ -88,10 +90,6 @@ class LoginViewController: UIViewController {
         } else {
             sender.setImage(UIImage(named: "chkboxOffIcon"), for: .normal)
         }
-    }
-    
-    @IBAction func onTextDelete(_ sender: UIButton) {
-        self.txtLoginID.text?.removeAll()
     }
     
     @IBAction func onPWSecure(_ sender: UIButton) {
@@ -146,8 +144,8 @@ class LoginViewController: UIViewController {
     
     private func gotoMyReceiptScreen() {
         DispatchQueue.main.async {
-            let mainSb = UIStoryboard(name: "Main", bundle: nil)
-            let myReceiptVc = mainSb.instantiateViewController(withIdentifier: "MyReceiptViewController_sid")
+            let myRcptSb = UIStoryboard(name: "MyReceiptSB", bundle: nil)
+            let myReceiptVc = myRcptSb.instantiateViewController(withIdentifier: "MyReceiptTabBarController_sid")
             self.navigationController?.pushViewController(myReceiptVc, animated: true)
         }
     }
