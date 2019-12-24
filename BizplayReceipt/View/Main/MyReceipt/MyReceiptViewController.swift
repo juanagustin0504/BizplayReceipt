@@ -14,6 +14,8 @@ class MyReceiptViewController: UIViewController {
     @IBOutlet weak var btnAlarm: UIButton!
     @IBOutlet weak var btnMore: UIButton!
     
+    @IBOutlet weak var myRcptTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +36,7 @@ class MyReceiptViewController: UIViewController {
     @IBAction func gotoMore(_ sender: UIButton) {
         tabBarController?.selectedIndex = 2
     }
+    
     func mnChageAlpha() {
         
         btnRcpt.alpha = 1.0

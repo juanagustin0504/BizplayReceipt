@@ -43,7 +43,7 @@
 		76454CF323B07DCA00E4A1DF /* CompanySelectionPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanySelectionPopup.swift; sourceTree = "<group>"; };
 		76454CF523B07DDA00E4A1DF /* PopupSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopupSB.storyboard; sourceTree = "<group>"; };
 		76454CF723B07F1C00E4A1DF /* CompanyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCustomCell.swift; sourceTree = "<group>"; };
-		7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = BizplayReceipt/IntroViewController.swift; sourceTree = SOURCE_ROOT; };
+		7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = BizplayReceipt/View/Main/IntroViewController.swift; sourceTree = SOURCE_ROOT; };
 		769C23F123A74F8200D92396 /* 비플 영수증.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "비플 영수증.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		769C23F423A74F8200D92396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		769C23FB23A74F8200D92396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				769C23F423A74F8200D92396 /* AppDelegate.swift */,
-				769C23FA23A74F8200D92396 /* Main.storyboard */,
 				769C23FD23A74F8300D92396 /* Assets.xcassets */,
 				769C23FF23A74F8300D92396 /* LaunchScreen.storyboard */,
 				769C240223A74F8300D92396 /* Info.plist */,
@@ -175,15 +174,24 @@
 		76A07BCC23A9DED600CFB20B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				76A48A1C23B1E91600C18958 /* MyReceipt */,
-				7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */,
+				76A48A1C23B1E91600C18958 /* Main */,
 				76A07BB523A9DDFB00CFB20B /* MG */,
 				76A07BB023A9DDA800CFB20B /* Login */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		76A48A1C23B1E91600C18958 /* MyReceipt */ = {
+		76A48A1C23B1E91600C18958 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */,
+				769C23FA23A74F8200D92396 /* Main.storyboard */,
+				76D0B97E23B1FB750002410E /* MyReceipt */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		76D0B97E23B1FB750002410E /* MyReceipt */ = {
 			isa = PBXGroup;
 			children = (
 				76D0B97C23B1F3BD0002410E /* MyReceiptTabBarController.swift */,
