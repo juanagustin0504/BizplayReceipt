@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var btnAutoLogin: UIButton!  // 자동로그인 버튼
     
-    var isALChecked: Bool = false               // 자동로그인 체크 되어 있는지
+    var isAutoLogin: Bool = false               // 자동로그인 되어 있는지
     var isLoginPWSecure: Bool = false           // 비밀번호 보이게 할지 말지
     
     let loginViewModel = LoginViewModel()
@@ -58,6 +58,14 @@ class LoginViewController: UIViewController {
         self.btnAutoLogin.setImage(UIImage(named: "chkboxOffIcon"), for: .normal)
         txtLoginID.clearButtonMode = .whileEditing
         // ------------------------------------------------------------------------ //
+        if let userId = UserDefaults.standard.string(forKey: "id"), let pwd = UserDefaults.standard.string(forKey: "pwd"), let bizNo = UserDefaults.standard.string(forKey: "biz_no") {
+            txtLoginID.text = userId
+            txtLoginPW.text = pwd
+            onClickAutoLogin(btnAutoLogin)
+            ShareInstance.manager.USER_ID = userId
+            ShareInstance.manager.BIZ_NO = bizNo
+            requestLoginWithBizNo()
+        }
         
     }
     
@@ -84,8 +92,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onClickAutoLogin(_ sender: UIButton) {
-        isALChecked.toggle()
-        if isALChecked {
+        isAutoLogin.toggle()
+        if isAutoLogin {
             sender.setImage(UIImage(named: "chkboxOnIcon"), for: .normal)
         } else {
             sender.setImage(UIImage(named: "chkboxOffIcon"), for: .normal)
@@ -135,6 +143,15 @@ class LoginViewController: UIViewController {
     private func requestLoginWithBizNo() {
         loginViewModel.requestLogin_WithBizNo(userId: userIdValue, pwd: pwdValue) { (error) in
             if error == nil {
+                if self.isAutoLogin {
+                    DispatchQueue.main.async {
+                        UserDefaults.standard.set(self.txtLoginID.text, forKey: "id")
+                        UserDefaults.standard.set(self.txtLoginPW.text, forKey: "pwd")
+                        UserDefaults.standard.set(ShareInstance.manager.BIZ_NO, forKey: "biz_no")
+                    }
+                    
+                    // when Logout : UserDefaults.standard.removeObject(forKey: "")
+                }
                 self.gotoMyReceiptScreen()
             } else {
                 self.alertMessage(title: "알림", message: error?.localizedDescription, action: nil)
@@ -144,9 +161,11 @@ class LoginViewController: UIViewController {
     
     private func gotoMyReceiptScreen() {
         DispatchQueue.main.async {
-            let myRcptSb = UIStoryboard(name: "MyReceiptSB", bundle: nil)
-            let myReceiptVc = myRcptSb.instantiateViewController(withIdentifier: "MyReceiptTabBarController_sid")
-            self.navigationController?.pushViewController(myReceiptVc, animated: true)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.changeRootToMain()
+//            let myRcptSb = UIStoryboard(name: "MyReceiptSB", bundle: nil)
+//            let myRcptVc = myRcptSb.instantiateViewController(withIdentifier: "MyReceiptTabBarController_sid")
+//            self.navigationController?.pushViewController(myRcptVc, animated: true)
         }
     }
     

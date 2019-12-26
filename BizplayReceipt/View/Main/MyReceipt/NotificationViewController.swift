@@ -14,13 +14,11 @@ class NotificationViewController: UIViewController {
     @IBOutlet weak var btnAlarm: UIButton!
     @IBOutlet weak var btnMore: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mnChageAlpha()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -33,14 +31,6 @@ class NotificationViewController: UIViewController {
     
     @IBAction func gotoMore(_ sender: UIButton) {
         tabBarController?.selectedIndex = 2
-    }
-    
-    func mnChageAlpha() {
-        
-        btnRcpt.alpha = 0.5
-        btnAlarm.alpha = 1.0
-        btnMore.alpha = 0.5
-        
     }
     
 }

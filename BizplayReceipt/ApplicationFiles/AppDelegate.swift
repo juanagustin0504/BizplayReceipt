@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    func changeRootToMain() {
+        let myRcptSb = UIStoryboard(name: "MyReceiptSB", bundle: nil)
+        let myReceiptVc = myRcptSb.instantiateViewController(withIdentifier: "MyReceiptTabBarController_sid")
+        let newNavigationBar = UINavigationController(rootViewController: myReceiptVc)
+        newNavigationBar.navigationBar.isTranslucent = false
+        //newNavigationBar.navigationBar.backgroundColor = .dodgerBlue
+        window?.rootViewController = newNavigationBar
+    }
 
 }
-

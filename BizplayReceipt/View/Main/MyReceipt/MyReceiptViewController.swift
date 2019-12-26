@@ -16,11 +16,24 @@ class MyReceiptViewController: UIViewController {
     
     @IBOutlet weak var myRcptTableView: UITableView!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tabBarController?.tabBar.isHidden = true
-        mnChageAlpha()
+        removeLineNavigationBar()
+        
+    }
+    
+    private func removeLineNavigationBar() {
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: ""), for: UIBarMetrics.default) //UIColor(hexString: "F5F5F5")
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 66/255, green: 134/255, blue: 245/255, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = UIColor.clear//UIColor(red: 66/255, green: 134/255, blue: 245/255, alpha: 1) //UIColor(hexString: "F5F5F5")
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 66/255, green: 134/255, blue: 245/255, alpha: 1) //UIColor(hexString: "F5F5F5")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,14 +48,6 @@ class MyReceiptViewController: UIViewController {
     
     @IBAction func gotoMore(_ sender: UIButton) {
         tabBarController?.selectedIndex = 2
-    }
-    
-    func mnChageAlpha() {
-        
-        btnRcpt.alpha = 1.0
-        btnAlarm.alpha = 0.5
-        btnMore.alpha = 0.5
-        
     }
     
 }

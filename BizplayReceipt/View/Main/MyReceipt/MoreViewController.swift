@@ -16,7 +16,6 @@ class MoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mnChageAlpha()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,13 +30,5 @@ class MoreViewController: UIViewController {
     
     @IBAction func gotoNotification(_ sender: UIButton) {
         tabBarController?.selectedIndex = 1
-    }
-    
-    func mnChageAlpha() {
-        
-        btnRcpt.alpha = 0.5
-        btnAlarm.alpha = 0.5
-        btnMore.alpha = 1.0
-    
     }
 }
