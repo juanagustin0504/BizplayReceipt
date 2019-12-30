@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func changeRootToMain() {
         let myRcptSb = UIStoryboard(name: "MyReceiptSB", bundle: nil)
-        let myReceiptVc = myRcptSb.instantiateViewController(withIdentifier: "MyReceiptTabBarController_sid")
+        let myReceiptVc = myRcptSb.instantiateViewController(withIdentifier: "TestMyReceiptTabBarController_sid")
         let newNavigationBar = UINavigationController(rootViewController: myReceiptVc)
         newNavigationBar.navigationBar.isTranslucent = false
         //newNavigationBar.navigationBar.backgroundColor = .dodgerBlue

@@ -18,7 +18,13 @@ class ReceiptListItemCell: UITableViewCell {
     @IBOutlet weak var rcptItemCategoryLB: UILabel!
     @IBOutlet weak var rcptItemSeeMore: UIButton!
     
-
+    @IBOutlet weak var photoSaveTitleLB: UILabel!
+    @IBOutlet weak var photoSaveDateLB: UILabel!
+    @IBOutlet weak var photoSaveSeeMore: UIButton!
+    @IBOutlet weak var photoSaveImageView: UIImageView!
+    
+    var rowNumber: Int = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,6 +38,9 @@ class ReceiptListItemCell: UITableViewCell {
         self.rcptItemPriceLB.font = .rcptItemPrice
         self.rcptItemWonLB.font = .rcptItemPrice
         self.rcptItemCategoryLB.font = .rcptListCategory
+        
+        self.photoSaveTitleLB.font = .rcptListTitle
+        self.photoSaveDateLB.font = .rcptListDate
         
         self.rcptItemPriceLB.textColor = .dodgerBlue
         self.rcptItemWonLB.textColor = .dodgerBlue
