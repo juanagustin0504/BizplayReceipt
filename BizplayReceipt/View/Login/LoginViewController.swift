@@ -150,6 +150,8 @@ class LoginViewController: UIViewController {
                         UserDefaults.standard.set(ShareInstance.manager.BIZ_NO, forKey: "biz_no")
                     }
                     
+                    
+                    
                     // when Logout : UserDefaults.standard.removeObject(forKey: "")
                 }
                 self.gotoMyReceiptScreen()

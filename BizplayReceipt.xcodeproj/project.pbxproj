@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7604001923B5EB1C00705CB7 /* ReceiptListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7604001823B5EB1C00705CB7 /* ReceiptListItemCell.swift */; };
 		76454CF423B07DCA00E4A1DF /* CompanySelectionPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76454CF323B07DCA00E4A1DF /* CompanySelectionPopup.swift */; };
 		76454CF623B07DDA00E4A1DF /* PopupSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76454CF523B07DDA00E4A1DF /* PopupSB.storyboard */; };
 		76454CF823B07F1C00E4A1DF /* CompanyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76454CF723B07F1C00E4A1DF /* CompanyCustomCell.swift */; };
@@ -45,6 +46,7 @@
 		0D643558C25618C56A7C62FA /* Pods_BizplayReceipt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BizplayReceipt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE189F474AAABFC4CB191AB /* Pods-BizplayReceipt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BizplayReceipt.release.xcconfig"; path = "Target Support Files/Pods-BizplayReceipt/Pods-BizplayReceipt.release.xcconfig"; sourceTree = "<group>"; };
 		39A53285B065C84490DCC019 /* Pods-BizplayReceipt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BizplayReceipt.debug.xcconfig"; path = "Target Support Files/Pods-BizplayReceipt/Pods-BizplayReceipt.debug.xcconfig"; sourceTree = "<group>"; };
+		7604001823B5EB1C00705CB7 /* ReceiptListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListItemCell.swift; sourceTree = "<group>"; };
 		76454CF323B07DCA00E4A1DF /* CompanySelectionPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanySelectionPopup.swift; sourceTree = "<group>"; };
 		76454CF523B07DDA00E4A1DF /* PopupSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopupSB.storyboard; sourceTree = "<group>"; };
 		76454CF723B07F1C00E4A1DF /* CompanyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCustomCell.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			children = (
 				76D0B97C23B1F3BD0002410E /* MyReceiptTabBarController.swift */,
 				76A48A1E23B1E9D400C18958 /* MyReceiptSB.storyboard */,
+				7604001823B5EB1C00705CB7 /* ReceiptListItemCell.swift */,
 				76C09F9D23A75AD00015AA42 /* MyReceiptViewController.swift */,
 				76D0B97823B1ECE90002410E /* NotificationViewController.swift */,
 				76D0B97A23B1ECFE0002410E /* MoreViewController.swift */,
@@ -366,6 +369,7 @@
 				76A07BB323A9DDBA00CFB20B /* LoginModel.swift in Sources */,
 				764D4D5723B20B3600F1E2F1 /* WENavigationController.swift in Sources */,
 				76D0B97B23B1ECFE0002410E /* MoreViewController.swift in Sources */,
+				7604001923B5EB1C00705CB7 /* ReceiptListItemCell.swift in Sources */,
 				769C240F23A7514E00D92396 /* LoginViewController.swift in Sources */,
 				76C09FAE23A7764C0015AA42 /* IDSearchViewController.swift in Sources */,
 				76A07BC823A9DE3D00CFB20B /* Response.swift in Sources */,

@@ -11,7 +11,7 @@
         <!--Intro View Controller-->
         <scene sceneID="FXZ-U3-pbc">
             <objects>
-                <viewController storyboardIdentifier="IntroViewController_sid" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NNX-XJ-oTb" customClass="IntroViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroViewController_sid" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NNX-XJ-oTb" customClass="IntroViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PxT-Au-DwU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +88,7 @@
         <!--Login View Controller-->
         <scene sceneID="xGq-jo-R6u">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController_sid" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8bm-s3-Qoj" customClass="LoginViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController_sid" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8bm-s3-Qoj" customClass="LoginViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pou-dg-1G4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,7 +207,7 @@
         <!--Search View Controller-->
         <scene sceneID="EJd-oS-oWt">
             <objects>
-                <viewController storyboardIdentifier="IDSearchViewController_sid" id="qpP-an-r9N" customClass="IDSearchViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IDSearchViewController_sid" id="qpP-an-r9N" customClass="IDSearchViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uuw-KO-Is1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -304,7 +304,7 @@
         <!--Search View Controller-->
         <scene sceneID="Vt9-eI-G4L">
             <objects>
-                <viewController storyboardIdentifier="PWSearchViewController_sid" id="0pT-uV-xbO" customClass="PWSearchViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PWSearchViewController_sid" id="0pT-uV-xbO" customClass="PWSearchViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dt4-EA-cSU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,7 +320,7 @@
         <!--View Controller-->
         <scene sceneID="kUY-PE-HcX">
             <objects>
-                <viewController id="J0f-gu-M3D" customClass="MGViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J0f-gu-M3D" customClass="MGViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KyE-ro-NrM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

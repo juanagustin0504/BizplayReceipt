@@ -16,6 +16,8 @@ class MyReceiptViewController: UIViewController {
     
     @IBOutlet weak var myRcptTableView: UITableView!
     
+    
+    
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
     override func viewDidLoad() {
@@ -53,3 +55,15 @@ class MyReceiptViewController: UIViewController {
 }
 
 // TableViewDelegate, TableViewDataSource 구현 해야 함. //
+extension MyReceiptViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = ReceiptListItemCell()
+        return cell
+    }
+    
+    
+}

@@ -11,7 +11,7 @@
         <!--Item-->
         <scene sceneID="nFL-qE-gAH">
             <objects>
-                <viewController storyboardIdentifier="MyReceiptViewController_sid" id="F2j-jY-Fns" customClass="MyReceiptViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyReceiptViewController_sid" id="F2j-jY-Fns" customClass="MyReceiptViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aF3-iT-n2z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,21 +21,21 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8X-X6-nxb">
                                         <rect key="frame" x="0.0" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.33725490196078434" green="0.52156862745098043" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" image="mnRcptOnIcon"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6P-Fv-CBQ">
                                         <rect key="frame" x="138" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.33725490196078434" green="0.52156862745098043" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnAlarmOnIcon"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="mnAlarmOffIcon"/>
                                         <connections>
                                             <action selector="gotoNotification:" destination="F2j-jY-Fns" eventType="touchUpInside" id="636-gH-IaR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuJ-lK-3lz">
                                         <rect key="frame" x="276" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.33725490196078434" green="0.52156862745098043" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnMoreOnIcon"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="mnMoreOffIcon"/>
                                         <connections>
                                             <action selector="gotoMore:" destination="F2j-jY-Fns" eventType="touchUpInside" id="dCb-5W-b35"/>
                                         </connections>
@@ -50,13 +50,89 @@
                                 <rect key="frame" x="0.0" y="110" width="414" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="f6S-sk-QIj">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="103" id="f6S-sk-QIj" customClass="ReceiptListItemCell" customModule="BizplayReceipt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f6S-sk-QIj" id="G6x-yI-eOH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(주)아시아나항공" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWT-80-OmY">
+                                                    <rect key="frame" x="20" y="11" width="187" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="187" id="9rx-mZ-Uak"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12월 27일(금)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giD-yi-Kwd">
+                                                    <rect key="frame" x="20" y="39.5" width="97.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eE-5v-5x0">
+                                                    <rect key="frame" x="361" y="38" width="48" height="48"/>
+                                                    <state key="normal" image="icoSeemore"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l 기업1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ko-Ms-3kR">
+                                                    <rect key="frame" x="126" y="40" width="76" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrc-qX-urW">
+                                                    <rect key="frame" x="259" y="11" width="100" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="f7F-1t-nfO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3Z-cR-RxK">
+                                                    <rect key="frame" x="367" y="11" width="15" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출장비" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sa-fx-POx">
+                                                    <rect key="frame" x="313.5" y="39.5" width="44.5" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44.5" id="zil-vv-MOg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4eE-5v-5x0" secondAttribute="trailing" constant="5" id="25t-Yy-d8r"/>
+                                                <constraint firstItem="giD-yi-Kwd" firstAttribute="top" secondItem="TWT-80-OmY" secondAttribute="bottom" constant="8" id="9w6-le-sJo"/>
+                                                <constraint firstItem="8Ko-Ms-3kR" firstAttribute="top" secondItem="TWT-80-OmY" secondAttribute="bottom" constant="8.5" id="ETd-Ko-Dai"/>
+                                                <constraint firstItem="4eE-5v-5x0" firstAttribute="leading" secondItem="7sa-fx-POx" secondAttribute="trailing" constant="3" id="JKL-Cd-Dr1"/>
+                                                <constraint firstItem="Mrc-qX-urW" firstAttribute="top" secondItem="G6x-yI-eOH" secondAttribute="topMargin" id="MmP-ek-YBP"/>
+                                                <constraint firstItem="4eE-5v-5x0" firstAttribute="top" secondItem="G6x-yI-eOH" secondAttribute="top" constant="38" id="RYb-lC-BPk"/>
+                                                <constraint firstItem="giD-yi-Kwd" firstAttribute="leading" secondItem="G6x-yI-eOH" secondAttribute="leadingMargin" id="WIH-RY-Vyf"/>
+                                                <constraint firstItem="8Ko-Ms-3kR" firstAttribute="leading" secondItem="giD-yi-Kwd" secondAttribute="trailing" constant="8.5" id="lBi-A8-Ywm"/>
+                                                <constraint firstItem="l3Z-cR-RxK" firstAttribute="leading" secondItem="Mrc-qX-urW" secondAttribute="trailing" constant="8" id="mtO-YC-XJD"/>
+                                                <constraint firstItem="TWT-80-OmY" firstAttribute="leading" secondItem="G6x-yI-eOH" secondAttribute="leadingMargin" id="mvu-rm-ADh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="l3Z-cR-RxK" secondAttribute="trailing" constant="12" id="qkj-fd-TIc"/>
+                                                <constraint firstItem="l3Z-cR-RxK" firstAttribute="top" secondItem="G6x-yI-eOH" secondAttribute="topMargin" id="sAf-L5-O0p"/>
+                                                <constraint firstItem="7sa-fx-POx" firstAttribute="top" secondItem="l3Z-cR-RxK" secondAttribute="bottom" constant="8" id="z0L-1Z-wOw"/>
+                                                <constraint firstItem="TWT-80-OmY" firstAttribute="top" secondItem="G6x-yI-eOH" secondAttribute="topMargin" id="zFA-Bt-kFI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="rcptItemCategoryLB" destination="7sa-fx-POx" id="hL3-Pj-7ZE"/>
+                                            <outlet property="rcptItemCompanyLB" destination="8Ko-Ms-3kR" id="y6j-aZ-Ydq"/>
+                                            <outlet property="rcptItemDateLB" destination="giD-yi-Kwd" id="wWp-7F-7UL"/>
+                                            <outlet property="rcptItemPriceLB" destination="Mrc-qX-urW" id="SmY-1g-PtU"/>
+                                            <outlet property="rcptItemSeeMore" destination="4eE-5v-5x0" id="XFN-ng-fEY"/>
+                                            <outlet property="rcptItemTitleLB" destination="TWT-80-OmY" id="qmJ-xB-6yd"/>
+                                            <outlet property="rcptItemWonLB" destination="7sa-fx-POx" id="TFD-0E-Jpj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -84,12 +160,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Aq-PH-c3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6620" y="-425"/>
+            <point key="canvasLocation" x="6618.840579710145" y="-425.22321428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gXF-gL-4sJ">
+            <objects>
+                <viewController id="b6E-o0-JtP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y4O-Nx-eLL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T1F-lm-kPn">
+                                <rect key="frame" x="0.0" y="153" width="414" height="385"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="oyt-PH-oDj" kind="embed" id="GHO-0e-OEL"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="146" translatesAutoresizingMaskIntoConstraints="NO" id="sJ7-ER-Vpr">
+                                <rect key="frame" x="-1" y="44" width="415" height="58"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09t-RY-2Pf">
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="58"/>
+                                        <color key="backgroundColor" red="0.32549019610000002" green="0.51764705879999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="mnRcptOnIcon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjr-ie-VNW">
+                                        <rect key="frame" x="187" y="0.0" width="41" height="58"/>
+                                        <color key="backgroundColor" red="0.32549019610000002" green="0.51764705879999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="mnAlarmOffIcon"/>
+                                        <connections>
+                                            <action selector="gotoNotification:" destination="F2j-jY-Fns" eventType="touchUpInside" id="art-XB-SYg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bh-6a-Fle">
+                                        <rect key="frame" x="374" y="0.0" width="41" height="58"/>
+                                        <color key="backgroundColor" red="0.32549019610000002" green="0.51764705879999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="mnMoreOffIcon"/>
+                                        <connections>
+                                            <action selector="gotoMore:" destination="F2j-jY-Fns" eventType="touchUpInside" id="8ZE-K9-lEt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="MCy-L2-E4O"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ySl-Gz-JEr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rYm-Gi-2me" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7976.811594202899" y="-650.22321428571422"/>
         </scene>
         <!--My Receipt Tab Bar Controller-->
         <scene sceneID="cuk-pW-6BE">
             <objects>
-                <tabBarController storyboardIdentifier="MyReceiptTabBarController_sid" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="ILt-ni-QzW" customClass="MyReceiptTabBarController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MyReceiptTabBarController_sid" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="ILt-ni-QzW" customClass="MyReceiptTabBarController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DkM-16-Mdp">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -109,7 +239,7 @@
         <!--Item-->
         <scene sceneID="N2v-qO-Gq6">
             <objects>
-                <viewController storyboardIdentifier="NotificationViewController_sid" id="zzb-TN-8K9" customClass="NotificationViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationViewController_sid" id="zzb-TN-8K9" customClass="NotificationViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xth-CB-M2B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,21 +249,21 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVu-6P-guF">
                                         <rect key="frame" x="0.0" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnRcptOnIcon"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="mnRcptOffIcon"/>
                                         <connections>
                                             <action selector="gotoRcpt:" destination="zzb-TN-8K9" eventType="touchUpInside" id="gH9-jr-BXv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frm-WP-J5V">
                                         <rect key="frame" x="138" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" image="mnAlarmOnIcon"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdO-j3-frf">
                                         <rect key="frame" x="276" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnMoreOnIcon"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="mnMoreOffIcon"/>
                                         <connections>
                                             <action selector="gotoMore:" destination="zzb-TN-8K9" eventType="touchUpInside" id="r7c-9o-cWc"/>
                                         </connections>
@@ -167,7 +297,7 @@
         <!--Item-->
         <scene sceneID="Svx-kF-Phu">
             <objects>
-                <viewController storyboardIdentifier="MoreViewController_sid" id="dtO-lm-tcf" customClass="MoreViewController" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreViewController_sid" id="dtO-lm-tcf" customClass="MoreViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q6y-2v-VRv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,23 +307,23 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-8h-XAW">
                                         <rect key="frame" x="0.0" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnRcptOnIcon"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="mnRcptOffIcon"/>
                                         <connections>
                                             <action selector="gotoRcpt:" destination="dtO-lm-tcf" eventType="touchUpInside" id="4a0-wl-mJs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXH-dr-sRh">
                                         <rect key="frame" x="138" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnAlarmOnIcon"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="mnAlarmOffIcon"/>
                                         <connections>
                                             <action selector="gotoNotification:" destination="dtO-lm-tcf" eventType="touchUpInside" id="aEJ-rd-umC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-iN-8jw">
                                         <rect key="frame" x="276" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" image="mnMoreOnIcon"/>
                                     </button>
                                 </subviews>
@@ -222,10 +352,29 @@
             </objects>
             <point key="canvasLocation" x="6557" y="673"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="bZz-5J-1st">
+            <objects>
+                <viewController id="oyt-PH-oDj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5oQ-bv-kGe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="385"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4Gg-5m-gYm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J7Q-gI-p2k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8996" y="-650"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="icoSeemore" width="24" height="24"/>
+        <image name="mnAlarmOffIcon" width="41" height="41"/>
         <image name="mnAlarmOnIcon" width="41" height="41"/>
+        <image name="mnMoreOffIcon" width="41" height="41"/>
         <image name="mnMoreOnIcon" width="41" height="41"/>
+        <image name="mnRcptOffIcon" width="41" height="41"/>
         <image name="mnRcptOnIcon" width="41" height="41"/>
     </resources>
 </document>

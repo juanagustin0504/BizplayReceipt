@@ -1,19 +1,19 @@
 {
   "images" : [
     {
+      "filename" : "mnMoreOffIcon.png",
       "idiom" : "universal",
-      "filename" : "mnAlarmOnIcon.png",
       "scale" : "1x"
     },
     {
-      "filename" : "mnAlarmOnIcon@2x.png",
       "scale" : "2x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "mnMoreOffIcon@2x.png"
     },
     {
-      "filename" : "mnAlarmOnIcon@3x.png",
+      "idiom" : "universal",
       "scale" : "3x",
-      "idiom" : "universal"
+      "filename" : "mnMoreOffIcon@3x.png"
     }
   ],
   "info" : {

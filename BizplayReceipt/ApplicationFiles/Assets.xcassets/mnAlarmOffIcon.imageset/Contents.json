@@ -3,17 +3,17 @@
     {
       "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "mnMoreOnIcon.png"
+      "filename" : "mnAlarmOffIcon.png"
     },
     {
+      "filename" : "mnAlarmOffIcon@2x.png",
       "idiom" : "universal",
-      "filename" : "mnMoreOnIcon@2x.png",
       "scale" : "2x"
     },
     {
       "scale" : "3x",
-      "filename" : "mnMoreOnIcon@3x.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "mnAlarmOffIcon@3x.png"
     }
   ],
   "info" : {
