@@ -107,7 +107,7 @@
         <!--Ect Receipt Popup-->
         <scene sceneID="KPl-Ep-Cgh">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="xsu-9E-err" customClass="EctReceiptPopup" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EctReceiptPopup_sid" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="xsu-9E-err" customClass="EctReceiptPopup" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mz8-08-B8U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +122,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nz-I6-MSE">
-                                        <rect key="frame" x="-9" y="52" width="393" height="1"/>
+                                        <rect key="frame" x="0.0" y="52" width="374" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사진만 먼저 촬영하여 보관하거나,  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ty-s4-0zS">
@@ -147,6 +147,9 @@
                                         <state key="normal" title="사진촬영">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCamera:" destination="xsu-9E-err" eventType="touchUpInside" id="qzU-HV-wUc"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigCameraIcon" translatesAutoresizingMaskIntoConstraints="NO" id="36t-kZ-PxY">
                                         <rect key="frame" x="66" y="172" width="72" height="64"/>
@@ -162,6 +165,9 @@
                                         <state key="normal" title="영수증작성">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onNewRcpt:" destination="xsu-9E-err" eventType="touchUpInside" id="f1H-EF-q7b"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newRcptIcon" translatesAutoresizingMaskIntoConstraints="NO" id="sui-4T-FiZ">
                                         <rect key="frame" x="237" y="165" width="69" height="77"/>
@@ -177,12 +183,12 @@
                                     <constraint firstItem="CyC-gw-l6u" firstAttribute="leading" secondItem="58W-yl-uL6" secondAttribute="leading" constant="40" id="BcG-JG-Fkk"/>
                                     <constraint firstItem="6nz-I6-MSE" firstAttribute="top" secondItem="9QU-Kc-MEA" secondAttribute="bottom" constant="17" id="DJf-Xh-SfX"/>
                                     <constraint firstAttribute="bottom" secondItem="RvN-Qj-b8q" secondAttribute="bottom" constant="25" id="JBg-Fc-daw"/>
-                                    <constraint firstItem="6nz-I6-MSE" firstAttribute="leading" secondItem="58W-yl-uL6" secondAttribute="leading" constant="-9" id="PXf-0O-jap"/>
+                                    <constraint firstItem="6nz-I6-MSE" firstAttribute="leading" secondItem="58W-yl-uL6" secondAttribute="leading" id="PXf-0O-jap"/>
                                     <constraint firstAttribute="trailing" secondItem="9QU-Kc-MEA" secondAttribute="trailing" constant="251" id="aq8-0N-oKt"/>
                                     <constraint firstAttribute="bottom" secondItem="Yo7-fe-h5a" secondAttribute="bottom" constant="166" id="cgs-B4-0fA"/>
                                     <constraint firstAttribute="bottom" secondItem="CyC-gw-l6u" secondAttribute="bottom" constant="25" id="ddq-Ec-Lbx"/>
                                     <constraint firstItem="9Ty-s4-0zS" firstAttribute="top" secondItem="6nz-I6-MSE" secondAttribute="bottom" constant="32" id="eJP-ea-egY"/>
-                                    <constraint firstAttribute="trailing" secondItem="6nz-I6-MSE" secondAttribute="trailing" constant="-10" id="gt1-MC-ubN"/>
+                                    <constraint firstAttribute="trailing" secondItem="6nz-I6-MSE" secondAttribute="trailing" id="gt1-MC-ubN"/>
                                     <constraint firstItem="9Ty-s4-0zS" firstAttribute="leading" secondItem="58W-yl-uL6" secondAttribute="leading" constant="82" id="he4-wP-aTY"/>
                                     <constraint firstAttribute="trailing" secondItem="Yo7-fe-h5a" secondAttribute="trailing" constant="99" id="li3-Qk-erG"/>
                                     <constraint firstAttribute="trailing" secondItem="RvN-Qj-b8q" secondAttribute="trailing" constant="40" id="m8S-kY-bZn"/>
@@ -192,7 +198,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="58W-yl-uL6" firstAttribute="leading" secondItem="zHM-1m-dta" secondAttribute="leading" constant="20" id="p3n-TL-E5g"/>
                             <constraint firstItem="58W-yl-uL6" firstAttribute="centerY" secondItem="mz8-08-B8U" secondAttribute="centerY" id="tXJ-N1-WbA"/>

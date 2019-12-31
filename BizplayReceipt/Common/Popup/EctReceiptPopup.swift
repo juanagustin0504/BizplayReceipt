@@ -18,9 +18,16 @@ class EctReceiptPopup: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        
     }
     
-
+    @IBAction func onCamera(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func onNewRcpt(_ sender: UIButton) {
+        // 영수증 작성으로 이동
+    }
     /*
     // MARK: - Navigation
 

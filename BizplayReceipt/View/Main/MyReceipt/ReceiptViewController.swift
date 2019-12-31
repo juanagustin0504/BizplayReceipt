@@ -32,6 +32,10 @@ class ReceiptViewController: UIViewController {
         changeTitle("나의 영수증")
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.dismiss(animated: true)
+    }
+    
     @IBAction func gotoRcpt(_ sender: UIButton) {
         myRcptVC.isHidden = false
         notificationVC.isHidden = true
@@ -66,6 +70,14 @@ class ReceiptViewController: UIViewController {
         btnMore.setImage(UIImage(named: "mnMoreOnIcon"), for: .normal)
         
         changeTitle("더보기")
+    }
+    
+    @IBAction func ectRcptPopup(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            let popupSb = UIStoryboard(name: "PopupSB", bundle: nil)
+            let ectRcptVc = popupSb.instantiateViewController(withIdentifier: "EctReceiptPopup_sid") as! EctReceiptPopup
+            self.present(ectRcptVc, animated: true, completion: nil)
+        }
     }
     
     public func changeTitle(_ title: String?) {

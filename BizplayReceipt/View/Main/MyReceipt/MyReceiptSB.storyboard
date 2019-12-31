@@ -67,6 +67,17 @@
                                     <segue destination="gi1-M3-Uuf" kind="embed" id="6CI-R2-e1P"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmB-gn-N3S">
+                                <rect key="frame" x="314" y="762" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Js7-uF-7rU"/>
+                                    <constraint firstAttribute="width" constant="80" id="L6m-Pu-8rR"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="btnFloatingNewRcpt"/>
+                                <connections>
+                                    <action selector="ectRcptPopup:" destination="qk8-vS-bI3" eventType="touchUpInside" id="eU0-pS-YkK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -79,7 +90,9 @@
                             <constraint firstItem="8H3-Ie-dV5" firstAttribute="trailing" secondItem="FCr-zN-e21" secondAttribute="trailing" id="RnD-TR-Y88"/>
                             <constraint firstItem="kEs-w7-xtk" firstAttribute="top" secondItem="8H3-Ie-dV5" secondAttribute="top" id="Uvx-Ou-As4"/>
                             <constraint firstItem="8H3-Ie-dV5" firstAttribute="trailing" secondItem="kEs-w7-xtk" secondAttribute="trailing" id="Vga-TJ-psP"/>
+                            <constraint firstItem="8H3-Ie-dV5" firstAttribute="trailing" secondItem="CmB-gn-N3S" secondAttribute="trailing" constant="20" id="ZKe-xf-8yP"/>
                             <constraint firstItem="8H3-Ie-dV5" firstAttribute="trailing" secondItem="gd8-VF-C9m" secondAttribute="trailing" id="bkc-5b-FQX"/>
+                            <constraint firstItem="8H3-Ie-dV5" firstAttribute="bottom" secondItem="CmB-gn-N3S" secondAttribute="bottom" constant="20" id="eiT-hI-ZJt"/>
                             <constraint firstItem="kEs-w7-xtk" firstAttribute="leading" secondItem="8H3-Ie-dV5" secondAttribute="leading" id="gXH-8V-orV"/>
                             <constraint firstItem="8H3-Ie-dV5" firstAttribute="bottom" secondItem="FCr-zN-e21" secondAttribute="bottom" id="kU8-8l-yFL"/>
                             <constraint firstItem="8H3-Ie-dV5" firstAttribute="bottom" secondItem="gd8-VF-C9m" secondAttribute="bottom" id="lVY-E2-HmX"/>
@@ -329,6 +342,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btnFloatingNewRcpt" width="80" height="80"/>
         <image name="icoSeemore" width="24" height="24"/>
         <image name="mnAlarmOffIcon" width="41" height="41"/>
         <image name="mnMoreOffIcon" width="41" height="41"/>
