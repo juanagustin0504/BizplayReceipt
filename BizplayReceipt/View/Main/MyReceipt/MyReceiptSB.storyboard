@@ -9,45 +9,152 @@
     </dependencies>
     <scenes>
         <!--Item-->
-        <scene sceneID="nFL-qE-gAH">
+        <scene sceneID="ppy-wF-nwZ">
             <objects>
-                <viewController storyboardIdentifier="MyReceiptViewController_sid" id="F2j-jY-Fns" customClass="MyReceiptViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aF3-iT-n2z">
+                <viewController storyboardIdentifier="ReceiptViewController_sid" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qk8-vS-bI3" customClass="ReceiptViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gBU-qB-8Ql">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Nvt-4A-o5e">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kEs-w7-xtk">
                                 <rect key="frame" x="0.0" y="44" width="414" height="58"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8X-X6-nxb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx0-BD-JGJ">
                                         <rect key="frame" x="0.0" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.32549019610000002" green="0.51764705879999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" image="mnRcptOnIcon"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6P-Fv-CBQ">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnAlarmOffIcon"/>
                                         <connections>
-                                            <action selector="gotoNotification:" destination="F2j-jY-Fns" eventType="touchUpInside" id="636-gH-IaR"/>
+                                            <action selector="gotoRcpt:" destination="qk8-vS-bI3" eventType="touchUpInside" id="zRZ-mQ-GR4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuJ-lK-3lz">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsf-TI-7Yr">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="58"/>
+                                        <color key="backgroundColor" red="0.32549019610000002" green="0.51764705879999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="mnAlarmOffIcon"/>
+                                        <connections>
+                                            <action selector="gotoAlarm:" destination="qk8-vS-bI3" eventType="touchUpInside" id="ycI-VG-tyf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Od-9n-vzx">
                                         <rect key="frame" x="276" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.32549019610000002" green="0.51764705879999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" image="mnMoreOffIcon"/>
                                         <connections>
-                                            <action selector="gotoMore:" destination="F2j-jY-Fns" eventType="touchUpInside" id="dCb-5W-b35"/>
+                                            <action selector="gotoMore:" destination="qk8-vS-bI3" eventType="touchUpInside" id="3xI-qq-PB1"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="eci-ho-9rM"/>
+                                    <constraint firstAttribute="height" constant="58" id="TqK-b1-gOH"/>
                                 </constraints>
                             </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3t-tz-NpG">
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
+                                <connections>
+                                    <segue destination="soD-9t-vth" kind="embed" id="pcb-hi-RfR"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gd8-VF-C9m">
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
+                                <connections>
+                                    <segue destination="mq4-7O-nWT" kind="embed" id="hBN-Et-17n"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCr-zN-e21">
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
+                                <connections>
+                                    <segue destination="gi1-M3-Uuf" kind="embed" id="6CI-R2-e1P"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FCr-zN-e21" firstAttribute="leading" secondItem="8H3-Ie-dV5" secondAttribute="leading" id="0Rk-7K-R7S"/>
+                            <constraint firstItem="FCr-zN-e21" firstAttribute="top" secondItem="kEs-w7-xtk" secondAttribute="bottom" constant="8" symbolic="YES" id="7dz-zY-IuV"/>
+                            <constraint firstItem="gd8-VF-C9m" firstAttribute="leading" secondItem="8H3-Ie-dV5" secondAttribute="leading" id="Fi4-az-P1a"/>
+                            <constraint firstItem="Q3t-tz-NpG" firstAttribute="leading" secondItem="8H3-Ie-dV5" secondAttribute="leading" id="OZB-81-07b"/>
+                            <constraint firstItem="Q3t-tz-NpG" firstAttribute="trailing" secondItem="8H3-Ie-dV5" secondAttribute="trailing" id="QHF-G0-QLG"/>
+                            <constraint firstItem="Q3t-tz-NpG" firstAttribute="bottom" secondItem="8H3-Ie-dV5" secondAttribute="bottom" id="QTv-3K-hTf"/>
+                            <constraint firstItem="8H3-Ie-dV5" firstAttribute="trailing" secondItem="FCr-zN-e21" secondAttribute="trailing" id="RnD-TR-Y88"/>
+                            <constraint firstItem="kEs-w7-xtk" firstAttribute="top" secondItem="8H3-Ie-dV5" secondAttribute="top" id="Uvx-Ou-As4"/>
+                            <constraint firstItem="8H3-Ie-dV5" firstAttribute="trailing" secondItem="kEs-w7-xtk" secondAttribute="trailing" id="Vga-TJ-psP"/>
+                            <constraint firstItem="8H3-Ie-dV5" firstAttribute="trailing" secondItem="gd8-VF-C9m" secondAttribute="trailing" id="bkc-5b-FQX"/>
+                            <constraint firstItem="kEs-w7-xtk" firstAttribute="leading" secondItem="8H3-Ie-dV5" secondAttribute="leading" id="gXH-8V-orV"/>
+                            <constraint firstItem="8H3-Ie-dV5" firstAttribute="bottom" secondItem="FCr-zN-e21" secondAttribute="bottom" id="kU8-8l-yFL"/>
+                            <constraint firstItem="8H3-Ie-dV5" firstAttribute="bottom" secondItem="gd8-VF-C9m" secondAttribute="bottom" id="lVY-E2-HmX"/>
+                            <constraint firstItem="Q3t-tz-NpG" firstAttribute="top" secondItem="kEs-w7-xtk" secondAttribute="bottom" constant="8" symbolic="YES" id="oqy-SE-vDz"/>
+                            <constraint firstItem="gd8-VF-C9m" firstAttribute="top" secondItem="kEs-w7-xtk" secondAttribute="bottom" constant="8" symbolic="YES" id="pig-a7-fON"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8H3-Ie-dV5"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="VeK-wI-Q8A"/>
+                    <navigationItem key="navigationItem" id="TMG-MV-ART"/>
+                    <connections>
+                        <outlet property="btnAlarm" destination="xsf-TI-7Yr" id="eCd-sS-pgE"/>
+                        <outlet property="btnMore" destination="8Od-9n-vzx" id="ft3-mD-GNs"/>
+                        <outlet property="btnRcpt" destination="Zx0-BD-JGJ" id="cnt-kE-dP3"/>
+                        <outlet property="moreVC" destination="FCr-zN-e21" id="XlR-sq-1aN"/>
+                        <outlet property="myRcptVC" destination="Q3t-tz-NpG" id="aUR-dP-yw0"/>
+                        <outlet property="notificationVC" destination="gd8-VF-C9m" id="roo-rY-YjZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aii-Z3-xOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5505.7971014492759" y="-248.4375"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="6Hw-YU-bV9">
+            <objects>
+                <viewController storyboardIdentifier="NotificationViewController_sid" id="mq4-7O-nWT" customClass="NotificationViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UGQ-gH-gtf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="752"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xq7-lZ-0mq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xq7-lZ-0mq" secondAttribute="trailing" id="62V-lp-EYr"/>
+                            <constraint firstItem="xq7-lZ-0mq" firstAttribute="top" secondItem="UGQ-gH-gtf" secondAttribute="top" id="9M8-4M-NPx"/>
+                            <constraint firstItem="xq7-lZ-0mq" firstAttribute="leading" secondItem="UGQ-gH-gtf" secondAttribute="leading" id="KYT-9F-OL0"/>
+                            <constraint firstAttribute="bottom" secondItem="xq7-lZ-0mq" secondAttribute="bottom" id="TPY-ec-mbt"/>
+                            <constraint firstItem="xq7-lZ-0mq" firstAttribute="centerX" secondItem="UGQ-gH-gtf" secondAttribute="centerX" id="w1R-8P-kXP"/>
+                            <constraint firstItem="xq7-lZ-0mq" firstAttribute="centerY" secondItem="UGQ-gH-gtf" secondAttribute="centerY" id="ymv-Tq-a1a"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ky-tu-5Oq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6618.840579710145" y="134.59821428571428"/>
+        </scene>
+        <!--More View Controller-->
+        <scene sceneID="vxR-zq-9Ll">
+            <objects>
+                <viewController storyboardIdentifier="MoreViewController_sid" id="gi1-M3-Uuf" customClass="MoreViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gvh-2r-zfH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="752"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YUH-xe-CD3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5504" y="509"/>
+        </scene>
+        <!--My Receipt View Controller-->
+        <scene sceneID="BEQ-HY-2qf">
+            <objects>
+                <viewController storyboardIdentifier="MyReceiptViewController_sid" id="soD-9t-vth" customClass="MyReceiptViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="80s-ay-0di">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="752"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kgw-5i-QL2">
-                                <rect key="frame" x="0.0" y="110" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="103" id="f6S-sk-QIj" customClass="ReceiptListItemCell" customModule="BizplayReceipt" customModuleProvider="target">
@@ -206,173 +313,25 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Kgw-5i-QL2" firstAttribute="trailing" secondItem="CLw-Dy-1V7" secondAttribute="trailing" id="0go-mg-he9"/>
-                            <constraint firstItem="Nvt-4A-o5e" firstAttribute="top" secondItem="CLw-Dy-1V7" secondAttribute="top" id="4um-mS-iPL"/>
-                            <constraint firstItem="Kgw-5i-QL2" firstAttribute="top" secondItem="Nvt-4A-o5e" secondAttribute="bottom" constant="8" symbolic="YES" id="9Uc-7Q-hgy"/>
-                            <constraint firstItem="Nvt-4A-o5e" firstAttribute="leading" secondItem="CLw-Dy-1V7" secondAttribute="leading" id="9hj-zB-5zc"/>
-                            <constraint firstItem="Kgw-5i-QL2" firstAttribute="leading" secondItem="CLw-Dy-1V7" secondAttribute="leading" id="bl3-DV-BdX"/>
-                            <constraint firstItem="Kgw-5i-QL2" firstAttribute="bottom" secondItem="CLw-Dy-1V7" secondAttribute="bottom" id="jtT-ar-Vgu"/>
-                            <constraint firstItem="CLw-Dy-1V7" firstAttribute="trailing" secondItem="Nvt-4A-o5e" secondAttribute="trailing" id="uVS-GE-DKq"/>
+                            <constraint firstItem="Kgw-5i-QL2" firstAttribute="trailing" secondItem="MEh-Co-bPz" secondAttribute="trailing" id="1r6-Nu-vGV"/>
+                            <constraint firstItem="Kgw-5i-QL2" firstAttribute="bottom" secondItem="MEh-Co-bPz" secondAttribute="bottom" id="5oX-ci-ZJf"/>
+                            <constraint firstItem="Kgw-5i-QL2" firstAttribute="leading" secondItem="MEh-Co-bPz" secondAttribute="leading" id="H2c-KY-k4O"/>
+                            <constraint firstItem="Kgw-5i-QL2" firstAttribute="centerY" secondItem="80s-ay-0di" secondAttribute="centerY" id="YyB-wV-aJh"/>
+                            <constraint firstItem="Kgw-5i-QL2" firstAttribute="top" secondItem="80s-ay-0di" secondAttribute="top" id="s3C-8o-biv"/>
+                            <constraint firstItem="Kgw-5i-QL2" firstAttribute="centerX" secondItem="80s-ay-0di" secondAttribute="centerX" id="seU-MJ-30i"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="CLw-Dy-1V7"/>
+                        <viewLayoutGuide key="safeArea" id="MEh-Co-bPz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="h2B-LJ-nva"/>
-                    <navigationItem key="navigationItem" id="UmY-PE-GOh"/>
-                    <connections>
-                        <outlet property="btnAlarm" destination="C6P-Fv-CBQ" id="Hb5-Lm-Dz9"/>
-                        <outlet property="btnMore" destination="kuJ-lK-3lz" id="Yjp-rh-hW5"/>
-                        <outlet property="btnRcpt" destination="p8X-X6-nxb" id="kKX-t1-ciT"/>
-                        <outlet property="myRcptTableView" destination="Kgw-5i-QL2" id="I0g-ax-dqP"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Aq-PH-c3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5O-ve-VNi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6618.840579710145" y="-425.22321428571428"/>
-        </scene>
-        <!--My Receipt Tab Bar Controller-->
-        <scene sceneID="cuk-pW-6BE">
-            <objects>
-                <tabBarController storyboardIdentifier="MyReceiptTabBarController_sid" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="ILt-ni-QzW" customClass="MyReceiptTabBarController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DkM-16-Mdp">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="F2j-jY-Fns" kind="relationship" relationship="viewControllers" id="kaT-Sl-qnJ"/>
-                        <segue destination="zzb-TN-8K9" kind="relationship" relationship="viewControllers" id="hL0-bP-CGM"/>
-                        <segue destination="dtO-lm-tcf" kind="relationship" relationship="viewControllers" id="npx-iM-vGF"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c5j-N3-O29" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5528.985507246377" y="116.51785714285714"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="N2v-qO-Gq6">
-            <objects>
-                <viewController storyboardIdentifier="NotificationViewController_sid" id="zzb-TN-8K9" customClass="NotificationViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xth-CB-M2B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1sP-v1-p0W">
-                                <rect key="frame" x="0.0" y="44" width="414" height="58"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVu-6P-guF">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnRcptOffIcon"/>
-                                        <connections>
-                                            <action selector="gotoRcpt:" destination="zzb-TN-8K9" eventType="touchUpInside" id="gH9-jr-BXv"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frm-WP-J5V">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnAlarmOnIcon"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdO-j3-frf">
-                                        <rect key="frame" x="276" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnMoreOffIcon"/>
-                                        <connections>
-                                            <action selector="gotoMore:" destination="zzb-TN-8K9" eventType="touchUpInside" id="r7c-9o-cWc"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="M0h-yV-5wJ"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Y8C-q4-zEq" firstAttribute="trailing" secondItem="1sP-v1-p0W" secondAttribute="trailing" id="Icd-qE-qBz"/>
-                            <constraint firstItem="1sP-v1-p0W" firstAttribute="leading" secondItem="Y8C-q4-zEq" secondAttribute="leading" id="WaN-bQ-v1c"/>
-                            <constraint firstItem="1sP-v1-p0W" firstAttribute="top" secondItem="Y8C-q4-zEq" secondAttribute="top" id="reK-bw-ob1"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Y8C-q4-zEq"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="L2N-Ht-jLy"/>
-                    <navigationItem key="navigationItem" id="LMx-xz-iB8"/>
-                    <connections>
-                        <outlet property="btnAlarm" destination="Frm-WP-J5V" id="FEw-rf-FN2"/>
-                        <outlet property="btnMore" destination="BdO-j3-frf" id="x9N-YT-bBr"/>
-                        <outlet property="btnRcpt" destination="eVu-6P-guF" id="jmO-it-i8W"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DgI-8f-OPL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7673.9130434782619" y="116.51785714285714"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="Svx-kF-Phu">
-            <objects>
-                <viewController storyboardIdentifier="MoreViewController_sid" id="dtO-lm-tcf" customClass="MoreViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Q6y-2v-VRv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2ab-PT-Eiv">
-                                <rect key="frame" x="0.0" y="44" width="414" height="58"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-8h-XAW">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnRcptOffIcon"/>
-                                        <connections>
-                                            <action selector="gotoRcpt:" destination="dtO-lm-tcf" eventType="touchUpInside" id="4a0-wl-mJs"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXH-dr-sRh">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnAlarmOffIcon"/>
-                                        <connections>
-                                            <action selector="gotoNotification:" destination="dtO-lm-tcf" eventType="touchUpInside" id="aEJ-rd-umC"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-iN-8jw">
-                                        <rect key="frame" x="276" y="0.0" width="138" height="58"/>
-                                        <color key="backgroundColor" red="0.32549019607843138" green="0.51764705882352935" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" image="mnMoreOnIcon"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="tIg-CH-r9d"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="2ab-PT-Eiv" firstAttribute="top" secondItem="a9B-o1-Anh" secondAttribute="top" id="1f1-2G-DCR"/>
-                            <constraint firstItem="a9B-o1-Anh" firstAttribute="trailing" secondItem="2ab-PT-Eiv" secondAttribute="trailing" id="85u-C8-R9J"/>
-                            <constraint firstItem="2ab-PT-Eiv" firstAttribute="leading" secondItem="a9B-o1-Anh" secondAttribute="leading" id="VOl-om-Eif"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="a9B-o1-Anh"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="9jI-Ff-PdF"/>
-                    <navigationItem key="navigationItem" id="1gJ-e8-eJY"/>
-                    <connections>
-                        <outlet property="btnAlarm" destination="UXH-dr-sRh" id="Bo3-u6-5lU"/>
-                        <outlet property="btnMore" destination="0Xc-iN-8jw" id="qcw-qj-NdP"/>
-                        <outlet property="btnRcpt" destination="uoZ-8h-XAW" id="FJ7-DI-DcT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4VI-4P-1ns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6557" y="673"/>
+            <point key="canvasLocation" x="6618.840579710145" y="-540.40178571428567"/>
         </scene>
     </scenes>
     <resources>
         <image name="icoSeemore" width="24" height="24"/>
         <image name="mnAlarmOffIcon" width="41" height="41"/>
-        <image name="mnAlarmOnIcon" width="41" height="41"/>
         <image name="mnMoreOffIcon" width="41" height="41"/>
-        <image name="mnMoreOnIcon" width="41" height="41"/>
-        <image name="mnRcptOffIcon" width="41" height="41"/>
         <image name="mnRcptOnIcon" width="41" height="41"/>
     </resources>
 </document>

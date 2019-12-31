@@ -10,10 +10,6 @@ import UIKit
 
 class MoreViewController: UIViewController {
     
-    @IBOutlet weak var btnRcpt: UIButton!
-    @IBOutlet weak var btnAlarm: UIButton!
-    @IBOutlet weak var btnMore: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,14 +17,7 @@ class MoreViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        tabBarController?.changeTitle("더보기")
+//        tabBarController?.changeTitle("더보기")
     }
     
-    @IBAction func gotoRcpt(_ sender: UIButton) {
-        tabBarController?.selectedIndex = 0
-    }
-    
-    @IBAction func gotoNotification(_ sender: UIButton) {
-        tabBarController?.selectedIndex = 1
-    }
 }

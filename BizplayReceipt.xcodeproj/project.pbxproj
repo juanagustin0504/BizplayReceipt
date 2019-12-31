@@ -13,6 +13,7 @@
 		76454CF823B07F1C00E4A1DF /* CompanyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76454CF723B07F1C00E4A1DF /* CompanyCustomCell.swift */; };
 		764D4D5723B20B3600F1E2F1 /* WENavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D4D5623B20B3600F1E2F1 /* WENavigationController.swift */; };
 		7659AED623A9E19C00AFF5A0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */; };
+		767AC96923BACF0700B85135 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC96823BACF0700B85135 /* ReceiptViewController.swift */; };
 		769C23F523A74F8200D92396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769C23F423A74F8200D92396 /* AppDelegate.swift */; };
 		769C23FC23A74F8200D92396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769C23FA23A74F8200D92396 /* Main.storyboard */; };
 		769C23FE23A74F8300D92396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769C23FD23A74F8300D92396 /* Assets.xcassets */; };
@@ -38,7 +39,6 @@
 		76C09FB023A77C1F0015AA42 /* PWSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C09FAF23A77C1F0015AA42 /* PWSearchViewController.swift */; };
 		76D0B97923B1ECE90002410E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B97823B1ECE90002410E /* NotificationViewController.swift */; };
 		76D0B97B23B1ECFE0002410E /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B97A23B1ECFE0002410E /* MoreViewController.swift */; };
-		76D0B97D23B1F3BD0002410E /* MyReceiptTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B97C23B1F3BD0002410E /* MyReceiptTabBarController.swift */; };
 		F45D07C05B421EF21BCA972D /* Pods_BizplayReceipt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D643558C25618C56A7C62FA /* Pods_BizplayReceipt.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +52,7 @@
 		76454CF723B07F1C00E4A1DF /* CompanyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCustomCell.swift; sourceTree = "<group>"; };
 		764D4D5623B20B3600F1E2F1 /* WENavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WENavigationController.swift; sourceTree = "<group>"; };
 		7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = BizplayReceipt/View/Main/IntroViewController.swift; sourceTree = SOURCE_ROOT; };
+		767AC96823BACF0700B85135 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		769C23F123A74F8200D92396 /* BizplayReceipt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizplayReceipt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		769C23F423A74F8200D92396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		769C23FB23A74F8200D92396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		76C09FAF23A77C1F0015AA42 /* PWSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWSearchViewController.swift; sourceTree = "<group>"; };
 		76D0B97823B1ECE90002410E /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		76D0B97A23B1ECFE0002410E /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		76D0B97C23B1F3BD0002410E /* MyReceiptTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReceiptTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,8 +214,8 @@
 		76D0B97E23B1FB750002410E /* MyReceipt */ = {
 			isa = PBXGroup;
 			children = (
-				76D0B97C23B1F3BD0002410E /* MyReceiptTabBarController.swift */,
 				76A48A1E23B1E9D400C18958 /* MyReceiptSB.storyboard */,
+				767AC96823BACF0700B85135 /* ReceiptViewController.swift */,
 				7604001823B5EB1C00705CB7 /* ReceiptListItemCell.swift */,
 				76C09F9D23A75AD00015AA42 /* MyReceiptViewController.swift */,
 				76D0B97823B1ECE90002410E /* NotificationViewController.swift */,
@@ -352,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76C09FA023A7648B0015AA42 /* CustomFont.swift in Sources */,
+				767AC96923BACF0700B85135 /* ReceiptViewController.swift in Sources */,
 				76A07BB923A9DE0700CFB20B /* MGModel.swift in Sources */,
 				76A07BBA23A9DE0700CFB20B /* MGViewModel.swift in Sources */,
 				76454CF423B07DCA00E4A1DF /* CompanySelectionPopup.swift in Sources */,
@@ -373,7 +374,6 @@
 				769C240F23A7514E00D92396 /* LoginViewController.swift in Sources */,
 				76C09FAE23A7764C0015AA42 /* IDSearchViewController.swift in Sources */,
 				76A07BC823A9DE3D00CFB20B /* Response.swift in Sources */,
-				76D0B97D23B1F3BD0002410E /* MyReceiptTabBarController.swift in Sources */,
 				769C23F523A74F8200D92396 /* AppDelegate.swift in Sources */,
 				76A07BC523A9DE3D00CFB20B /* DataAccess.swift in Sources */,
 				7659AED623A9E19C00AFF5A0 /* IntroViewController.swift in Sources */,
