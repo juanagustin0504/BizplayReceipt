@@ -24,6 +24,7 @@ class ReceiptListItemCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        setLabelStyle()
     }
     
     func setLabelStyle() {
@@ -33,9 +34,6 @@ class ReceiptListItemCell: UITableViewCell {
         self.rcptItemPriceLB.font = .rcptItemPrice
         self.rcptItemWonLB.font = .rcptItemPrice
         self.rcptItemCategoryLB.font = .rcptListCategory
-        
-        self.photoSaveTitleLB.font = .rcptListTitle
-        self.photoSaveDateLB.font = .rcptListDate
         
         self.rcptItemPriceLB.textColor = .dodgerBlue
         self.rcptItemWonLB.textColor = .dodgerBlue

@@ -25,8 +25,8 @@ class LoginViewModel {
                 if data.RSLT_CD == "0000" {
                     // 정상처리 //
                     //Saving header value
-                    ShareInstance.manager.BIZ_NO = data.RESP_DATA.REC[0].BIZ_NO
-                    ShareInstance.manager.USE_INTT_ID = data.RESP_DATA.REC[0].USE_INTT_ID
+                    ShareInstance.manager.BIZ_NO = data.RESP_DATA!.REC[0].BIZ_NO
+                    ShareInstance.manager.USE_INTT_ID = data.RESP_DATA!.REC[0].USE_INTT_ID
                     self.SCMS_METC_R001_Response = data.RESP_DATA
                     completionHandler(nil)
                 } else if data.RSLT_CD == "1999" {

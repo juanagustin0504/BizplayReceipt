@@ -14,5 +14,5 @@ struct Response<T: Decodable> : Decodable {
     let API_SEQ_NO: String?
     let RESP_DATE: String?
     let RESP_TIME: String?
-    let RESP_DATA: T
+    let RESP_DATA: T?
 }

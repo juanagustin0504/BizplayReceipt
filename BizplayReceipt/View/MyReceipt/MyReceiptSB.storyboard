@@ -170,7 +170,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="103" id="f6S-sk-QIj" customClass="ReceiptListItemCell" customModule="BizplayReceipt" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell_1" rowHeight="103" id="f6S-sk-QIj" customClass="ReceiptListItemCell" customModule="BizplayReceipt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f6S-sk-QIj" id="G6x-yI-eOH">
@@ -254,7 +254,7 @@
                                             <outlet property="rcptItemWonLB" destination="l3Z-cR-RxK" id="Bbp-Jl-jUa"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="125" id="Ohv-Pn-bRI" customClass="ReceiptListItemCell" customModule="BizplayReceipt" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell_2" rowHeight="125" id="Ohv-Pn-bRI" customClass="PhotoSaveCell" customModule="BizplayReceipt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="131" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ohv-Pn-bRI" id="oJ1-JN-Lcg">
@@ -335,6 +335,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MEh-Co-bPz"/>
                     </view>
+                    <connections>
+                        <outlet property="myRcptTableView" destination="Kgw-5i-QL2" id="LQU-Qp-oaT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5O-ve-VNi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
