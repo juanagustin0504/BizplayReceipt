@@ -14,6 +14,7 @@
 		764D4D5723B20B3600F1E2F1 /* WENavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D4D5623B20B3600F1E2F1 /* WENavigationController.swift */; };
 		7659AED623A9E19C00AFF5A0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */; };
 		767AC96923BACF0700B85135 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC96823BACF0700B85135 /* ReceiptViewController.swift */; };
+		767AC96D23BAE29900B85135 /* EctReceiptPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC96C23BAE29900B85135 /* EctReceiptPopup.swift */; };
 		769C23F523A74F8200D92396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769C23F423A74F8200D92396 /* AppDelegate.swift */; };
 		769C23FC23A74F8200D92396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769C23FA23A74F8200D92396 /* Main.storyboard */; };
 		769C23FE23A74F8300D92396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769C23FD23A74F8300D92396 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		764D4D5623B20B3600F1E2F1 /* WENavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WENavigationController.swift; sourceTree = "<group>"; };
 		7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = BizplayReceipt/View/Main/IntroViewController.swift; sourceTree = SOURCE_ROOT; };
 		767AC96823BACF0700B85135 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
+		767AC96C23BAE29900B85135 /* EctReceiptPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EctReceiptPopup.swift; sourceTree = "<group>"; };
 		769C23F123A74F8200D92396 /* BizplayReceipt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizplayReceipt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		769C23F423A74F8200D92396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		769C23FB23A74F8200D92396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				76454CF323B07DCA00E4A1DF /* CompanySelectionPopup.swift */,
 				76454CF523B07DDA00E4A1DF /* PopupSB.storyboard */,
 				76454CF723B07F1C00E4A1DF /* CompanyCustomCell.swift */,
+				767AC96C23BAE29900B85135 /* EctReceiptPopup.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				76C09FA023A7648B0015AA42 /* CustomFont.swift in Sources */,
 				767AC96923BACF0700B85135 /* ReceiptViewController.swift in Sources */,
 				76A07BB923A9DE0700CFB20B /* MGModel.swift in Sources */,
+				767AC96D23BAE29900B85135 /* EctReceiptPopup.swift in Sources */,
 				76A07BBA23A9DE0700CFB20B /* MGViewModel.swift in Sources */,
 				76454CF423B07DCA00E4A1DF /* CompanySelectionPopup.swift in Sources */,
 				76A07BC923A9DE3D00CFB20B /* ShareInstance.swift in Sources */,

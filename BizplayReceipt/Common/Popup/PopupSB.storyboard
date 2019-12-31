@@ -11,7 +11,7 @@
         <!--Company Selection Popup-->
         <scene sceneID="EDj-q7-8eR">
             <objects>
-                <viewController storyboardIdentifier="CompanySelectionPopup_sid" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="x72-Et-zse" customClass="CompanySelectionPopup" customModule="비플_영수증" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompanySelectionPopup_sid" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="x72-Et-zse" customClass="CompanySelectionPopup" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7pX-rU-S7L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                                         <rect key="frame" x="20" y="66" width="310" height="193"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="company_selection_cell" rowHeight="64" id="Lqq-SM-PZ4" customClass="CompanyCustomCell" customModule="비플_영수증" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="company_selection_cell" rowHeight="64" id="Lqq-SM-PZ4" customClass="CompanyCustomCell" customModule="BizplayReceipt" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="310" height="64"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lqq-SM-PZ4" id="35Z-mL-s8p">
@@ -104,5 +104,114 @@
             </objects>
             <point key="canvasLocation" x="-255.07246376811597" y="128.57142857142856"/>
         </scene>
+        <!--Ect Receipt Popup-->
+        <scene sceneID="KPl-Ep-Cgh">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="xsu-9E-err" customClass="EctReceiptPopup" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mz8-08-B8U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58W-yl-uL6">
+                                <rect key="frame" x="20" y="302.5" width="374" height="291"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기타영수증등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QU-Kc-MEA">
+                                        <rect key="frame" x="20" y="14" width="103" height="21"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <color key="textColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nz-I6-MSE">
+                                        <rect key="frame" x="-9" y="52" width="393" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사진만 먼저 촬영하여 보관하거나,  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ty-s4-0zS">
+                                        <rect key="frame" x="82" y="85" width="211" height="16"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영수증을 바로 등록할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yo7-fe-h5a">
+                                        <rect key="frame" x="100" y="109" width="175" height="16"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyC-gw-l6u">
+                                        <rect key="frame" x="40" y="141" width="125" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="9Mi-oT-Duh"/>
+                                            <constraint firstAttribute="width" constant="125" id="RkV-4N-Zsh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                        <state key="normal" title="사진촬영">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigCameraIcon" translatesAutoresizingMaskIntoConstraints="NO" id="36t-kZ-PxY">
+                                        <rect key="frame" x="66" y="172" width="72" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvN-Qj-b8q">
+                                        <rect key="frame" x="209" y="141" width="125" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="DGh-Nv-wjf"/>
+                                            <constraint firstAttribute="height" constant="125" id="TUl-jq-3AS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                        <state key="normal" title="영수증작성">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newRcptIcon" translatesAutoresizingMaskIntoConstraints="NO" id="sui-4T-FiZ">
+                                        <rect key="frame" x="237" y="165" width="69" height="77"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9Ty-s4-0zS" secondAttribute="trailing" constant="81" id="1b3-rV-Iwl"/>
+                                    <constraint firstItem="Yo7-fe-h5a" firstAttribute="leading" secondItem="58W-yl-uL6" secondAttribute="leading" constant="100" id="5Br-IR-UIG"/>
+                                    <constraint firstAttribute="height" constant="291" id="6J0-9X-VEK"/>
+                                    <constraint firstItem="9QU-Kc-MEA" firstAttribute="top" secondItem="58W-yl-uL6" secondAttribute="top" constant="14" id="6Vp-gm-yEg"/>
+                                    <constraint firstItem="CyC-gw-l6u" firstAttribute="leading" secondItem="58W-yl-uL6" secondAttribute="leading" constant="40" id="BcG-JG-Fkk"/>
+                                    <constraint firstItem="6nz-I6-MSE" firstAttribute="top" secondItem="9QU-Kc-MEA" secondAttribute="bottom" constant="17" id="DJf-Xh-SfX"/>
+                                    <constraint firstAttribute="bottom" secondItem="RvN-Qj-b8q" secondAttribute="bottom" constant="25" id="JBg-Fc-daw"/>
+                                    <constraint firstItem="6nz-I6-MSE" firstAttribute="leading" secondItem="58W-yl-uL6" secondAttribute="leading" constant="-9" id="PXf-0O-jap"/>
+                                    <constraint firstAttribute="trailing" secondItem="9QU-Kc-MEA" secondAttribute="trailing" constant="251" id="aq8-0N-oKt"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yo7-fe-h5a" secondAttribute="bottom" constant="166" id="cgs-B4-0fA"/>
+                                    <constraint firstAttribute="bottom" secondItem="CyC-gw-l6u" secondAttribute="bottom" constant="25" id="ddq-Ec-Lbx"/>
+                                    <constraint firstItem="9Ty-s4-0zS" firstAttribute="top" secondItem="6nz-I6-MSE" secondAttribute="bottom" constant="32" id="eJP-ea-egY"/>
+                                    <constraint firstAttribute="trailing" secondItem="6nz-I6-MSE" secondAttribute="trailing" constant="-10" id="gt1-MC-ubN"/>
+                                    <constraint firstItem="9Ty-s4-0zS" firstAttribute="leading" secondItem="58W-yl-uL6" secondAttribute="leading" constant="82" id="he4-wP-aTY"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yo7-fe-h5a" secondAttribute="trailing" constant="99" id="li3-Qk-erG"/>
+                                    <constraint firstAttribute="trailing" secondItem="RvN-Qj-b8q" secondAttribute="trailing" constant="40" id="m8S-kY-bZn"/>
+                                    <constraint firstItem="9QU-Kc-MEA" firstAttribute="leading" secondItem="58W-yl-uL6" secondAttribute="leading" constant="20" id="o4U-HL-DMk"/>
+                                    <constraint firstAttribute="bottom" secondItem="9QU-Kc-MEA" secondAttribute="bottom" constant="256" id="u3j-B0-Yja"/>
+                                    <constraint firstItem="Yo7-fe-h5a" firstAttribute="top" secondItem="9Ty-s4-0zS" secondAttribute="bottom" constant="8" id="wJe-Pe-xQf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="58W-yl-uL6" firstAttribute="leading" secondItem="zHM-1m-dta" secondAttribute="leading" constant="20" id="p3n-TL-E5g"/>
+                            <constraint firstItem="58W-yl-uL6" firstAttribute="centerY" secondItem="mz8-08-B8U" secondAttribute="centerY" id="tXJ-N1-WbA"/>
+                            <constraint firstItem="zHM-1m-dta" firstAttribute="trailing" secondItem="58W-yl-uL6" secondAttribute="trailing" constant="20" id="ye7-mx-FZL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zHM-1m-dta"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnCamera" destination="CyC-gw-l6u" id="GPE-0D-oab"/>
+                        <outlet property="btnNewRcpt" destination="RvN-Qj-b8q" id="HU1-AM-sxb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4wU-iU-tiT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656.52173913043487" y="128.57142857142856"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="bigCameraIcon" width="56" height="50"/>
+        <image name="newRcptIcon" width="53" height="59"/>
+    </resources>
 </document>
