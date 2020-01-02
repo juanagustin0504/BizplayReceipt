@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol NewReceiptDelegate: class {
+    func kindOfNewReceipt(kind: String)
+}
+
 class EctReceiptPopup: UIViewController {
 
     @IBOutlet weak var btnCamera: UIButton!
     @IBOutlet weak var btnNewRcpt: UIButton!
+    
+    weak var delegate: NewReceiptDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +28,17 @@ class EctReceiptPopup: UIViewController {
     }
     
     @IBAction func onCamera(_ sender: UIButton) {
-        
+        // 카메라 열기 //
+        self.dismiss(animated: true) {
+            self.delegate?.kindOfNewReceipt(kind: "Camera")
+        }
     }
     
     @IBAction func onNewRcpt(_ sender: UIButton) {
         // 영수증 작성으로 이동
+        self.dismiss(animated: true) {
+            self.delegate?.kindOfNewReceipt(kind: "Receipt")
+        }
     }
     /*
     // MARK: - Navigation

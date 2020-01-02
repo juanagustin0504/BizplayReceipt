@@ -138,11 +138,36 @@
                             <constraint firstItem="xq7-lZ-0mq" firstAttribute="centerX" secondItem="UGQ-gH-gtf" secondAttribute="centerX" id="w1R-8P-kXP"/>
                             <constraint firstItem="xq7-lZ-0mq" firstAttribute="centerY" secondItem="UGQ-gH-gtf" secondAttribute="centerY" id="ymv-Tq-a1a"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="b9U-dk-cR2"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ky-tu-5Oq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6618.840579710145" y="134.59821428571428"/>
+        </scene>
+        <!--Fill Out Receipt View Controller-->
+        <scene sceneID="eVx-Wi-bWb">
+            <objects>
+                <viewController storyboardIdentifier="FillOutReceiptViewController_sid" id="Iai-9K-o8i" customClass="FillOutReceiptViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Age-M5-yDN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="영수증 작성" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tx-VT-fcJ">
+                                <rect key="frame" x="168" y="283" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="rHl-oj-LjM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9V-qp-1ir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7684.057971014493" y="-248.4375"/>
         </scene>
         <!--More View Controller-->
         <scene sceneID="vxR-zq-9Ll">
@@ -152,6 +177,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="752"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vIx-VR-WMS"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUH-xe-CD3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

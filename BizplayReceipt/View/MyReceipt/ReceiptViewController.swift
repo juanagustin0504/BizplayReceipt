@@ -18,6 +18,7 @@ class ReceiptViewController: UIViewController {
     @IBOutlet weak var btnAlarm: UIButton!
     @IBOutlet weak var btnMore: UIButton!
     
+    let inputItemSettingViewModel = InputItemSettingViewModel()
     
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
@@ -30,10 +31,6 @@ class ReceiptViewController: UIViewController {
         removeLineNavigationBar()
         self.navigationItem.hidesBackButton = true
         changeTitle("나의 영수증")
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.dismiss(animated: true)
     }
     
     @IBAction func gotoRcpt(_ sender: UIButton) {
@@ -76,6 +73,7 @@ class ReceiptViewController: UIViewController {
         DispatchQueue.main.async {
             let popupSb = UIStoryboard(name: "PopupSB", bundle: nil)
             let ectRcptVc = popupSb.instantiateViewController(withIdentifier: "EctReceiptPopup_sid") as! EctReceiptPopup
+            ectRcptVc.delegate = self
             self.present(ectRcptVc, animated: true, completion: nil)
         }
     }
@@ -96,5 +94,40 @@ class ReceiptViewController: UIViewController {
         self.navigationController?.navigationBar.backgroundColor = UIColor(red: 66/255, green: 134/255, blue: 245/255, alpha: 1)
         self.navigationController?.navigationBar.tintColor = UIColor.clear//UIColor(red: 66/255, green: 134/255, blue: 245/255, alpha: 1) //UIColor(hexString: "F5F5F5")
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 66/255, green: 134/255, blue: 245/255, alpha: 1) //UIColor(hexString: "F5F5F5")
+    }
+    
+    public func gotoNewReceipt() {
+        let myRcptSb = UIStoryboard(name: "MyReceiptSB", bundle: nil)
+        let fillOutReceiptVc = myRcptSb.instantiateViewController(withIdentifier: "FillOutReceiptViewController_sid")
+        self.navigationController?.pushViewController(fillOutReceiptVc, animated: true)
+    }
+    
+    public func gotoCamera() {
+        
+    }
+    
+    func inputItemSetting() {
+        inputItemSettingViewModel.requestInputItemSetting() { (error) in
+            if error == nil {
+//                let data = self.inputItemSettingViewModel.responseData?.RESP_DATA
+//                print(data ?? "data is nil")
+            } else {
+                DispatchQueue.main.async {
+                    self.alertMessage(title: "알림", message: error?.localizedDescription, action: nil)
+                }
+            }
+        }
+    }
+    
+}
+
+extension ReceiptViewController: NewReceiptDelegate {
+    func kindOfNewReceipt(kind: String) {
+        if kind == "Receipt" {
+            self.inputItemSetting()
+            self.gotoNewReceipt()
+        } else if kind == "Camera" {
+            self.gotoCamera()
+        }
     }
 }

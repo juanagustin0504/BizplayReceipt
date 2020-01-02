@@ -13,12 +13,13 @@
 		76454CF823B07F1C00E4A1DF /* CompanyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76454CF723B07F1C00E4A1DF /* CompanyCustomCell.swift */; };
 		764D4D5723B20B3600F1E2F1 /* WENavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D4D5623B20B3600F1E2F1 /* WENavigationController.swift */; };
 		7659AED623A9E19C00AFF5A0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */; };
+		7660181923BD7CD900BA3BEF /* FillOutReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7660181823BD7CD900BA3BEF /* FillOutReceiptViewController.swift */; };
+		7660181D23BDA4C300BA3BEF /* InputItemSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7660181C23BDA4C300BA3BEF /* InputItemSettingViewController.swift */; };
 		767AC96923BACF0700B85135 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC96823BACF0700B85135 /* ReceiptViewController.swift */; };
 		767AC96D23BAE29900B85135 /* EctReceiptPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC96C23BAE29900B85135 /* EctReceiptPopup.swift */; };
 		767AC96F23BB1E1600B85135 /* PhotoSaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC96E23BB1E1600B85135 /* PhotoSaveCell.swift */; };
 		767AC97423BB24AC00B85135 /* InputItemSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC97323BB24AC00B85135 /* InputItemSettingModel.swift */; };
 		767AC97623BB25B900B85135 /* InputItemSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC97523BB25B900B85135 /* InputItemSettingViewModel.swift */; };
-		767AC97823BB29B400B85135 /* InputItemSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC97723BB29B400B85135 /* InputItemSettingViewController.swift */; };
 		767AC97B23BB2BC500B85135 /* ReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC97A23BB2BC500B85135 /* ReceiptModel.swift */; };
 		767AC97E23BB2CEB00B85135 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC97D23BB2CEB00B85135 /* ReceiptViewModel.swift */; };
 		769C23F523A74F8200D92396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769C23F423A74F8200D92396 /* AppDelegate.swift */; };
@@ -59,12 +60,13 @@
 		76454CF723B07F1C00E4A1DF /* CompanyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCustomCell.swift; sourceTree = "<group>"; };
 		764D4D5623B20B3600F1E2F1 /* WENavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WENavigationController.swift; sourceTree = "<group>"; };
 		7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = BizplayReceipt/View/Main/IntroViewController.swift; sourceTree = SOURCE_ROOT; };
+		7660181823BD7CD900BA3BEF /* FillOutReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillOutReceiptViewController.swift; sourceTree = "<group>"; };
+		7660181C23BDA4C300BA3BEF /* InputItemSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputItemSettingViewController.swift; sourceTree = "<group>"; };
 		767AC96823BACF0700B85135 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		767AC96C23BAE29900B85135 /* EctReceiptPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EctReceiptPopup.swift; sourceTree = "<group>"; };
 		767AC96E23BB1E1600B85135 /* PhotoSaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSaveCell.swift; sourceTree = "<group>"; };
 		767AC97323BB24AC00B85135 /* InputItemSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputItemSettingModel.swift; sourceTree = "<group>"; };
 		767AC97523BB25B900B85135 /* InputItemSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputItemSettingViewModel.swift; sourceTree = "<group>"; };
-		767AC97723BB29B400B85135 /* InputItemSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputItemSettingViewController.swift; sourceTree = "<group>"; };
 		767AC97A23BB2BC500B85135 /* ReceiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptModel.swift; sourceTree = "<group>"; };
 		767AC97D23BB2CEB00B85135 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
 		769C23F123A74F8200D92396 /* BizplayReceipt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizplayReceipt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,12 +130,20 @@
 			path = Popup;
 			sourceTree = "<group>";
 		};
+		7660181723BD7C9200BA3BEF /* FillOutReceipt */ = {
+			isa = PBXGroup;
+			children = (
+				7660181823BD7CD900BA3BEF /* FillOutReceiptViewController.swift */,
+			);
+			path = FillOutReceipt;
+			sourceTree = "<group>";
+		};
 		767AC97223BB245C00B85135 /* ReceiptSetting */ = {
 			isa = PBXGroup;
 			children = (
 				767AC97323BB24AC00B85135 /* InputItemSettingModel.swift */,
 				767AC97523BB25B900B85135 /* InputItemSettingViewModel.swift */,
-				767AC97723BB29B400B85135 /* InputItemSettingViewController.swift */,
+				7660181C23BDA4C300BA3BEF /* InputItemSettingViewController.swift */,
 			);
 			path = ReceiptSetting;
 			sourceTree = "<group>";
@@ -192,8 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				76A07BB623A9DE0600CFB20B /* MGModel.swift */,
-				76A07BB823A9DE0700CFB20B /* MGViewController.swift */,
 				76A07BB723A9DE0700CFB20B /* MGViewModel.swift */,
+				76A07BB823A9DE0700CFB20B /* MGViewController.swift */,
 				767AC97A23BB2BC500B85135 /* ReceiptModel.swift */,
 			);
 			path = Models;
@@ -258,6 +268,7 @@
 				76D0B97A23B1ECFE0002410E /* MoreViewController.swift */,
 				764D4D5623B20B3600F1E2F1 /* WENavigationController.swift */,
 				767AC97223BB245C00B85135 /* ReceiptSetting */,
+				7660181723BD7C9200BA3BEF /* FillOutReceipt */,
 			);
 			path = MyReceipt;
 			sourceTree = "<group>";
@@ -389,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76C09FA023A7648B0015AA42 /* CustomFont.swift in Sources */,
+				7660181923BD7CD900BA3BEF /* FillOutReceiptViewController.swift in Sources */,
 				767AC96923BACF0700B85135 /* ReceiptViewController.swift in Sources */,
 				76A07BB923A9DE0700CFB20B /* MGModel.swift in Sources */,
 				767AC96D23BAE29900B85135 /* EctReceiptPopup.swift in Sources */,
@@ -406,10 +418,10 @@
 				76454CF823B07F1C00E4A1DF /* CompanyCustomCell.swift in Sources */,
 				76A07BCA23A9DE3D00CFB20B /* Request.swift in Sources */,
 				76D0B97923B1ECE90002410E /* NotificationViewController.swift in Sources */,
+				7660181D23BDA4C300BA3BEF /* InputItemSettingViewController.swift in Sources */,
 				76C09F9E23A75AD00015AA42 /* MyReceiptViewController.swift in Sources */,
 				767AC97423BB24AC00B85135 /* InputItemSettingModel.swift in Sources */,
 				76A07BC723A9DE3D00CFB20B /* DeviceInfo.swift in Sources */,
-				767AC97823BB29B400B85135 /* InputItemSettingViewController.swift in Sources */,
 				76A07BB323A9DDBA00CFB20B /* LoginModel.swift in Sources */,
 				764D4D5723B20B3600F1E2F1 /* WENavigationController.swift in Sources */,
 				76D0B97B23B1ECFE0002410E /* MoreViewController.swift in Sources */,

@@ -136,6 +136,8 @@ class DataAccess {
             // ******************************************************************************
             
             guard let dataResult = replaceString.data(using: .utf8) else { return }
+            
+            print(dataResult)
             do {
                 let responseObj = try JSONDecoder().decode(responseType, from: dataResult)
                 completion(.success(responseObj))

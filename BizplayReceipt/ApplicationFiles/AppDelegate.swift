@@ -26,5 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        newNavigationBar.navigationBar.backgroundColor = .dodgerBlue
         window?.rootViewController = newNavigationBar
     }
+    
+    func goToFillOutReceipt() {
+        let myRcptSb = UIStoryboard(name: "MyReceiptSB", bundle: nil)
+        let fillOutRcptVc = myRcptSb.instantiateViewController(withIdentifier: "FillOutReceiptViewController_sid")
+        let newNavigationBar = UINavigationController(rootViewController: fillOutRcptVc)
+        newNavigationBar.navigationBar.isTranslucent = false
+        window?.rootViewController = newNavigationBar
+    }
 
 }

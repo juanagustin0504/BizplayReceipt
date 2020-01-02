@@ -10,18 +10,35 @@ import Foundation
 
 struct InputItemSettingModel {
     
-    struct InputItemSettingRequest: Encodable { }
+    struct Request: Encodable { }
     
-    struct InputItemSettingResponse: Decodable {
-        let RESP_DATA: [InputItemSettingData]
-    }
-    
-    struct InputItemSettingData: Decodable {
-        let BZAQ_YN         : String // 사용처
-        let AMT_YN          : String // 사용금액
-        let TRSC_DTM_YN     : String // 사용일시
-        let TRAN_KIND_YN    : String // 사용용도
-        let USER_YN         : String // 사용자
+    struct Response: Decodable {
+        
+       let BZAQ_YN         : String // 사용처
+       let AMT_YN          : String // 사용금액
+       let TRSC_DTM_YN     : String // 사용일시
+       let USER_YN         : String // 사용자
+       let USE_USAG_YN     : String
+       let RESP_CD         : String
+       let RESP_MSG        : String
+           
+        /* * ---------- error mapping ---------- *
+        
+        * ----- success ----- *
+        BZAQ_YN
+        AMT_YN
+        TRSC_DTM_YN
+        USER_YN
+        
+        * ------ modify ----- *
+        TRAN_KIND_YN => USE_USAG_YN
+        
+        * ------- new ------- *
+        RESP_CD
+        RESP_MSG
+        
+        --------------------------------------- */
+        
     }
     
 }
