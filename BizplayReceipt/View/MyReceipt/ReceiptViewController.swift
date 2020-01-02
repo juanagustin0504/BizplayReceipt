@@ -106,25 +106,12 @@ class ReceiptViewController: UIViewController {
         
     }
     
-    func inputItemSetting() {
-        inputItemSettingViewModel.requestInputItemSetting() { (error) in
-            if error == nil {
-//                let data = self.inputItemSettingViewModel.responseData?.RESP_DATA
-//                print(data ?? "data is nil")
-            } else {
-                DispatchQueue.main.async {
-                    self.alertMessage(title: "알림", message: error?.localizedDescription, action: nil)
-                }
-            }
-        }
-    }
-    
 }
 
 extension ReceiptViewController: NewReceiptDelegate {
     func kindOfNewReceipt(kind: String) {
         if kind == "Receipt" {
-            self.inputItemSetting()
+//            self.inputItemSetting()
             self.gotoNewReceipt()
         } else if kind == "Camera" {
             self.gotoCamera()

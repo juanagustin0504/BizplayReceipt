@@ -153,21 +153,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="영수증 작성" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tx-VT-fcJ">
-                                <rect key="frame" x="168" y="283" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4EX-gn-SOX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Z9D-bu-tDe">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z9D-bu-tDe" id="72A-Nm-Pgo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4EX-gn-SOX" firstAttribute="top" secondItem="rHl-oj-LjM" secondAttribute="top" id="59K-cZ-X2h"/>
+                            <constraint firstItem="rHl-oj-LjM" firstAttribute="bottom" secondItem="4EX-gn-SOX" secondAttribute="bottom" id="GLW-Zu-1TP"/>
+                            <constraint firstItem="rHl-oj-LjM" firstAttribute="trailing" secondItem="4EX-gn-SOX" secondAttribute="trailing" id="QNa-EQ-E9f"/>
+                            <constraint firstItem="4EX-gn-SOX" firstAttribute="leading" secondItem="rHl-oj-LjM" secondAttribute="leading" id="r5Z-dA-g9u"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rHl-oj-LjM"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9V-qp-1ir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7684.057971014493" y="-248.4375"/>
+            <point key="canvasLocation" x="8038" y="-281"/>
         </scene>
         <!--More View Controller-->
         <scene sceneID="vxR-zq-9Ll">
@@ -189,11 +202,11 @@
             <objects>
                 <viewController storyboardIdentifier="MyReceiptViewController_sid" id="soD-9t-vth" customClass="MyReceiptViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="80s-ay-0di">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="752"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kgw-5i-QL2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="966"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell_1" rowHeight="103" id="f6S-sk-QIj" customClass="ReceiptListItemCell" customModule="BizplayReceipt" customModuleProvider="target">
@@ -347,7 +360,53 @@
                                             <outlet property="rcptItemTitleLB" destination="MFF-Qu-sVf" id="EBt-Ih-1Dr"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoReceiptCellID" rowHeight="571" id="TvI-FZ-AEP" customClass="NoReceiptCustomCell" customModule="BizplayReceipt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="256" width="414" height="571"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TvI-FZ-AEP" id="wks-7g-npj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="571"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="등록된 영수증이 없습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMt-Lw-OX1">
+                                                    <rect key="frame" x="119" y="161" width="176" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="combinedShape4" translatesAutoresizingMaskIntoConstraints="NO" id="o1B-r1-IFb">
+                                                    <rect key="frame" x="189" y="215" width="36" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="o1B-r1-IFb" secondAttribute="height" multiplier="32:41" constant="4" id="jcM-Th-DZG"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aai-aj-ASD">
+                                                    <rect key="frame" x="119.5" y="290" width="175" height="61"/>
+                                                    <string key="text" base64-UTF8="YES">
+67KE7Yq87J2EIO2BtOumre2VmOyXrCAgDQrtmozsgqzsl5Ag6rK967mE7KeA7LacIOyYgeyImOymneyd
+hCAL4oCo6rCE7Y647ZWY6rKMIOygnOy2nO2VmOyEuOyalA
+</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="o1B-r1-IFb" firstAttribute="top" secondItem="fMt-Lw-OX1" secondAttribute="bottom" constant="33" id="2oG-k8-oSN"/>
+                                                <constraint firstItem="o1B-r1-IFb" firstAttribute="centerY" secondItem="wks-7g-npj" secondAttribute="centerY" constant="-50" id="4O2-bs-OSH"/>
+                                                <constraint firstItem="fMt-Lw-OX1" firstAttribute="centerX" secondItem="o1B-r1-IFb" secondAttribute="centerX" id="4mN-Cc-FTW"/>
+                                                <constraint firstItem="o1B-r1-IFb" firstAttribute="leading" secondItem="wks-7g-npj" secondAttribute="leading" constant="189" id="6dt-OT-RiJ"/>
+                                                <constraint firstItem="Aai-aj-ASD" firstAttribute="centerX" secondItem="o1B-r1-IFb" secondAttribute="centerX" id="E0v-ol-FA4"/>
+                                                <constraint firstAttribute="trailing" secondItem="o1B-r1-IFb" secondAttribute="trailing" constant="189" id="EAG-oW-1su"/>
+                                                <constraint firstItem="Aai-aj-ASD" firstAttribute="top" secondItem="o1B-r1-IFb" secondAttribute="bottom" constant="34" id="PfH-o7-ymo"/>
+                                                <constraint firstItem="o1B-r1-IFb" firstAttribute="centerX" secondItem="wks-7g-npj" secondAttribute="centerX" id="WmT-89-lbq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="soD-9t-vth" id="hoV-8n-6TA"/>
+                                    <outlet property="delegate" destination="soD-9t-vth" id="AQw-XF-C0c"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -355,23 +414,23 @@
                             <constraint firstItem="Kgw-5i-QL2" firstAttribute="trailing" secondItem="MEh-Co-bPz" secondAttribute="trailing" id="1r6-Nu-vGV"/>
                             <constraint firstItem="Kgw-5i-QL2" firstAttribute="bottom" secondItem="MEh-Co-bPz" secondAttribute="bottom" id="5oX-ci-ZJf"/>
                             <constraint firstItem="Kgw-5i-QL2" firstAttribute="leading" secondItem="MEh-Co-bPz" secondAttribute="leading" id="H2c-KY-k4O"/>
-                            <constraint firstItem="Kgw-5i-QL2" firstAttribute="centerY" secondItem="80s-ay-0di" secondAttribute="centerY" id="YyB-wV-aJh"/>
                             <constraint firstItem="Kgw-5i-QL2" firstAttribute="top" secondItem="80s-ay-0di" secondAttribute="top" id="s3C-8o-biv"/>
-                            <constraint firstItem="Kgw-5i-QL2" firstAttribute="centerX" secondItem="80s-ay-0di" secondAttribute="centerX" id="seU-MJ-30i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MEh-Co-bPz"/>
                     </view>
+                    <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="myRcptTableView" destination="Kgw-5i-QL2" id="LQU-Qp-oaT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5O-ve-VNi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6618.840579710145" y="-540.40178571428567"/>
+            <point key="canvasLocation" x="6618.840579710145" y="-659.59821428571422"/>
         </scene>
     </scenes>
     <resources>
         <image name="btnFloatingNewRcpt" width="80" height="80"/>
+        <image name="combinedShape4" width="32" height="41"/>
         <image name="icoSeemore" width="24" height="24"/>
         <image name="mnAlarmOffIcon" width="41" height="41"/>
         <image name="mnMoreOffIcon" width="41" height="41"/>
