@@ -14,6 +14,7 @@
 		764D4D5723B20B3600F1E2F1 /* WENavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D4D5623B20B3600F1E2F1 /* WENavigationController.swift */; };
 		7659AED623A9E19C00AFF5A0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */; };
 		7660181923BD7CD900BA3BEF /* FillOutReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7660181823BD7CD900BA3BEF /* FillOutReceiptViewController.swift */; };
+		7660182023BDDFED00BA3BEF /* ReceiptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7660181F23BDDFED00BA3BEF /* ReceiptTableViewCell.swift */; };
 		767AC96923BACF0700B85135 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC96823BACF0700B85135 /* ReceiptViewController.swift */; };
 		767AC96D23BAE29900B85135 /* EctReceiptPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC96C23BAE29900B85135 /* EctReceiptPopup.swift */; };
 		767AC96F23BB1E1600B85135 /* PhotoSaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC96E23BB1E1600B85135 /* PhotoSaveCell.swift */; };
@@ -60,6 +61,7 @@
 		764D4D5623B20B3600F1E2F1 /* WENavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WENavigationController.swift; sourceTree = "<group>"; };
 		7659AED523A9E19C00AFF5A0 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = BizplayReceipt/View/Main/IntroViewController.swift; sourceTree = SOURCE_ROOT; };
 		7660181823BD7CD900BA3BEF /* FillOutReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillOutReceiptViewController.swift; sourceTree = "<group>"; };
+		7660181F23BDDFED00BA3BEF /* ReceiptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTableViewCell.swift; sourceTree = "<group>"; };
 		767AC96823BACF0700B85135 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		767AC96C23BAE29900B85135 /* EctReceiptPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EctReceiptPopup.swift; sourceTree = "<group>"; };
 		767AC96E23BB1E1600B85135 /* PhotoSaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSaveCell.swift; sourceTree = "<group>"; };
@@ -128,12 +130,20 @@
 			path = Popup;
 			sourceTree = "<group>";
 		};
+		7660181E23BDDFA200BA3BEF /* FillOutReceipt */ = {
+			isa = PBXGroup;
+			children = (
+				7660181823BD7CD900BA3BEF /* FillOutReceiptViewController.swift */,
+				7660181F23BDDFED00BA3BEF /* ReceiptTableViewCell.swift */,
+			);
+			path = FillOutReceipt;
+			sourceTree = "<group>";
+		};
 		767AC97223BB245C00B85135 /* ReceiptSetting */ = {
 			isa = PBXGroup;
 			children = (
 				767AC97323BB24AC00B85135 /* InputItemSettingModel.swift */,
 				767AC97523BB25B900B85135 /* InputItemSettingViewModel.swift */,
-				7660181823BD7CD900BA3BEF /* FillOutReceiptViewController.swift */,
 			);
 			path = ReceiptSetting;
 			sourceTree = "<group>";
@@ -258,6 +268,7 @@
 				76D0B97A23B1ECFE0002410E /* MoreViewController.swift */,
 				764D4D5623B20B3600F1E2F1 /* WENavigationController.swift */,
 				767AC97223BB245C00B85135 /* ReceiptSetting */,
+				7660181E23BDDFA200BA3BEF /* FillOutReceipt */,
 			);
 			path = MyReceipt;
 			sourceTree = "<group>";
@@ -394,6 +405,7 @@
 				76A07BB923A9DE0700CFB20B /* MGModel.swift in Sources */,
 				767AC96D23BAE29900B85135 /* EctReceiptPopup.swift in Sources */,
 				76A07BBA23A9DE0700CFB20B /* MGViewModel.swift in Sources */,
+				7660182023BDDFED00BA3BEF /* ReceiptTableViewCell.swift in Sources */,
 				767AC97623BB25B900B85135 /* InputItemSettingViewModel.swift in Sources */,
 				76454CF423B07DCA00E4A1DF /* CompanySelectionPopup.swift in Sources */,
 				76A07BC923A9DE3D00CFB20B /* ShareInstance.swift in Sources */,
