@@ -111,10 +111,21 @@ class ReceiptViewController: UIViewController {
 extension ReceiptViewController: NewReceiptDelegate {
     func kindOfNewReceipt(kind: String) {
         if kind == "Receipt" {
-//            self.inputItemSetting()
             self.gotoNewReceipt()
         } else if kind == "Camera" {
             self.gotoCamera()
         }
     }
 }
+
+///
+
+
+//reconnect(api:"001",body:obj,delegate:self)
+//
+//
+//
+//func fetchData(serverData){
+//
+//
+//}

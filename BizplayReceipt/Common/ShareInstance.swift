@@ -18,5 +18,6 @@ class ShareInstance {
     var USER_ID: String = ""
     var USE_INTT_ID: String = ""
     var BIZ_NO: String = ""
+    var COMPANY_NM: String = ""
     
 }

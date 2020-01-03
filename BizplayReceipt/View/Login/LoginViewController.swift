@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     var isAutoLogin: Bool = false               // 자동로그인 되어 있는지
     var isLoginPWSecure: Bool = false           // 비밀번호 보이게 할지 말지
     
-    let loginViewModel = LoginViewModel()
+    public let loginViewModel = LoginViewModel()
     
     // test id
     private let userIdValue = "mm0101"
