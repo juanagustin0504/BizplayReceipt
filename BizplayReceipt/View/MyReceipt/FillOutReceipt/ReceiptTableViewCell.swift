@@ -9,9 +9,6 @@
 import UIKit
 
 class UseCell: UITableViewCell {
-
-//    @IBOutlet weak var Lblusage: UILabel!
-//    @IBOutlet weak var txtContent: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,11 +22,9 @@ class UseCell: UITableViewCell {
     }
 
 }
+
 class AmountusedCell: UITableViewCell {
     
-//    @IBOutlet weak var amountLbl: UILabel!
-//    @IBOutlet weak var txtAmount: UITextField!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -42,25 +37,9 @@ class AmountusedCell: UITableViewCell {
     }
     
 }
-class ContentCell: UITableViewCell {
-    
-//    @IBOutlet weak var useUsage: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
-}
+
 class UseDateTimeCell: UITableViewCell {
-    
-//    @IBOutlet weak var dateTimeLbl: UILabel!
-//    @IBOutlet weak var dateTimeButtom: UIButton!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -73,6 +52,7 @@ class UseDateTimeCell: UITableViewCell {
         // Configure the view for the selected state
     }
 }
+
 class UsageCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -85,10 +65,23 @@ class UsageCell: UITableViewCell {
         // Configure the view for the selected state
     }
 }
-class InformationCell:UITableViewCell {
+
+class ContentCell: UITableViewCell {
     
-//    @IBOutlet weak var LblInformation: UILabel!
-//    @IBOutlet weak var TypingLbl: UILabel!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+}
+
+class InformationCell:UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -101,7 +94,8 @@ class InformationCell:UITableViewCell {
         // Configure the view for the selected state
     }
 }
-class UnusedCell:UITableViewCell {
+
+class PhotoCell:UITableViewCell {
     
 //    @IBOutlet weak var userName: UITextField!
     
@@ -115,21 +109,4 @@ class UnusedCell:UITableViewCell {
         
         // Configure the view for the selected state
     }
-}
-
-
-class ReceiptTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

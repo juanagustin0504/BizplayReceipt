@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct InputItemSettingModel {
+struct SCMS_METC_R004 {
     
     struct Request: Encodable { }
     

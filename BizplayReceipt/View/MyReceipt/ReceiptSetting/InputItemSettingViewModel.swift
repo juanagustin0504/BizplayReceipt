@@ -10,12 +10,12 @@ import Foundation
 
 class InputItemSettingViewModel {
     
-    var responseData: InputItemSettingModel.Response? = nil
+    var responseData: SCMS_METC_R004.Response? = nil
     
-    func requestInputItemSetting(completionHandler: @escaping (NSError?) -> Void) {
+    func requestSCMS_METC_R004(completionHandler: @escaping (NSError?) -> Void) {
         let apiName = "SCMS_METC_R004"
-        let reqBody = InputItemSettingModel.Request()
-        DataAccess.manager.fetch(api: apiName, body: reqBody, responseType: Response<InputItemSettingModel.Response>.self) { (result) in
+        let reqBody = SCMS_METC_R004.Request()
+        DataAccess.manager.fetch(api: apiName, body: reqBody, responseType: Response<SCMS_METC_R004.Response>.self) { (result) in
             switch result {
             case .failure(let error):
                 completionHandler(error)
