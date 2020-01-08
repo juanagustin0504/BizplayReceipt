@@ -20,12 +20,17 @@ class FillOutReceiptViewController: UIViewController {
     //                 (title : "USE_USAG_YN", placeHolder : "용도"),
     //                 (title : "USER_YN", placeHolder : "사용자"),]
     var cells = [(title : String, value : String)]()
+    var photoCell = [(title : String, value : String)]()
+    
+    var sections: [String] = ["웹케시(주)", ""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
+        
+        removeLineNavigationBar()
         
         inputItemSetting()
     }
@@ -40,7 +45,7 @@ class FillOutReceiptViewController: UIViewController {
                 self.cells.append(("USE_USAG_YN", data!.USE_USAG_YN))
                 self.cells.append(("CONTENT_YN", "Y"))
                 self.cells.append(("USER_YN", data!.USER_YN))
-                self.cells.append(("PHOTO_YN", "Y"))
+                self.photoCell.append(("PHOTO_YN", "Y"))
                 
                 self.cells = self.cells.filter {
                     $0.value == "Y"
@@ -62,19 +67,30 @@ class FillOutReceiptViewController: UIViewController {
 }
 
 extension FillOutReceiptViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section]
+    }
 }
 
 extension FillOutReceiptViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(cells.count)
-        return cells.count
-        
+        if section == 0 {
+            return cells.count
+        } else if section == 1 {
+            return 1
+        } else {
+            print(section)
+            return 0
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { // 행의 셀 //
-        let ourObj = self.cells[indexPath.row]
+        let ourObj = self.cells[indexPath.row]  
         if ourObj.title == "BZAQ_YN" {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseCell", for: indexPath) as? UseCell else {
                 return UITableViewCell()
@@ -110,6 +126,16 @@ extension FillOutReceiptViewController: UITableViewDataSource {
         } else {
             return UITableViewCell()
         }
+    }
+    
+    private func removeLineNavigationBar() {
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: ""), for: UIBarMetrics.default) //UIColor(hexString: "F5F5F5")
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 66/255, green: 134/255, blue: 245/255, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = UIColor.clear//UIColor(red: 66/255, green: 134/255, blue: 245/255, alpha: 1) //UIColor(hexString: "F5F5F5")
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 66/255, green: 134/255, blue: 245/255, alpha: 1) //UIColor(hexString: "F5F5F5")
     }
         
 }
