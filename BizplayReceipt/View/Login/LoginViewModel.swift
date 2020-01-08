@@ -61,7 +61,8 @@ class LoginViewModel {
             switch result {
             case .failure(let error):
                 completionHandler(error)
-            case .success(_):
+            case .success(let data):
+                ShareInstance.manager.USER_NM = data.RESP_DATA!.USER_NM
                 completionHandler(nil)
             }
         }

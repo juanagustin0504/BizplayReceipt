@@ -22,7 +22,10 @@ class FillOutReceiptViewController: UIViewController {
     var cells = [(title : String, value : String)]()
     var photoCell = [(title : String, value : String)]()
     
-    var sections: [String] = ["웹케시(주)", ""]
+    @IBOutlet weak var companyNm: UILabel!
+    @IBOutlet weak var userNm: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +48,6 @@ class FillOutReceiptViewController: UIViewController {
                 self.cells.append(("USE_USAG_YN", data!.USE_USAG_YN))
                 self.cells.append(("CONTENT_YN", "Y"))
                 self.cells.append(("USER_YN", data!.USER_YN))
-                self.photoCell.append(("PHOTO_YN", "Y"))
                 
                 self.cells = self.cells.filter {
                     $0.value == "Y"
@@ -64,33 +66,26 @@ class FillOutReceiptViewController: UIViewController {
             }
         }
     }
+    
+    func settingUserInfo() {
+        companyNm.text = ShareInstance.manager.COMPANY_NM
+    }
+    
 }
 
 extension FillOutReceiptViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section]
-    }
+    
 }
 
 extension FillOutReceiptViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return cells.count
-        } else if section == 1 {
-            return 1
-        } else {
-            print(section)
-            return 0
-        }
+        return cells.count
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { // 행의 셀 //
-        let ourObj = self.cells[indexPath.row]  
+        let ourObj = self.cells[indexPath.row]
         if ourObj.title == "BZAQ_YN" {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseCell", for: indexPath) as? UseCell else {
                 return UITableViewCell()
@@ -117,10 +112,6 @@ extension FillOutReceiptViewController: UITableViewDataSource {
             return cell
         } else if ourObj.title == "USER_YN" {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "InformationCell", for: indexPath) as? InformationCell else {
-                return UITableViewCell() }
-            return cell
-        } else if ourObj.title == "PHOTO_YN" {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as? PhotoCell else {
                 return UITableViewCell() }
             return cell
         } else {
