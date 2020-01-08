@@ -58,12 +58,13 @@ class LoginViewController: UIViewController {
         self.btnAutoLogin.setImage(UIImage(named: "chkboxOffIcon"), for: .normal)
         txtLoginID.clearButtonMode = .whileEditing
         // ------------------------------------------------------------------------ //
-        if let userId = UserDefaults.standard.string(forKey: "id"), let pwd = UserDefaults.standard.string(forKey: "pwd"), let bizNo = UserDefaults.standard.string(forKey: "biz_no") {
-            txtLoginID.text = userId
-            txtLoginPW.text = pwd
+        if let userId = UserDefaults.standard.string(forKey: "id"), let pwd = UserDefaults.standard.string(forKey: "pwd"), let bizNo = UserDefaults.standard.string(forKey: "biz_no"), let bizNm = UserDefaults.standard.string(forKey: "biz_nm") {
+            txtLoginID.text               = userId
+            txtLoginPW.text               = pwd
             onClickAutoLogin(btnAutoLogin)
             ShareInstance.manager.USER_ID = userId
-            ShareInstance.manager.BIZ_NO = bizNo
+            ShareInstance.manager.BIZ_NM  = bizNm
+            ShareInstance.manager.BIZ_NO  = bizNo
             requestLoginWithBizNo()
         }
         
@@ -148,6 +149,7 @@ class LoginViewController: UIViewController {
                         UserDefaults.standard.set(self.txtLoginID.text, forKey: "id")
                         UserDefaults.standard.set(self.txtLoginPW.text, forKey: "pwd")
                         UserDefaults.standard.set(ShareInstance.manager.BIZ_NO, forKey: "biz_no")
+                        UserDefaults.standard.set(ShareInstance.manager.BIZ_NM, forKey: "biz_nm")
                     }
                     
                     
@@ -174,7 +176,8 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: CompanySelectionPopupDelegate {
-    func didSelectCompany(bizNo: String) {
+    func didSelectCompany(bizNm: String, bizNo: String) {
+        ShareInstance.manager.BIZ_NM = bizNm
         ShareInstance.manager.BIZ_NO = bizNo
         self.requestLoginWithBizNo()
     }

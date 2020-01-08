@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CompanySelectionPopupDelegate: class {
-    func didSelectCompany(bizNo: String)
+    func didSelectCompany(bizNm: String, bizNo: String)
 }
 
 class CompanySelectionPopup: UIViewController {
@@ -48,9 +48,10 @@ extension CompanySelectionPopup: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let bizNm = serverData?[indexPath.row].BIZ_NM
         let bizNo = serverData?[indexPath.row].BIZ_NO
         self.dismiss(animated: true) {
-            self.delegate?.didSelectCompany(bizNo: (bizNo ?? ""))
+            self.delegate?.didSelectCompany(bizNm: (bizNm ?? ""), bizNo: (bizNo ?? ""))
         }
     }
     

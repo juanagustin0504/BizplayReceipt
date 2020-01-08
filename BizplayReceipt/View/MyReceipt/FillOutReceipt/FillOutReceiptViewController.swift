@@ -36,6 +36,7 @@ class FillOutReceiptViewController: UIViewController {
         removeLineNavigationBar()
         
         inputItemSetting()
+        settingUserInfo()
     }
     
     func inputItemSetting() {
@@ -68,7 +69,8 @@ class FillOutReceiptViewController: UIViewController {
     }
     
     func settingUserInfo() {
-        companyNm.text = ShareInstance.manager.COMPANY_NM
+        companyNm.text = ShareInstance.manager.BIZ_NM
+        userNm.text    = ShareInstance.manager.USER_NM
     }
     
 }
