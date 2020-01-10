@@ -311,8 +311,11 @@
                                                         <constraint firstAttribute="height" constant="34" id="Nz4-uR-vuq"/>
                                                     </constraints>
                                                     <state key="normal" image="icoSeemore"/>
+                                                    <connections>
+                                                        <action selector="showDatePickerPopup:" destination="Iai-9K-o8i" eventType="touchUpInside" id="E1x-79-umO"/>
+                                                    </connections>
                                                 </button>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="DatePicker를 이용한 날짜 표시 예정" placeholder="경비를 사용한 사용처를 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-UE-fa4">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="날짜를 선택해주세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-UE-fa4">
                                                     <rect key="frame" x="100" y="5.5" width="262" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="262" id="Q2t-Ga-eUD"/>
@@ -351,6 +354,9 @@
                                                         <constraint firstAttribute="width" constant="24" id="ccG-GT-m7e"/>
                                                     </constraints>
                                                     <state key="normal" image="icoSeemore"/>
+                                                    <connections>
+                                                        <segue destination="HZY-Zh-YPI" kind="show" id="Giz-rb-6j6"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="용도를 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z7t-aw-85i">
                                                     <rect key="frame" x="100" y="5.5" width="262" height="34"/>
@@ -391,6 +397,9 @@
                                                         <constraint firstAttribute="width" constant="24" id="TuH-OP-biS"/>
                                                     </constraints>
                                                     <state key="normal" image="icoSeemore"/>
+                                                    <connections>
+                                                        <segue destination="aH8-33-wwU" kind="show" id="HVd-Lf-dag"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="내용을 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="gWb-qb-3bb">
                                                     <rect key="frame" x="100" y="5.5" width="262" height="34"/>
@@ -409,6 +418,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="gWb-qb-3bb" secondAttribute="bottom" constant="4" id="Ram-wc-tKJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="txtContent" destination="gWb-qb-3bb" id="UMV-EJ-OxQ"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InformationCell" id="OUb-CS-Re1" customClass="InformationCell" customModule="BizplayReceipt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="279.5" width="414" height="43.5"/>
@@ -469,7 +481,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9V-qp-1ir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7647.826086956522" y="-504.24107142857139"/>
+            <point key="canvasLocation" x="7558" y="-236"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="at8-3w-0cH">
+            <objects>
+                <viewController id="aH8-33-wwU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rhh-v9-BLo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="muS-0M-e8R"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ldo-0h-8CH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wh5-Y4-fRR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7558" y="558"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="36O-bQ-hSb">
+            <objects>
+                <viewController id="HZY-Zh-YPI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3eq-oS-Slb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cQk-2V-695"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gBg-D0-7t5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ClC-4Y-eZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8458" y="183"/>
         </scene>
         <!--More View Controller-->
         <scene sceneID="vxR-zq-9Ll">

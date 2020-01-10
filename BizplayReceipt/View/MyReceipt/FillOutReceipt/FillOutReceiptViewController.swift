@@ -68,6 +68,13 @@ class FillOutReceiptViewController: UIViewController {
         }
     }
     
+    @IBAction func showDatePickerPopup(_ sender: UIButton) {
+        let popupSb = UIStoryboard(name: "PopupSB", bundle: nil)
+        let datePickerVc = popupSb.instantiateViewController(withIdentifier: "DatePickerPopup_sid")
+        self.present(datePickerVc, animated: true)
+    }
+    
+    
     func settingUserInfo() {
         companyNm.text = ShareInstance.manager.BIZ_NM
         userNm.text    = ShareInstance.manager.USER_NM

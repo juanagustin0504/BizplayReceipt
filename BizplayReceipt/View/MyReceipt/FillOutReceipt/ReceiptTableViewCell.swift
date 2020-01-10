@@ -68,6 +68,9 @@ class UsageCell: UITableViewCell {
 
 class ContentCell: UITableViewCell {
     
+    @IBOutlet weak var txtContent: UITextField!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
