@@ -53,13 +53,6 @@ class UseDateTimeCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-    
-    @IBAction func showDatePickerPopup(_ sender: UIButton) {
-//        let popupSb = UIStoryboard(name: "PopupSB", bundle: nil)
-//        let datePickerVc = popupSb.instantiateViewController(withIdentifier: "DatePickerPopup_sid")
-//        self.present(datePickerVc, animated: true)
-    }
-    
 }
 
 class UsageCell: UITableViewCell {

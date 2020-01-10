@@ -312,7 +312,7 @@
                                                     </constraints>
                                                     <state key="normal" image="icoSeemore"/>
                                                     <connections>
-                                                        <action selector="showDatePickerPopup:" destination="MI8-CR-I6t" eventType="touchUpInside" id="QbZ-QL-6LI"/>
+                                                        <action selector="presentDatePopup:" destination="Iai-9K-o8i" eventType="touchUpInside" id="hif-ga-mZF"/>
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="날짜를 선택해주세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-UE-fa4">

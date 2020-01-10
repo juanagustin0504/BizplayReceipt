@@ -73,6 +73,12 @@ class FillOutReceiptViewController: UIViewController {
         userNm.text    = ShareInstance.manager.USER_NM
     }
     
+    @IBAction func presentDatePopup(_ sender: UIButton) {
+        let vc = self.PopupVC(storyboard: "PopupSB", identifier: "DatePickerPopup_sid")
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true )
+    }
 }
 
 extension FillOutReceiptViewController: UITableViewDelegate {
@@ -131,4 +137,11 @@ extension FillOutReceiptViewController: UITableViewDataSource {
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 66/255, green: 134/255, blue: 245/255, alpha: 1) //UIColor(hexString: "F5F5F5")
     }
         
+}
+
+extension UIViewController {
+    func PopupVC(storyboard: String, identifier: String) -> UIViewController {
+        let vc = UIStoryboard(name: storyboard, bundle: nil).instantiateViewController(withIdentifier: identifier)
+        return vc
+    }
 }
