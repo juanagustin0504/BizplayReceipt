@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol DatePickerPopupDelegate: class {
+    func saveDate(dateTime: String)
+}
+
 class DatePickerPopup: UIViewController {
+    
+    var dateTime: String = ""
+    var delegate: DatePickerPopupDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +28,13 @@ class DatePickerPopup: UIViewController {
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy년 MM월 DD일 HH:mm"
-        let result = formatter.string(from: datePicker.date)
-        print(result)
+        dateTime = formatter.string(from: datePicker.date)
     }
     
-    
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        self.delegate?.saveDate(dateTime: self.dateTime)
+        self.dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

@@ -312,7 +312,7 @@
                                                     </constraints>
                                                     <state key="normal" image="icoSeemore"/>
                                                     <connections>
-                                                        <action selector="showDatePickerPopup:" destination="Iai-9K-o8i" eventType="touchUpInside" id="E1x-79-umO"/>
+                                                        <action selector="showDatePickerPopup:" destination="MI8-CR-I6t" eventType="touchUpInside" id="QbZ-QL-6LI"/>
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="날짜를 선택해주세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-UE-fa4">
@@ -332,6 +332,10 @@
                                                 <constraint firstAttribute="bottom" secondItem="dUH-UE-fa4" secondAttribute="bottom" constant="4" id="yAG-sU-GSm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnDate" destination="7Xl-hk-eu2" id="Wdz-1v-8PN"/>
+                                            <outlet property="lblDate" destination="dUH-UE-fa4" id="fRh-pU-Qm3"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UsageCell" id="mjY-5r-0ZB" customClass="UsageCell" customModule="BizplayReceipt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="192.5" width="414" height="43.5"/>
@@ -481,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9V-qp-1ir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7558" y="-236"/>
+            <point key="canvasLocation" x="7557.971014492754" y="-236.38392857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="at8-3w-0cH">

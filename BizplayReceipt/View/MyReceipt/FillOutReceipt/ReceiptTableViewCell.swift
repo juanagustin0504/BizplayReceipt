@@ -40,6 +40,8 @@ class AmountusedCell: UITableViewCell {
 
 class UseDateTimeCell: UITableViewCell {
 
+    @IBOutlet weak var lblDate: UITextField!
+    @IBOutlet weak var btnDate: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,6 +53,13 @@ class UseDateTimeCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+    
+    @IBAction func showDatePickerPopup(_ sender: UIButton) {
+//        let popupSb = UIStoryboard(name: "PopupSB", bundle: nil)
+//        let datePickerVc = popupSb.instantiateViewController(withIdentifier: "DatePickerPopup_sid")
+//        self.present(datePickerVc, animated: true)
+    }
+    
 }
 
 class UsageCell: UITableViewCell {
@@ -111,5 +120,11 @@ class PhotoCell:UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
+    }
+}
+
+extension UseDateTimeCell: DatePickerPopupDelegate {
+    func saveDate(dateTime: String) {
+        lblDate.text = dateTime
     }
 }
