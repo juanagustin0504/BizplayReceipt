@@ -269,6 +269,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bj0-BZ-6VI"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="nCc-MR-mTu" id="PrO-vF-YnZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47D-6L-ukF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

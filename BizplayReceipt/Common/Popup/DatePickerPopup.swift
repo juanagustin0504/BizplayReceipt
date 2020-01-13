@@ -17,22 +17,25 @@ class DatePickerPopup: UIViewController {
     var dateTime: String = ""
     var delegate: DatePickerPopupDelegate?
     
+    @IBOutlet var datePicker: UIDatePicker!
+    
+    let formatter = DateFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func changeDatePicker(_ sender: UIDatePicker) {
-        let datePicker = sender
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy년 MM월 DD일 HH:mm"
+        formatter.dateFormat = "yyyy년 MM월 dd일 HH:mm"
         dateTime = formatter.string(from: datePicker.date)
     }
     
-    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        self.delegate?.saveDate(dateTime: self.dateTime)
+    @IBAction func changeDatePicker(_ sender: UIDatePicker) {
+        
+        dateTime = formatter.string(from: sender.date)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.delegate?.saveDate(dateTime: dateTime)
         self.dismiss(animated: true, completion: nil)
     }
 

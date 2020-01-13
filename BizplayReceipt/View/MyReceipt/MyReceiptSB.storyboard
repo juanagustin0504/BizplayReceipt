@@ -312,7 +312,7 @@
                                                     </constraints>
                                                     <state key="normal" image="icoSeemore"/>
                                                     <connections>
-                                                        <action selector="presentDatePopup:" destination="Iai-9K-o8i" eventType="touchUpInside" id="hif-ga-mZF"/>
+                                                        <action selector="presentDatePopup:" destination="Iai-9K-o8i" eventType="touchUpInside" id="jxR-Ib-rdg"/>
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="날짜를 선택해주세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-UE-fa4">
@@ -402,7 +402,7 @@
                                                     </constraints>
                                                     <state key="normal" image="icoSeemore"/>
                                                     <connections>
-                                                        <segue destination="aH8-33-wwU" kind="show" id="HVd-Lf-dag"/>
+                                                        <segue destination="aH8-33-wwU" kind="show" id="hs9-mg-vDK"/>
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="내용을 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="gWb-qb-3bb">
@@ -478,7 +478,9 @@
                         <viewLayoutGuide key="safeArea" id="rHl-oj-LjM"/>
                     </view>
                     <connections>
+                        <outlet property="btnPhoto" destination="Uzn-XW-QHb" id="kDQ-98-mcT"/>
                         <outlet property="companyNm" destination="Qkq-HT-6gZ" id="NoR-kp-Qfo"/>
+                        <outlet property="imageView" destination="oKB-lP-A0r" id="isv-mF-Smf"/>
                         <outlet property="tableView" destination="4EX-gn-SOX" id="tQe-sL-dVp"/>
                         <outlet property="userNm" destination="f36-vP-0ud" id="OHS-uu-99y"/>
                     </connections>
@@ -487,37 +489,78 @@
             </objects>
             <point key="canvasLocation" x="7557.971014492754" y="-236.38392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Content View Controller-->
         <scene sceneID="at8-3w-0cH">
             <objects>
-                <viewController id="aH8-33-wwU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentViewController_sid" id="aH8-33-wwU" customClass="ContentViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rhh-v9-BLo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="내용을 입력하세요." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jmM-jI-ZMm">
+                                <rect key="frame" x="20" y="20" width="374" height="788"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jmM-jI-ZMm" firstAttribute="top" secondItem="muS-0M-e8R" secondAttribute="top" constant="20" id="8dl-WD-mON"/>
+                            <constraint firstItem="jmM-jI-ZMm" firstAttribute="trailing" secondItem="muS-0M-e8R" secondAttribute="trailing" constant="-20" id="A6K-eS-0ua"/>
+                            <constraint firstItem="jmM-jI-ZMm" firstAttribute="bottom" secondItem="muS-0M-e8R" secondAttribute="bottom" id="Bkt-bi-o4S"/>
+                            <constraint firstItem="jmM-jI-ZMm" firstAttribute="leading" secondItem="muS-0M-e8R" secondAttribute="leading" constant="20" id="lEq-a8-EtT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="muS-0M-e8R"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ldo-0h-8CH"/>
+                    <connections>
+                        <outlet property="textField" destination="jmM-jI-ZMm" id="qkc-nl-Au1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wh5-Y4-fRR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7558" y="558"/>
+            <point key="canvasLocation" x="7557.971014492754" y="557.8125"/>
         </scene>
-        <!--View Controller-->
+        <!--Use Usage View Controller-->
         <scene sceneID="36O-bQ-hSb">
             <objects>
-                <viewController id="HZY-Zh-YPI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UseUsageViewController_sid" id="HZY-Zh-YPI" customClass="UseUsageViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3eq-oS-Slb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5e7-HS-mde">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bZj-SF-6yC">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bZj-SF-6yC" id="kU9-Ak-wxN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cQk-2V-695" firstAttribute="bottom" secondItem="5e7-HS-mde" secondAttribute="bottom" id="6Md-x7-zO3"/>
+                            <constraint firstItem="5e7-HS-mde" firstAttribute="top" secondItem="cQk-2V-695" secondAttribute="top" id="kad-EM-sqG"/>
+                            <constraint firstItem="cQk-2V-695" firstAttribute="trailing" secondItem="5e7-HS-mde" secondAttribute="trailing" id="xh3-Ev-ZoD"/>
+                            <constraint firstItem="5e7-HS-mde" firstAttribute="leading" secondItem="cQk-2V-695" secondAttribute="leading" id="xmz-Ha-fh5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cQk-2V-695"/>
                     </view>
                     <navigationItem key="navigationItem" id="gBg-D0-7t5"/>
+                    <connections>
+                        <outlet property="tableView" destination="5e7-HS-mde" id="fez-xx-WgD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ClC-4Y-eZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8458" y="183"/>
+            <point key="canvasLocation" x="8612" y="-236"/>
         </scene>
         <!--More View Controller-->
         <scene sceneID="vxR-zq-9Ll">

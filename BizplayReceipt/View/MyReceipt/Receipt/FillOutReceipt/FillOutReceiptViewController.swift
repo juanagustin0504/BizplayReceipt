@@ -11,6 +11,9 @@ import UIKit
 class FillOutReceiptViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var btnPhoto: UIButton!
+    
     
     let inputItemSettingViewModel = InputItemSettingViewModel()
     
@@ -74,9 +77,10 @@ class FillOutReceiptViewController: UIViewController {
     }
     
     @IBAction func presentDatePopup(_ sender: UIButton) {
-        let vc = self.PopupVC(storyboard: "PopupSB", identifier: "DatePickerPopup_sid")
+        let vc = self.PopupVC(storyboard: "PopupSB", identifier: "DatePickerPopup_sid") as! DatePickerPopup
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext
+        vc.delegate = self
         self.present(vc, animated: true )
     }
 }

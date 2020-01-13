@@ -41,7 +41,6 @@ class AmountusedCell: UITableViewCell {
 class UseDateTimeCell: UITableViewCell {
 
     @IBOutlet weak var lblDate: UITextField!
-    @IBOutlet weak var btnDate: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
