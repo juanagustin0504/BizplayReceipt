@@ -12,6 +12,9 @@ class UseUsageViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var useListCells  = [(title: String, name: String)]()
+    var useUsageCells = [(title: String, name: String)]()
+    
     let useUsageViewModel = UseUsageViewModel()
 
     override func viewDidLoad() {
@@ -27,11 +30,14 @@ class UseUsageViewController: UIViewController {
         
         useUsageViewModel.request_SCMS_METC_R005(SCH_WORD: "") { (error) in
             if error == nil {
-                
+                for i in 0 ..< self.useUsageViewModel.responseData!.USE_LIST.count {
+                    self.useListCells.append((title: self.useUsageViewModel.responseData!.USE_LIST[i].USE_USAG_CD, name: self.useUsageViewModel.responseData!.USE_LIST[i].USE_USAG_NM))
+                }
             } else {
                 
             }
         }
+        tableView.reloadData()
         
     }
     
@@ -94,6 +100,7 @@ extension UseUsageViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseListCell") as? UseListCell else {
                 return UITableViewCell()
             }
+            cell.useListNm.text = useListCells[indexPath.row].name
             return cell
         } else if indexPath.section == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseUsageCell") as? UseUsageCell else {
@@ -104,6 +111,5 @@ extension UseUsageViewController: UITableViewDataSource {
             return UITableViewCell()
         }
     }
-    
     
 }

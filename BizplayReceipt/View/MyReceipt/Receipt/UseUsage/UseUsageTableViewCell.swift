@@ -10,7 +10,7 @@ import UIKit
 
 class UseListCell: UITableViewCell {
     
-    @IBOutlet weak var useListNm: UIView!
+    @IBOutlet weak var useListNm: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,7 +26,7 @@ class UseListCell: UITableViewCell {
 
 class UseUsageCell: UITableViewCell {
     
-    @IBOutlet weak var useUsageNm: UIView!
+    @IBOutlet weak var useUsageNm: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

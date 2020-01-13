@@ -554,7 +554,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="useListNm" destination="kU9-Ak-wxN" id="ML0-nm-UIo"/>
+                                            <outlet property="useListNm" destination="lEk-9C-1AF" id="XSi-UY-2XC"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UseUsageCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Sda-kN-VFH" customClass="UseUsageCell" customModule="BizplayReceipt" customModuleProvider="target">
@@ -581,7 +581,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="useUsageNm" destination="68c-yc-wqE" id="4or-l7-j4T"/>
+                                            <outlet property="useUsageNm" destination="k9D-PQ-4tL" id="Z54-J7-oB5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
