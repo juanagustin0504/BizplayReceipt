@@ -20,6 +20,7 @@
 		7673FA5723CBF0D1008817B9 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7673FA5623CBF0D1008817B9 /* ContentViewController.swift */; };
 		7673FA5923CC30D6008817B9 /* UseUsageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7673FA5823CC30D6008817B9 /* UseUsageModel.swift */; };
 		7673FA5B23CC337F008817B9 /* UseUsageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7673FA5A23CC337F008817B9 /* UseUsageViewModel.swift */; };
+		7675A00123CC60EF00E811E0 /* UseUsageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7675A00023CC60EF00E811E0 /* UseUsageTableViewCell.swift */; };
 		767AC96923BACF0700B85135 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC96823BACF0700B85135 /* ReceiptViewController.swift */; };
 		767AC96D23BAE29900B85135 /* EctReceiptPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC96C23BAE29900B85135 /* EctReceiptPopup.swift */; };
 		767AC96F23BB1E1600B85135 /* PhotoSaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC96E23BB1E1600B85135 /* PhotoSaveCell.swift */; };
@@ -73,6 +74,7 @@
 		7673FA5623CBF0D1008817B9 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		7673FA5823CC30D6008817B9 /* UseUsageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseUsageModel.swift; sourceTree = "<group>"; };
 		7673FA5A23CC337F008817B9 /* UseUsageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseUsageViewModel.swift; sourceTree = "<group>"; };
+		7675A00023CC60EF00E811E0 /* UseUsageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseUsageTableViewCell.swift; sourceTree = "<group>"; };
 		767AC96823BACF0700B85135 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		767AC96C23BAE29900B85135 /* EctReceiptPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EctReceiptPopup.swift; sourceTree = "<group>"; };
 		767AC96E23BB1E1600B85135 /* PhotoSaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSaveCell.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				7673FA5323CBEFAD008817B9 /* UseUsageViewController.swift */,
+				7675A00023CC60EF00E811E0 /* UseUsageTableViewCell.swift */,
 			);
 			path = UseUsage;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				7660181923BD7CD900BA3BEF /* FillOutReceiptViewController.swift in Sources */,
 				767AC96923BACF0700B85135 /* ReceiptViewController.swift in Sources */,
 				7673FA5423CBEFAD008817B9 /* UseUsageViewController.swift in Sources */,
+				7675A00123CC60EF00E811E0 /* UseUsageTableViewCell.swift in Sources */,
 				76A07BB923A9DE0700CFB20B /* MGModel.swift in Sources */,
 				767AC96D23BAE29900B85135 /* EctReceiptPopup.swift in Sources */,
 				76A07BBA23A9DE0700CFB20B /* MGViewModel.swift in Sources */,

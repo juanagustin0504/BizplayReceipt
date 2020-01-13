@@ -19,17 +19,13 @@ struct SCMS_METC_R005 {
         let REC     : [REC]
         
         struct USE_LIST: Decodable {
-            let USE_USAG_CD: String = ""
-            let USE_USAG_NM: String = ""
-            
-            init() {}
+            let USE_USAG_CD: String
+            let USE_USAG_NM: String
         }
         
         struct REC: Decodable {
-            let TRAN_KIND_CD: String = ""
-            let TRAN_KIND_NM: String = ""
-            
-            init() {}
+            let TRAN_KIND_CD: String
+            let TRAN_KIND_NM: String
         }
     
     }

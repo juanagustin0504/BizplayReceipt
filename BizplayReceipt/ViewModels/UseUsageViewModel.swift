@@ -20,8 +20,6 @@ class UseUsageViewModel {
                 case .failure(let error): completion(error)
                 case .success(let resp):
                 self.responseData = resp.RESP_DATA
-                print(resp.RESP_DATA!.USE_LIST)
-                print(resp.RESP_DATA!.REC)
                 completion(nil)
             }
         }

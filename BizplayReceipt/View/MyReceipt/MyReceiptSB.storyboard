@@ -358,9 +358,6 @@
                                                         <constraint firstAttribute="width" constant="24" id="ccG-GT-m7e"/>
                                                     </constraints>
                                                     <state key="normal" image="icoSeemore"/>
-                                                    <connections>
-                                                        <segue destination="HZY-Zh-YPI" kind="show" id="Giz-rb-6j6"/>
-                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="용도를 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z7t-aw-85i">
                                                     <rect key="frame" x="100" y="5.5" width="262" height="34"/>
@@ -402,7 +399,7 @@
                                                     </constraints>
                                                     <state key="normal" image="icoSeemore"/>
                                                     <connections>
-                                                        <segue destination="aH8-33-wwU" kind="show" id="hs9-mg-vDK"/>
+                                                        <segue destination="HZY-Zh-YPI" kind="show" id="iUl-p7-Ce7"/>
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="내용을 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="gWb-qb-3bb">
@@ -494,11 +491,11 @@
             <objects>
                 <viewController storyboardIdentifier="ContentViewController_sid" id="aH8-33-wwU" customClass="ContentViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rhh-v9-BLo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="내용을 입력하세요." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jmM-jI-ZMm">
-                                <rect key="frame" x="20" y="20" width="374" height="788"/>
+                                <rect key="frame" x="20" y="64" width="374" height="798"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -533,13 +530,59 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bZj-SF-6yC">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UseListCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bZj-SF-6yC" customClass="UseListCell" customModule="BizplayReceipt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bZj-SF-6yC" id="kU9-Ak-wxN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEk-9C-1AF">
+                                                    <rect key="frame" x="20" y="11" width="165" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="xg5-x4-bIk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lEk-9C-1AF" firstAttribute="top" secondItem="kU9-Ak-wxN" secondAttribute="topMargin" id="1Rz-rR-hqP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lEk-9C-1AF" secondAttribute="bottom" id="eAg-yv-bgR"/>
+                                                <constraint firstItem="lEk-9C-1AF" firstAttribute="leading" secondItem="kU9-Ak-wxN" secondAttribute="leadingMargin" id="uK0-zX-64q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="useListNm" destination="kU9-Ak-wxN" id="ML0-nm-UIo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UseUsageCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Sda-kN-VFH" customClass="UseUsageCell" customModule="BizplayReceipt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="71" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sda-kN-VFH" id="68c-yc-wqE">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9D-PQ-4tL">
+                                                    <rect key="frame" x="20" y="11" width="165" height="21.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="g5q-n1-rVN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="k9D-PQ-4tL" firstAttribute="bottom" secondItem="68c-yc-wqE" secondAttribute="bottomMargin" id="2ET-HS-PyJ"/>
+                                                <constraint firstItem="k9D-PQ-4tL" firstAttribute="top" secondItem="68c-yc-wqE" secondAttribute="topMargin" id="Qul-7c-xnD"/>
+                                                <constraint firstItem="k9D-PQ-4tL" firstAttribute="leading" secondItem="68c-yc-wqE" secondAttribute="leadingMargin" id="RNt-cW-5ZG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="useUsageNm" destination="68c-yc-wqE" id="4or-l7-j4T"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -560,7 +603,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ClC-4Y-eZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8612" y="-236"/>
+            <point key="canvasLocation" x="8611.5942028985519" y="-236.38392857142856"/>
         </scene>
         <!--More View Controller-->
         <scene sceneID="vxR-zq-9Ll">
