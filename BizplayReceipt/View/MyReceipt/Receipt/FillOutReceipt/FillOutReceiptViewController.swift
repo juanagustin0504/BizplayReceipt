@@ -25,7 +25,7 @@ class FillOutReceiptViewController: UIViewController {
     @IBOutlet weak var companyNm: UILabel!
     @IBOutlet weak var userNm: UILabel!
     
-    
+    private var dateTimeStr = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +81,13 @@ class FillOutReceiptViewController: UIViewController {
     }
 }
 
+extension FillOutReceiptViewController: DatePickerPopupDelegate {
+    func saveDate(dateTime: String) {
+        self.dateTimeStr = dateTime
+        tableView.reloadData()
+    }
+}
+
 extension FillOutReceiptViewController: UITableViewDelegate {
     
 }
@@ -108,6 +115,7 @@ extension FillOutReceiptViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseDateTimeCell", for: indexPath) as? UseDateTimeCell else {
                 return UITableViewCell()
             }
+            cell.lblDate.text = self.dateTimeStr
             return cell
         } else if ourObj.title == "USE_USAG_YN" {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UsageCell", for: indexPath) as? UsageCell else {
