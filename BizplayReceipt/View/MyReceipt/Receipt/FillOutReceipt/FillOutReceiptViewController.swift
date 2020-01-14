@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class FillOutReceiptViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var btnPhoto: UIButton!
     
+    @IBOutlet weak var companyNm: UILabel!
+    @IBOutlet weak var userNm: UILabel!
     
     let inputItemSettingViewModel = InputItemSettingViewModel()
-    
+    let imagePicker: UIImagePickerController! = UIImagePickerController()
     //    var cells = [(title : "BZAQ_YN", placeHolder : "사용처"),
     //                 (title : "AMT_YN" , placeHolder : "사용금액"),
     //                 (title : "TRSC_DTM_YN", placeHolder : "사용일시"),
@@ -25,8 +27,8 @@ class FillOutReceiptViewController: UIViewController {
     var cells = [(title : String, value : String)]()
     var photoCell = [(title : String, value : String)]()
     
-    @IBOutlet weak var companyNm: UILabel!
-    @IBOutlet weak var userNm: UILabel!
+    var captureImage: UIImage!
+    var flagImageSave = false
     
     private var dateTimeStr = ""
     
@@ -155,5 +157,56 @@ extension UIViewController {
     func PopupVC(storyboard: String, identifier: String) -> UIViewController {
         let vc = UIStoryboard(name: storyboard, bundle: nil).instantiateViewController(withIdentifier: identifier)
         return vc
+    }
+}
+
+extension FillOutReceiptViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBAction func cameraOrPhotoClicker(_ sender: UIButton) {
+        let alertCtrl = UIAlertController(title: nil, message: "영수증에 사진을 추가합니다.", preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "사진촬영하기", style: .default, handler: {(action) in
+            if(UIImagePickerController.isSourceTypeAvailable(.camera)){
+                self.flagImageSave = true
+                self.imagePicker.delegate = self
+                self.imagePicker.sourceType = .camera
+                self.imagePicker.mediaTypes = [kUTTypeImage as String]
+                self.imagePicker.allowsEditing = false
+                
+                self.present(self.imagePicker, animated: true, completion: nil)
+            }
+        })
+        let photoAction = UIAlertAction(title: "앨범에서 선택하기", style: .default, handler: {(action) in
+            if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
+                self.flagImageSave = false
+                
+                self.imagePicker.delegate = self
+                self.imagePicker.sourceType = .photoLibrary
+                self.imagePicker.mediaTypes = [kUTTypeImage as String]
+                self.imagePicker.allowsEditing = true
+                
+                self.present(self.imagePicker, animated: true, completion: nil)
+            }
+        })
+        alertCtrl.addAction(cameraAction)
+        alertCtrl.addAction(photoAction)
+        self.present(alertCtrl, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        captureImage = info[.originalImage] as? UIImage
+        
+        if flagImageSave {
+            UIImageWriteToSavedPhotosAlbum(captureImage, self, nil, nil)
+        }
+        
+        imageView.image = captureImage
+    
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @available(iOS 2.0, *)
+    public func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
+        self.dismiss(animated: true, completion: nil)
     }
 }
