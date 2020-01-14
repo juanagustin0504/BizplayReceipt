@@ -13,6 +13,7 @@ class FillOutReceiptViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var btnPhoto: UIButton!
     
     @IBOutlet weak var companyNm: UILabel!
     @IBOutlet weak var userNm: UILabel!

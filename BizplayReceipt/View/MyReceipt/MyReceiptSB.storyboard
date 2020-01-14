@@ -478,6 +478,7 @@
                         <viewLayoutGuide key="safeArea" id="rHl-oj-LjM"/>
                     </view>
                     <connections>
+                        <outlet property="btnPhoto" destination="Uzn-XW-QHb" id="yK5-K2-atl"/>
                         <outlet property="companyNm" destination="Qkq-HT-6gZ" id="NoR-kp-Qfo"/>
                         <outlet property="imageView" destination="oKB-lP-A0r" id="isv-mF-Smf"/>
                         <outlet property="tableView" destination="4EX-gn-SOX" id="tQe-sL-dVp"/>
