@@ -28,7 +28,6 @@
 		767AC97623BB25B900B85135 /* InputItemSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC97523BB25B900B85135 /* InputItemSettingViewModel.swift */; };
 		767AC97B23BB2BC500B85135 /* ReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC97A23BB2BC500B85135 /* ReceiptModel.swift */; };
 		767AC97E23BB2CEB00B85135 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AC97D23BB2CEB00B85135 /* ReceiptViewModel.swift */; };
-		768CCC6D23CC5950003516DA /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768CCC6C23CC5950003516DA /* PhotoViewController.swift */; };
 		769C23F523A74F8200D92396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769C23F423A74F8200D92396 /* AppDelegate.swift */; };
 		769C23FC23A74F8200D92396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769C23FA23A74F8200D92396 /* Main.storyboard */; };
 		769C23FE23A74F8300D92396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769C23FD23A74F8300D92396 /* Assets.xcassets */; };
@@ -82,7 +81,6 @@
 		767AC97523BB25B900B85135 /* InputItemSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputItemSettingViewModel.swift; sourceTree = "<group>"; };
 		767AC97A23BB2BC500B85135 /* ReceiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptModel.swift; sourceTree = "<group>"; };
 		767AC97D23BB2CEB00B85135 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
-		768CCC6C23CC5950003516DA /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		769C23F123A74F8200D92396 /* BizplayReceipt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizplayReceipt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		769C23F423A74F8200D92396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		769C23FB23A74F8200D92396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 				7660181E23BDDFA200BA3BEF /* FillOutReceipt */,
 				7673FA5223CBEF83008817B9 /* UseUsage */,
 				7673FA5523CBF0C4008817B9 /* Content */,
-				768CCC6B23CC5929003516DA /* Photo */,
 			);
 			path = Receipt;
 			sourceTree = "<group>";
@@ -220,14 +217,6 @@
 				7673FA5A23CC337F008817B9 /* UseUsageViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		768CCC6B23CC5929003516DA /* Photo */ = {
-			isa = PBXGroup;
-			children = (
-				768CCC6C23CC5950003516DA /* PhotoViewController.swift */,
-			);
-			path = Photo;
 			sourceTree = "<group>";
 		};
 		769C23E823A74F8200D92396 = {
@@ -498,7 +487,6 @@
 				76A07BC723A9DE3D00CFB20B /* DeviceInfo.swift in Sources */,
 				7673FA5B23CC337F008817B9 /* UseUsageViewModel.swift in Sources */,
 				76A07BB323A9DDBA00CFB20B /* LoginModel.swift in Sources */,
-				768CCC6D23CC5950003516DA /* PhotoViewController.swift in Sources */,
 				764D4D5723B20B3600F1E2F1 /* WENavigationController.swift in Sources */,
 				76D0B97B23B1ECFE0002410E /* MoreViewController.swift in Sources */,
 				7604001923B5EB1C00705CB7 /* ReceiptListItemCell.swift in Sources */,

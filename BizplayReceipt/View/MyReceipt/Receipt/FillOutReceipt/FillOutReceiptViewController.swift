@@ -164,6 +164,7 @@ extension UIViewController {
 extension FillOutReceiptViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBAction func cameraOrPhotoClicker(_ sender: UIButton) {
+        
         let alertCtrl = UIAlertController(title: nil, message: "영수증에 사진을 추가합니다.", preferredStyle: .actionSheet)
         let cameraAction = UIAlertAction(title: "사진촬영하기", style: .default, handler: {(action) in
             if(UIImagePickerController.isSourceTypeAvailable(.camera)){
@@ -176,6 +177,7 @@ extension FillOutReceiptViewController: UIImagePickerControllerDelegate, UINavig
                 self.present(self.imagePicker, animated: true, completion: nil)
             }
         })
+        
         let photoAction = UIAlertAction(title: "앨범에서 선택하기", style: .default, handler: {(action) in
             if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
                 self.flagImageSave = false
@@ -188,11 +190,18 @@ extension FillOutReceiptViewController: UIImagePickerControllerDelegate, UINavig
                 self.present(self.imagePicker, animated: true, completion: nil)
             }
         })
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+//        cancelAction.isEnabled = false
+        
         alertCtrl.addAction(cameraAction)
         alertCtrl.addAction(photoAction)
+        alertCtrl.addAction(cancelAction)
+        
         self.present(alertCtrl, animated: true)
     }
     
+    // When image selected in the Album //
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         captureImage = info[.originalImage] as? UIImage
@@ -206,6 +215,7 @@ extension FillOutReceiptViewController: UIImagePickerControllerDelegate, UINavig
         self.dismiss(animated: true, completion: nil)
     }
     
+    // When image selected cancel //
     @available(iOS 2.0, *)
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
         self.dismiss(animated: true, completion: nil)
