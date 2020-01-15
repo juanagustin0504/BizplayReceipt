@@ -41,10 +41,11 @@ class UseUsageViewController: UIViewController {
                     print(self.useUsageCells[i])
                 }
             } else {
-                
+                DispatchQueue.main.async {
+                    self.alertMessage(title: "알림", message: error?.localizedDescription, action: nil)
+                }
             }
         }
-//        tableView.reloadData()
         
     }
     
@@ -75,19 +76,21 @@ class UseUsageViewController: UIViewController {
 
 extension UseUsageViewController: UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        if self.useUsageViewModel.responseData?.USE_LIST.isEmpty ?? false {
-            return 1
-        } else {
-            return 2
-        }
+//        if self.useUsageViewModel.responseData?.USE_LIST.isEmpty ?? false {
+//            return 1
+//        } else {
+//            return 2
+//        }
+        return 1
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "최근"
-        } else if section == 1 {
-            return "전체"
-        }
+//        if section == 0 {
+//            return "최근"
+//        } else if section == 1 {
+//            return "전체"
+//        }
+//        return ""
         return ""
     }
 }
@@ -95,39 +98,42 @@ extension UseUsageViewController: UITableViewDelegate {
 extension UseUsageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            print(useUsageViewModel.responseData?.USE_LIST.count ?? 0)
-            print(useListCells.count)
-            return useUsageViewModel.responseData?.USE_LIST.count ?? 0
-        } else if section == 1 {
-            return useUsageViewModel.responseData?.REC.count ?? 0
-        }
-        return 0
+//        if section == 0 {
+//            print(useUsageViewModel.responseData?.USE_LIST.count ?? 0)
+//            print(useListCells.count)
+//            return useUsageViewModel.responseData?.USE_LIST.count ?? 0
+//        } else if section == 1 {
+//            return useUsageViewModel.responseData?.REC.count ?? 0
+//        }
+//        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseListCell") as? UseListCell else {
-                return UITableViewCell()
-            }
-            cell.useListNm.text = useListCells[indexPath.row].name
-            print(useListCells[indexPath.row].name)
-            return cell
-        } else if indexPath.section == 1 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseUsageCell") as? UseUsageCell else {
-                return UITableViewCell()
-            }
-            cell.useUsageNm.text = useUsageCells[indexPath.row].name
-            print(useUsageCells[indexPath.row].name)
-            return cell
-        } else {
-            print("ELSE")
-            return UITableViewCell()
-        }
+//        if indexPath.section == 0 {
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseListCell") as? UseListCell else {
+//                return UITableViewCell()
+//            }
+//
+//            cell.useListNm.text = useListCells[indexPath.row].name
+//            print(useListCells[indexPath.row].name)
+//            return cell
+//        } else if indexPath.section == 1 {
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseUsageCell") as? UseUsageCell else {
+//                return UITableViewCell()
+//            }
+//            cell.useUsageNm.text = useUsageCells[indexPath.row].name
+//            print(useUsageCells[indexPath.row].name)
+//            return cell
+//        } else {
+//            print("ELSE")
+//            return UITableViewCell()
+//        }
+        return UITableViewCell()
     }
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        
+//
 //    }
     
 }
