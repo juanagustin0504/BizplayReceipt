@@ -3,214 +3,107 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08316C488BBBE3C9CACD552A867306B3 /* CarbonTabSwipeScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D8F8634F8AF99302E68966B070F63C /* CarbonTabSwipeScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EAEEE457525BF058E1D6DD21A7B7BE0 /* CarbonKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EBCC31341E2B833452B6A6284A42771 /* CarbonKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24F94BD9FF9301B56E2BF9675F0FA3BA /* CarbonKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0315827A4FBDDC60746B0580622EA5E /* CarbonKit-dummy.m */; };
-		2A5FA744410B10CA36DDF95031869DAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		3BADD89280FA5C9F2BC1BE3E680CA2AD /* CarbonSwipeRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD56B5B61C3773DF56F37B1E35FC718 /* CarbonSwipeRefresh.m */; };
-		48D582BC61A1251DFD27BA765829FBDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		51A0998B006EC835DBBF7E93AF2A3201 /* CarbonTabSwipeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B50ECA4A54F2AACF1C687A565F0A65 /* CarbonTabSwipeScrollView.m */; };
-		58028E39720CD948B3E1AFC7C16D38F5 /* CarbonSwipeRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = CEF8EED9B22BDF15C734844F7D2F3FCA /* CarbonSwipeRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CEF4A5278DDE7601D9EB85266B62C55 /* CarbonKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 099964774E6A80CA9B5CC4A2D78D20D7 /* CarbonKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B98D14B62E7BBFC5A7F06C675E1D3675 /* Pods-BizplayReceipt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CD93630BFEA975421942F838D6B100 /* Pods-BizplayReceipt-dummy.m */; };
-		B9AE80EAA4D2189E673332125190328F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		BD8E90645FDE43FD41342AC9322FB151 /* CarbonTabSwipeNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8824942ADBF52AFF62DD361581611DE5 /* CarbonTabSwipeNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9EA57DE60D8D6400B96BB485058172B /* Pods-BizplayReceipt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6B2C93E907DC0C4062075447339BE90 /* Pods-BizplayReceipt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9717432E8D1402242F358DD197A2627 /* CarbonTabSwipeSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = D2D809AD58CE8775E1693A4AB17EE0F4 /* CarbonTabSwipeSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E69D5596F58F7CE052C09272F51AF3CD /* CarbonTabSwipeNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 019D1273C0A3E13C54D1C96191406BAD /* CarbonTabSwipeNavigation.m */; };
-		E73672A78A2A1DC2B3DC37F8A021FDE7 /* CarbonTabSwipeSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B5DFFE2B6CD1F7655E36022D25EB3 /* CarbonTabSwipeSegmentedControl.m */; };
+		3DAB3D4446DB057DCEEAE5CDA02EFDB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		6C905C3058542F77DAE7D301E0E5BD95 /* Pods-BizplayReceipt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E424C2E1AB82C84362520C9DFAD2EED6 /* Pods-BizplayReceipt-dummy.m */; };
+		82F1493FD0DD5799592998EB9E059A27 /* Pods-BizplayReceipt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 315A8644B3A6F407AD6F01F85B84B4C8 /* Pods-BizplayReceipt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FF5DABEF3B6BB20D823DA57EB0D9080B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF9228424A074D42F13FABA26E972B57;
-			remoteInfo = CarbonKit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		019D1273C0A3E13C54D1C96191406BAD /* CarbonTabSwipeNavigation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CarbonTabSwipeNavigation.m; path = CarbonKit/CarbonTabSwipeNavigation.m; sourceTree = "<group>"; };
-		04D8F8634F8AF99302E68966B070F63C /* CarbonTabSwipeScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CarbonTabSwipeScrollView.h; path = CarbonKit/CarbonTabSwipeScrollView.h; sourceTree = "<group>"; };
-		06CD93630BFEA975421942F838D6B100 /* Pods-BizplayReceipt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BizplayReceipt-dummy.m"; sourceTree = "<group>"; };
-		099964774E6A80CA9B5CC4A2D78D20D7 /* CarbonKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CarbonKit.h; path = CarbonKit/CarbonKit.h; sourceTree = "<group>"; };
-		0EBCC31341E2B833452B6A6284A42771 /* CarbonKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CarbonKit-umbrella.h"; sourceTree = "<group>"; };
-		0F33999DCDDA151FF503853D4567A536 /* Pods-BizplayReceipt-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BizplayReceipt-acknowledgements.plist"; sourceTree = "<group>"; };
-		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		3D8B5DFFE2B6CD1F7655E36022D25EB3 /* CarbonTabSwipeSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CarbonTabSwipeSegmentedControl.m; path = CarbonKit/CarbonTabSwipeSegmentedControl.m; sourceTree = "<group>"; };
-		4265AA245E38023F4ADE6D24F6F6E8C2 /* Pods-BizplayReceipt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BizplayReceipt.debug.xcconfig"; sourceTree = "<group>"; };
-		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		69E37135B527E761B9D5EAC92293A806 /* Pods-BizplayReceipt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BizplayReceipt.modulemap"; sourceTree = "<group>"; };
+		25FE4563DD53CBAE79C1F903A31BE576 /* Pods-BizplayReceipt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BizplayReceipt.modulemap"; sourceTree = "<group>"; };
+		315A8644B3A6F407AD6F01F85B84B4C8 /* Pods-BizplayReceipt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BizplayReceipt-umbrella.h"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5639CD083E445660097B76BCA00CA95F /* Pods-BizplayReceipt-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BizplayReceipt-acknowledgements.plist"; sourceTree = "<group>"; };
+		6C3C03E2E7CFBD74A272FEF0CC7ECD98 /* Pods-BizplayReceipt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BizplayReceipt-Info.plist"; sourceTree = "<group>"; };
 		6D373ABDD9E05054E662748E9FBC7608 /* Pods_BizplayReceipt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BizplayReceipt.framework; path = "Pods-BizplayReceipt.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FD56B5B61C3773DF56F37B1E35FC718 /* CarbonSwipeRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CarbonSwipeRefresh.m; path = CarbonKit/CarbonSwipeRefresh.m; sourceTree = "<group>"; };
-		7507FF2A31069EBD97E584BA0C45CF5A /* CarbonKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CarbonKit.modulemap; sourceTree = "<group>"; };
-		857D0B90490FD8083F79B97597566B28 /* CarbonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CarbonKit.framework; path = CarbonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85951284E05B81C3B79E4F0D907571FB /* CarbonKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CarbonKit-Info.plist"; sourceTree = "<group>"; };
-		8824942ADBF52AFF62DD361581611DE5 /* CarbonTabSwipeNavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CarbonTabSwipeNavigation.h; path = CarbonKit/CarbonTabSwipeNavigation.h; sourceTree = "<group>"; };
-		9D79E9CC460AED7178058BF0EA3346A1 /* Pods-BizplayReceipt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BizplayReceipt-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A6B2C93E907DC0C4062075447339BE90 /* Pods-BizplayReceipt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BizplayReceipt-umbrella.h"; sourceTree = "<group>"; };
-		B13F8B682638504257F4BB9A4D21161B /* CarbonKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CarbonKit.xcconfig; sourceTree = "<group>"; };
-		BB1F6815B141C7CAC9096497BD86587B /* Pods-BizplayReceipt-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BizplayReceipt-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BB877FBBB37A2E0E7A72CCA1AEF50EBE /* Pods-BizplayReceipt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BizplayReceipt.release.xcconfig"; sourceTree = "<group>"; };
-		CEF8EED9B22BDF15C734844F7D2F3FCA /* CarbonSwipeRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CarbonSwipeRefresh.h; path = CarbonKit/CarbonSwipeRefresh.h; sourceTree = "<group>"; };
-		D2D809AD58CE8775E1693A4AB17EE0F4 /* CarbonTabSwipeSegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CarbonTabSwipeSegmentedControl.h; path = CarbonKit/CarbonTabSwipeSegmentedControl.h; sourceTree = "<group>"; };
-		DC6E977DB28872336F81878595E3EA41 /* CarbonKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CarbonKit-prefix.pch"; sourceTree = "<group>"; };
-		E4B50ECA4A54F2AACF1C687A565F0A65 /* CarbonTabSwipeScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CarbonTabSwipeScrollView.m; path = CarbonKit/CarbonTabSwipeScrollView.m; sourceTree = "<group>"; };
-		E54C5BD4A26E3C4EDCDEED81EDC928A8 /* Pods-BizplayReceipt-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BizplayReceipt-frameworks.sh"; sourceTree = "<group>"; };
-		F0315827A4FBDDC60746B0580622EA5E /* CarbonKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CarbonKit-dummy.m"; sourceTree = "<group>"; };
+		CCC029BF5B42C88D2ADDA438407A2C72 /* Pods-BizplayReceipt-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BizplayReceipt-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D21D40E1B7DB34DACB195048FE5E94CE /* Pods-BizplayReceipt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BizplayReceipt.release.xcconfig"; sourceTree = "<group>"; };
+		E424C2E1AB82C84362520C9DFAD2EED6 /* Pods-BizplayReceipt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BizplayReceipt-dummy.m"; sourceTree = "<group>"; };
+		FA08D334714A1C7E3C749FEFF52EA79F /* Pods-BizplayReceipt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BizplayReceipt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		37E9F682E6A4C0E050104CC9A9A4FB49 /* Frameworks */ = {
+		48E379620E04C8828DA4A3F3ADC9CA25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9AE80EAA4D2189E673332125190328F /* Foundation.framework in Frameworks */,
-				48D582BC61A1251DFD27BA765829FBDC /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A333754AE7F775D65B3B50A6B4EA9B7A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A5FA744410B10CA36DDF95031869DAA /* Foundation.framework in Frameworks */,
+				3DAB3D4446DB057DCEEAE5CDA02EFDB1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09F637C5D4EF740E43D56A5903FFF97B /* Targets Support Files */ = {
+		75C58E0DBB4E4DDA05A5D3DAF8A9F475 /* Pods-BizplayReceipt */ = {
 			isa = PBXGroup;
 			children = (
-				F136FF2CB5B3E27A5DD12C4400BD1616 /* Pods-BizplayReceipt */,
+				25FE4563DD53CBAE79C1F903A31BE576 /* Pods-BizplayReceipt.modulemap */,
+				CCC029BF5B42C88D2ADDA438407A2C72 /* Pods-BizplayReceipt-acknowledgements.markdown */,
+				5639CD083E445660097B76BCA00CA95F /* Pods-BizplayReceipt-acknowledgements.plist */,
+				E424C2E1AB82C84362520C9DFAD2EED6 /* Pods-BizplayReceipt-dummy.m */,
+				6C3C03E2E7CFBD74A272FEF0CC7ECD98 /* Pods-BizplayReceipt-Info.plist */,
+				315A8644B3A6F407AD6F01F85B84B4C8 /* Pods-BizplayReceipt-umbrella.h */,
+				FA08D334714A1C7E3C749FEFF52EA79F /* Pods-BizplayReceipt.debug.xcconfig */,
+				D21D40E1B7DB34DACB195048FE5E94CE /* Pods-BizplayReceipt.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-BizplayReceipt";
+			path = "Target Support Files/Pods-BizplayReceipt";
 			sourceTree = "<group>";
 		};
-		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		50F2EE83AECE4E40D54212E09FAC79A0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				857D0B90490FD8083F79B97597566B28 /* CarbonKit.framework */,
-				6D373ABDD9E05054E662748E9FBC7608 /* Pods_BizplayReceipt.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		583CD1E498301F72C2C1BCD74E525548 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CCC41E7B82AD5F80AA6C5E9D0B8AF3EA /* CarbonKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		C19814D49271379B4E7E113ECE9DC4BE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7507FF2A31069EBD97E584BA0C45CF5A /* CarbonKit.modulemap */,
-				B13F8B682638504257F4BB9A4D21161B /* CarbonKit.xcconfig */,
-				F0315827A4FBDDC60746B0580622EA5E /* CarbonKit-dummy.m */,
-				85951284E05B81C3B79E4F0D907571FB /* CarbonKit-Info.plist */,
-				DC6E977DB28872336F81878595E3EA41 /* CarbonKit-prefix.pch */,
-				0EBCC31341E2B833452B6A6284A42771 /* CarbonKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CarbonKit";
-			sourceTree = "<group>";
-		};
-		CCC41E7B82AD5F80AA6C5E9D0B8AF3EA /* CarbonKit */ = {
-			isa = PBXGroup;
-			children = (
-				099964774E6A80CA9B5CC4A2D78D20D7 /* CarbonKit.h */,
-				CEF8EED9B22BDF15C734844F7D2F3FCA /* CarbonSwipeRefresh.h */,
-				6FD56B5B61C3773DF56F37B1E35FC718 /* CarbonSwipeRefresh.m */,
-				8824942ADBF52AFF62DD361581611DE5 /* CarbonTabSwipeNavigation.h */,
-				019D1273C0A3E13C54D1C96191406BAD /* CarbonTabSwipeNavigation.m */,
-				04D8F8634F8AF99302E68966B070F63C /* CarbonTabSwipeScrollView.h */,
-				E4B50ECA4A54F2AACF1C687A565F0A65 /* CarbonTabSwipeScrollView.m */,
-				D2D809AD58CE8775E1693A4AB17EE0F4 /* CarbonTabSwipeSegmentedControl.h */,
-				3D8B5DFFE2B6CD1F7655E36022D25EB3 /* CarbonTabSwipeSegmentedControl.m */,
-				C19814D49271379B4E7E113ECE9DC4BE /* Support Files */,
-			);
-			name = CarbonKit;
-			path = CarbonKit;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				583CD1E498301F72C2C1BCD74E525548 /* Pods */,
-				50F2EE83AECE4E40D54212E09FAC79A0 /* Products */,
-				09F637C5D4EF740E43D56A5903FFF97B /* Targets Support Files */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				FABCA70E3C1D2A7CF6818584D0EDCF33 /* Products */,
+				F2C6376F8AFC63EF3489F7E2C9039050 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
-				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
-			name = iOS;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F136FF2CB5B3E27A5DD12C4400BD1616 /* Pods-BizplayReceipt */ = {
+		F2C6376F8AFC63EF3489F7E2C9039050 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				69E37135B527E761B9D5EAC92293A806 /* Pods-BizplayReceipt.modulemap */,
-				BB1F6815B141C7CAC9096497BD86587B /* Pods-BizplayReceipt-acknowledgements.markdown */,
-				0F33999DCDDA151FF503853D4567A536 /* Pods-BizplayReceipt-acknowledgements.plist */,
-				06CD93630BFEA975421942F838D6B100 /* Pods-BizplayReceipt-dummy.m */,
-				E54C5BD4A26E3C4EDCDEED81EDC928A8 /* Pods-BizplayReceipt-frameworks.sh */,
-				9D79E9CC460AED7178058BF0EA3346A1 /* Pods-BizplayReceipt-Info.plist */,
-				A6B2C93E907DC0C4062075447339BE90 /* Pods-BizplayReceipt-umbrella.h */,
-				4265AA245E38023F4ADE6D24F6F6E8C2 /* Pods-BizplayReceipt.debug.xcconfig */,
-				BB877FBBB37A2E0E7A72CCA1AEF50EBE /* Pods-BizplayReceipt.release.xcconfig */,
+				75C58E0DBB4E4DDA05A5D3DAF8A9F475 /* Pods-BizplayReceipt */,
 			);
-			name = "Pods-BizplayReceipt";
-			path = "Target Support Files/Pods-BizplayReceipt";
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FABCA70E3C1D2A7CF6818584D0EDCF33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D373ABDD9E05054E662748E9FBC7608 /* Pods_BizplayReceipt.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		25BC534774E63023A9C5264B4E7D346B /* Headers */ = {
+		FD76A2218E50B0C8BCB9D428387450C3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9EA57DE60D8D6400B96BB485058172B /* Pods-BizplayReceipt-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA4EEC66B4EF266DD7F7BA0D78D47BB8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0EAEEE457525BF058E1D6DD21A7B7BE0 /* CarbonKit-umbrella.h in Headers */,
-				7CEF4A5278DDE7601D9EB85266B62C55 /* CarbonKit.h in Headers */,
-				58028E39720CD948B3E1AFC7C16D38F5 /* CarbonSwipeRefresh.h in Headers */,
-				BD8E90645FDE43FD41342AC9322FB151 /* CarbonTabSwipeNavigation.h in Headers */,
-				08316C488BBBE3C9CACD552A867306B3 /* CarbonTabSwipeScrollView.h in Headers */,
-				D9717432E8D1402242F358DD197A2627 /* CarbonTabSwipeSegmentedControl.h in Headers */,
+				82F1493FD0DD5799592998EB9E059A27 /* Pods-BizplayReceipt-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,39 +112,20 @@
 /* Begin PBXNativeTarget section */
 		5D8FA67E73C4658C52A477376B9A4CC7 /* Pods-BizplayReceipt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CDB51FD73C0FA052D99B4969DE5CF65 /* Build configuration list for PBXNativeTarget "Pods-BizplayReceipt" */;
+			buildConfigurationList = FAEA0D80BF473396BAAFCA52CB5599BA /* Build configuration list for PBXNativeTarget "Pods-BizplayReceipt" */;
 			buildPhases = (
-				25BC534774E63023A9C5264B4E7D346B /* Headers */,
-				4260579385524E192EAE7765A857F077 /* Sources */,
-				A333754AE7F775D65B3B50A6B4EA9B7A /* Frameworks */,
-				D43EC34C9D7E2A558AD199602AFCC3E8 /* Resources */,
+				FD76A2218E50B0C8BCB9D428387450C3 /* Headers */,
+				43D1CB04B7B2CC8C17F1C1FD0FA8AE75 /* Sources */,
+				48E379620E04C8828DA4A3F3ADC9CA25 /* Frameworks */,
+				486281B01A3E24A13DE7A7942BB9CB64 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C3F1599241F43AF0B35BE5905E81170B /* PBXTargetDependency */,
 			);
 			name = "Pods-BizplayReceipt";
 			productName = "Pods-BizplayReceipt";
 			productReference = 6D373ABDD9E05054E662748E9FBC7608 /* Pods_BizplayReceipt.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		AF9228424A074D42F13FABA26E972B57 /* CarbonKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6C1C44E62D19630DCAF2E47CD796ADB0 /* Build configuration list for PBXNativeTarget "CarbonKit" */;
-			buildPhases = (
-				CA4EEC66B4EF266DD7F7BA0D78D47BB8 /* Headers */,
-				1A11556C80FC8DF779888B1E32ED9A12 /* Sources */,
-				37E9F682E6A4C0E050104CC9A9A4FB49 /* Frameworks */,
-				7FD281292E4E4F95C99C9197BF44A009 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CarbonKit;
-			productName = CarbonKit;
-			productReference = 857D0B90490FD8083F79B97597566B28 /* CarbonKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -264,7 +138,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -272,25 +146,17 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 50F2EE83AECE4E40D54212E09FAC79A0 /* Products */;
+			productRefGroup = FABCA70E3C1D2A7CF6818584D0EDCF33 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF9228424A074D42F13FABA26E972B57 /* CarbonKit */,
 				5D8FA67E73C4658C52A477376B9A4CC7 /* Pods-BizplayReceipt */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7FD281292E4E4F95C99C9197BF44A009 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D43EC34C9D7E2A558AD199602AFCC3E8 /* Resources */ = {
+		486281B01A3E24A13DE7A7942BB9CB64 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -300,77 +166,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1A11556C80FC8DF779888B1E32ED9A12 /* Sources */ = {
+		43D1CB04B7B2CC8C17F1C1FD0FA8AE75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24F94BD9FF9301B56E2BF9675F0FA3BA /* CarbonKit-dummy.m in Sources */,
-				3BADD89280FA5C9F2BC1BE3E680CA2AD /* CarbonSwipeRefresh.m in Sources */,
-				E69D5596F58F7CE052C09272F51AF3CD /* CarbonTabSwipeNavigation.m in Sources */,
-				51A0998B006EC835DBBF7E93AF2A3201 /* CarbonTabSwipeScrollView.m in Sources */,
-				E73672A78A2A1DC2B3DC37F8A021FDE7 /* CarbonTabSwipeSegmentedControl.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4260579385524E192EAE7765A857F077 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B98D14B62E7BBFC5A7F06C675E1D3675 /* Pods-BizplayReceipt-dummy.m in Sources */,
+				6C905C3058542F77DAE7D301E0E5BD95 /* Pods-BizplayReceipt-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		C3F1599241F43AF0B35BE5905E81170B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CarbonKit;
-			target = AF9228424A074D42F13FABA26E972B57 /* CarbonKit */;
-			targetProxy = FF5DABEF3B6BB20D823DA57EB0D9080B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		0CD7BA03E333037B4E33138E5FD2AF39 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB877FBBB37A2E0E7A72CCA1AEF50EBE /* Pods-BizplayReceipt.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BizplayReceipt/Pods-BizplayReceipt-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BizplayReceipt/Pods-BizplayReceipt.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		257497152829C177993B5EC99C1D227A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -431,80 +237,9 @@
 			};
 			name = Release;
 		};
-		5F1844A5140252278783C716643139C3 /* Release */ = {
+		AA251D93642703EC49C19C7EF6E57EBC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B13F8B682638504257F4BB9A4D21161B /* CarbonKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CarbonKit/CarbonKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CarbonKit/CarbonKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CarbonKit/CarbonKit.modulemap";
-				PRODUCT_MODULE_NAME = CarbonKit;
-				PRODUCT_NAME = CarbonKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		964843307B82A7EB83D110770D1B379E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B13F8B682638504257F4BB9A4D21161B /* CarbonKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CarbonKit/CarbonKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CarbonKit/CarbonKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CarbonKit/CarbonKit.modulemap";
-				PRODUCT_MODULE_NAME = CarbonKit;
-				PRODUCT_NAME = CarbonKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A8624FB7A1ADE3C8636C259A39339AC7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4265AA245E38023F4ADE6D24F6F6E8C2 /* Pods-BizplayReceipt.debug.xcconfig */;
+			baseConfigurationReference = D21D40E1B7DB34DACB195048FE5E94CE /* Pods-BizplayReceipt.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -535,10 +270,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -604,18 +340,47 @@
 			};
 			name = Debug;
 		};
+		FDF858673E771601FF6CC1E067599E84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA08D334714A1C7E3C749FEFF52EA79F /* Pods-BizplayReceipt.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BizplayReceipt/Pods-BizplayReceipt-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BizplayReceipt/Pods-BizplayReceipt.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2CDB51FD73C0FA052D99B4969DE5CF65 /* Build configuration list for PBXNativeTarget "Pods-BizplayReceipt" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A8624FB7A1ADE3C8636C259A39339AC7 /* Debug */,
-				0CD7BA03E333037B4E33138E5FD2AF39 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -625,11 +390,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C1C44E62D19630DCAF2E47CD796ADB0 /* Build configuration list for PBXNativeTarget "CarbonKit" */ = {
+		FAEA0D80BF473396BAAFCA52CB5599BA /* Build configuration list for PBXNativeTarget "Pods-BizplayReceipt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				964843307B82A7EB83D110770D1B379E /* Debug */,
-				5F1844A5140252278783C716643139C3 /* Release */,
+				FDF858673E771601FF6CC1E067599E84 /* Debug */,
+				AA251D93642703EC49C19C7EF6E57EBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
