@@ -248,7 +248,7 @@
                                                         <constraint firstAttribute="width" constant="262" id="sgg-u9-Ron"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="organization"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="Iai-9K-o8i" id="Di3-wy-ehH"/>
                                                     </connections>
@@ -288,7 +288,7 @@
                                                         <constraint firstAttribute="height" constant="34" id="XLm-nS-5NY"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="Iai-9K-o8i" id="nW5-a0-01U"/>
                                                     </connections>
@@ -533,14 +533,27 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="muS-0M-e8R"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ldo-0h-8CH"/>
+                    <navigationItem key="navigationItem" id="Ldo-0h-8CH">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="o9d-nL-9TF">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ypV-7W-aBu">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="완료"/>
+                                <connections>
+                                    <action selector="completed" destination="aH8-33-wwU" eventType="touchUpInside" id="TN9-EM-kJF"/>
+                                </connections>
+                            </button>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="btnComplete" destination="o9d-nL-9TF" id="Uhg-CQ-rnF"/>
                         <outlet property="textField" destination="jmM-jI-ZMm" id="qkc-nl-Au1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wh5-Y4-fRR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7557.971014492754" y="557.8125"/>
+            <point key="canvasLocation" x="8468.115942028986" y="557.8125"/>
         </scene>
         <!--Use Usage View Controller-->
         <scene sceneID="36O-bQ-hSb">

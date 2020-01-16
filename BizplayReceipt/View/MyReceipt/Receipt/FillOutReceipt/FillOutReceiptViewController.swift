@@ -150,6 +150,13 @@ extension FillOutReceiptViewController: UITableViewDataSource {
         self.present(nav, animated: true)
     }
     
+    private func gotoContent() {
+        let contentVc = self.storyboard?.instantiateViewController(withIdentifier: "ContentViewController_sid") as! ContentViewController
+        contentVc.delegate = self
+        let nav = UINavigationController(rootViewController: contentVc)
+        self.present(nav, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let ourObj = self.cells[indexPath.row]
 //        if ourObj.title == "BZAQ_YN" {
@@ -261,12 +268,27 @@ extension FillOutReceiptViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
-        if textField.tag == 1005 { //내용
+        if textField.tag == 1004 { // 용도
             gotoUsage()
             return false
         }
         
+        if textField.tag == 1005 { //내용
+            gotoContent()
+            return false
+        }
+        
         return true
+    }
+    
+}
+
+extension FillOutReceiptViewController: ContentDelegate {
+    
+    func didSelect(content: String) {
+        if let infoTF = self.tableView.viewWithTag(1005) as? UITextField {
+            infoTF.text = content
+        }
     }
     
 }

@@ -9,17 +9,29 @@
 import UIKit
 
 protocol ContentDelegate: class {
-    func saveContent(strContent: String)
+    func didSelect(content: String)
 }
-
-// 내용 뷰에서 용도 테이블 뷰 테스팅중
 
 class ContentViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var btnComplete: UIBarButtonItem!
     
-    var delegate: ContentDelegate?
+    weak var delegate: ContentDelegate?
+    
+    override func viewDidLoad() {
+        self.navigationController?.navigationBar.backgroundColor = UIColor(hexString: "5384ED")
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = false
 
+        self.navigationController?.navigationBar.tintColor = .white
+    }
+
+    @IBAction func completed() {
+        dismiss(animated: true) {
+            self.delegate?.didSelect(content: self.textField.text!)
+        }
+    }
     
     /*
     // MARK: - Navigation
