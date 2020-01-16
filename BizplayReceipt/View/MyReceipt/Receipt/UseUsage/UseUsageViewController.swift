@@ -14,6 +14,7 @@ class UseUsageViewController: UIViewController {
     
     var useListCells  = [(title: String, name: String)]()
     var useUsageCells = [(title: String, name: String)]()
+    var isLatestAvailable: Bool = false
     
     let useUsageViewModel = UseUsageViewModel()
 
@@ -30,16 +31,26 @@ class UseUsageViewController: UIViewController {
         
         useUsageViewModel.request_SCMS_METC_R005(SCH_WORD: "") { (error) in
             if error == nil {
-                for i in 0 ..< self.useUsageViewModel.responseData!.USE_LIST.count {
-                    
-                    self.useListCells.append((title: self.useUsageViewModel.responseData!.USE_LIST[i].USE_USAG_CD, name: self.useUsageViewModel.responseData!.USE_LIST[i].USE_USAG_NM))
-                    print(self.useListCells[i])
+                
+                if self.useUsageViewModel.responseData!.USE_LIST.isEmpty {
+                    self.isLatestAvailable = false
+                } else {
+                    self.isLatestAvailable = true
+                }
+                
+                if self.isLatestAvailable {
+                    for i in 0 ..< self.useUsageViewModel.responseData!.USE_LIST.count {
+                        
+                        self.useListCells.append((title: self.useUsageViewModel.responseData!.USE_LIST[i].USE_USAG_CD, name: self.useUsageViewModel.responseData!.USE_LIST[i].USE_USAG_NM))
+                        print(self.useListCells[i])
+                    }
                 }
                 
                 for i in 0 ..< self.useUsageViewModel.responseData!.REC.count {
                     self.useUsageCells.append((title: self.useUsageViewModel.responseData!.REC[i].TRAN_KIND_CD, name: self.useUsageViewModel.responseData!.REC[i].TRAN_KIND_NM))
                     print(self.useUsageCells[i])
                 }
+                
             } else {
                 DispatchQueue.main.async {
                     self.alertMessage(title: "알림", message: error?.localizedDescription, action: nil)
@@ -75,61 +86,56 @@ class UseUsageViewController: UIViewController {
 }
 
 extension UseUsageViewController: UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-//        if self.useUsageViewModel.responseData?.USE_LIST.isEmpty ?? false {
-//            return 1
-//        } else {
-//            return 2
-//        }
-        return 1
+    func numberOfSections(in tableView: UITableView) -> Int { // 섹션의 개수
+        if self.isLatestAvailable {
+            return 2
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if section == 0 {
-//            return "최근"
-//        } else if section == 1 {
-//            return "전체"
-//        }
-//        return ""
-        return ""
+        if section == 0 {
+            return "최근"
+        } else if section == 1 {
+            return "전체"
+        }
+        return "ASDF"
     }
 }
 
 extension UseUsageViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if section == 0 {
-//            print(useUsageViewModel.responseData?.USE_LIST.count ?? 0)
-//            print(useListCells.count)
-//            return useUsageViewModel.responseData?.USE_LIST.count ?? 0
-//        } else if section == 1 {
-//            return useUsageViewModel.responseData?.REC.count ?? 0
-//        }
-//        return 0
-        return 1
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { // 섹션당 행의 개수
+        if section == 0 {
+            print(useUsageViewModel.responseData?.USE_LIST.count ?? 0)
+            print(useListCells.count)
+            return useUsageViewModel.responseData?.USE_LIST.count ?? 0
+        } else if section == 1 {
+            return useUsageViewModel.responseData?.REC.count ?? 0
+        }
+        return 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.section == 0 {
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseListCell") as? UseListCell else {
-//                return UITableViewCell()
-//            }
-//
-//            cell.useListNm.text = useListCells[indexPath.row].name
-//            print(useListCells[indexPath.row].name)
-//            return cell
-//        } else if indexPath.section == 1 {
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseUsageCell") as? UseUsageCell else {
-//                return UITableViewCell()
-//            }
-//            cell.useUsageNm.text = useUsageCells[indexPath.row].name
-//            print(useUsageCells[indexPath.row].name)
-//            return cell
-//        } else {
-//            print("ELSE")
-//            return UITableViewCell()
-//        }
-        return UITableViewCell()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { // 셀
+        if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseListCell") as? UseListCell else {
+                return UITableViewCell()
+            }
+            cell.useListNm.text = useListCells[indexPath.row].name
+            print(useListCells[indexPath.row].name)
+            return cell
+        } else if indexPath.section == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseUsageCell") as? UseUsageCell else {
+                return UITableViewCell()
+            }
+            cell.useUsageNm.text = useUsageCells[indexPath.row].name
+            print(useUsageCells[indexPath.row].name)
+            return cell
+        } else {
+            print("else")
+            return UITableViewCell()
+        }
     }
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

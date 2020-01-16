@@ -19,6 +19,8 @@ class ReceiptViewController: UIViewController {
     @IBOutlet weak var btnAlarm: UIButton!
     @IBOutlet weak var btnMore: UIButton!
     
+    @IBOutlet weak var btnNewReceipt: UIButton!
+    
     let inputItemSettingViewModel = InputItemSettingViewModel()
     
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
@@ -29,6 +31,7 @@ class ReceiptViewController: UIViewController {
         // Do any additional setup after loading the view.
         notificationVC.isHidden = true
         moreVC.isHidden = true
+        btnNewReceipt.isHidden = false
         removeLineNavigationBar()
         self.navigationItem.hidesBackButton = true
         changeTitle("나의 영수증")
@@ -44,6 +47,8 @@ class ReceiptViewController: UIViewController {
         btnMore.setImage(UIImage(named: "mnMoreOffIcon"), for: .normal)
         
         changeTitle("나의 영수증")
+        
+        btnNewReceipt.isHidden = false
     }
     
     @IBAction func gotoAlarm(_ sender: UIButton) {
@@ -56,6 +61,8 @@ class ReceiptViewController: UIViewController {
         btnMore.setImage(UIImage(named: "mnMoreOffIcon"), for: .normal)
         
         changeTitle("알림")
+        
+        btnNewReceipt.isHidden = true
     }
     
     @IBAction func gotoMore(_ sender: UIButton) {
@@ -68,6 +75,8 @@ class ReceiptViewController: UIViewController {
         btnMore.setImage(UIImage(named: "mnMoreOnIcon"), for: .normal)
         
         changeTitle("더보기")
+        
+        btnNewReceipt.isHidden = true
     }
     
     @IBAction func ectRcptPopup(_ sender: UIButton) {

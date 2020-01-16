@@ -106,6 +106,7 @@
                     <connections>
                         <outlet property="btnAlarm" destination="xsf-TI-7Yr" id="eCd-sS-pgE"/>
                         <outlet property="btnMore" destination="8Od-9n-vzx" id="ft3-mD-GNs"/>
+                        <outlet property="btnNewReceipt" destination="CmB-gn-N3S" id="fIj-vV-lcZ"/>
                         <outlet property="btnRcpt" destination="Zx0-BD-JGJ" id="cnt-kE-dP3"/>
                         <outlet property="moreVC" destination="FCr-zN-e21" id="XlR-sq-1aN"/>
                         <outlet property="myRcptVC" destination="Q3t-tz-NpG" id="aUR-dP-yw0"/>
@@ -539,14 +540,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UseListCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UseListCell" id="bZj-SF-6yC" customClass="UseListCell" customModule="BizplayReceipt" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bZj-SF-6yC" id="kU9-Ak-wxN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEk-9C-1AF">
-                                                    <rect key="frame" x="20" y="11" width="165" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="165" height="21.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="xg5-x4-bIk"/>
                                                     </constraints>
@@ -566,14 +567,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UseUsageCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UseUsageCell" id="Sda-kN-VFH" customClass="UseUsageCell" customModule="BizplayReceipt" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="71" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sda-kN-VFH" id="68c-yc-wqE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9D-PQ-4tL">
-                                                    <rect key="frame" x="20" y="11" width="165" height="21.5"/>
+                                                    <rect key="frame" x="20" y="11" width="165" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="g5q-n1-rVN"/>
                                                     </constraints>
@@ -663,7 +664,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eE-5v-5x0">
-                                                    <rect key="frame" x="361" y="38" width="48" height="48"/>
+                                                    <rect key="frame" x="385" y="38" width="24" height="24"/>
                                                     <state key="normal" image="icoSeemore"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l  CompanyNm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ko-Ms-3kR">
@@ -688,7 +689,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sa-fx-POx">
-                                                    <rect key="frame" x="287.5" y="39.5" width="70.5" height="20.5"/>
+                                                    <rect key="frame" x="311.5" y="39.5" width="70.5" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44.5" id="zil-vv-MOg"/>
                                                     </constraints>
@@ -747,7 +748,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7h-Gj-mWw">
-                                                    <rect key="frame" x="359" y="11" width="48" height="24"/>
+                                                    <rect key="frame" x="383" y="11" width="24" height="24"/>
                                                     <state key="normal" image="icoSeemore"/>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yow-as-xfp">
@@ -758,7 +759,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영수증 내용 입력하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbF-jF-5dS">
-                                                    <rect key="frame" x="250.5" y="15" width="100.5" height="14"/>
+                                                    <rect key="frame" x="274.5" y="15" width="100.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="12"/>
                                                     <color key="textColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
