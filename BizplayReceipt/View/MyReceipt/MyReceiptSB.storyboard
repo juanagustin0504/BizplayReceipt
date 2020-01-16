@@ -155,7 +155,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4EX-gn-SOX">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="PjZ-G8-Y7t">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
@@ -201,17 +201,6 @@
                                             <color key="textColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Woe-jP-PdA">
-                                            <rect key="frame" x="0.0" y="552" width="414" height="50"/>
-                                            <color key="backgroundColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="QrU-SI-FKh"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                            <state key="normal" title="저장하기">
-                                                <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                            </state>
-                                        </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oKB-lP-A0r">
                                             <rect key="frame" x="56" y="28" width="338" height="300"/>
                                             <constraints>
@@ -231,13 +220,10 @@
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="Woe-jP-PdA" secondAttribute="bottom" id="3qf-3q-Xcp"/>
                                         <constraint firstItem="3Te-UZ-uEx" firstAttribute="leading" secondItem="egM-o9-5NH" secondAttribute="leading" constant="20" id="5Yh-pf-wRP"/>
                                         <constraint firstItem="oKB-lP-A0r" firstAttribute="top" secondItem="Mmg-8J-Rq8" secondAttribute="bottom" constant="8" id="FyF-cj-b0N"/>
                                         <constraint firstItem="Uzn-XW-QHb" firstAttribute="leading" secondItem="3Te-UZ-uEx" secondAttribute="trailing" constant="10" id="G2m-Yg-APj"/>
-                                        <constraint firstItem="Woe-jP-PdA" firstAttribute="leading" secondItem="egM-o9-5NH" secondAttribute="leading" id="Jrh-3j-4a6"/>
                                         <constraint firstAttribute="trailing" secondItem="oKB-lP-A0r" secondAttribute="trailing" constant="20" id="KoS-Kj-KUg"/>
-                                        <constraint firstAttribute="trailing" secondItem="Woe-jP-PdA" secondAttribute="trailing" id="Ox3-6Z-Bh4"/>
                                         <constraint firstItem="3Te-UZ-uEx" firstAttribute="top" secondItem="Mmg-8J-Rq8" secondAttribute="bottom" constant="8" id="QmZ-Zu-KV4"/>
                                         <constraint firstItem="Mmg-8J-Rq8" firstAttribute="top" secondItem="egM-o9-5NH" secondAttribute="top" id="Qzf-RM-ALH"/>
                                         <constraint firstItem="Uzn-XW-QHb" firstAttribute="top" secondItem="Mmg-8J-Rq8" secondAttribute="bottom" constant="8" id="aV2-jJ-6m9"/>
@@ -255,7 +241,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="경비를 사용한 사용처를 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="BJj-yZ-aAN">
+                                                <textField opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="경비를 사용한 사용처를 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="BJj-yZ-aAN">
                                                     <rect key="frame" x="132" y="5.5" width="262" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="NFt-BS-WAY"/>
@@ -263,6 +249,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Iai-9K-o8i" id="Di3-wy-ehH"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="사용처" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="995-VL-lND">
                                                     <rect key="frame" x="20" y="14" width="39" height="18"/>
@@ -292,7 +281,7 @@
                                                     <color key="textColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="사용금액을 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="d9X-we-3IL">
+                                                <textField opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="사용금액을 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="d9X-we-3IL">
                                                     <rect key="frame" x="132" y="5.5" width="262" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="262" id="PYR-5b-aX6"/>
@@ -300,6 +289,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Iai-9K-o8i" id="nW5-a0-01U"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -333,7 +325,7 @@
                                                         <action selector="presentDatePopup:" destination="Iai-9K-o8i" eventType="touchUpInside" id="jxR-Ib-rdg"/>
                                                     </connections>
                                                 </button>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="날짜를 선택해주세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-UE-fa4">
+                                                <textField opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="날짜를 선택해주세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-UE-fa4">
                                                     <rect key="frame" x="100" y="5.5" width="262" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="262" id="Q2t-Ga-eUD"/>
@@ -341,6 +333,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Iai-9K-o8i" id="xRL-Yr-tte"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -377,7 +372,7 @@
                                                     </constraints>
                                                     <state key="normal" image="icoSeemore"/>
                                                 </button>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="용도를 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z7t-aw-85i">
+                                                <textField opaque="NO" tag="1004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="용도를 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z7t-aw-85i">
                                                     <rect key="frame" x="100" y="5.5" width="262" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="262" id="We9-B5-2Cz"/>
@@ -385,6 +380,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Iai-9K-o8i" id="0mg-rW-1qQ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -416,11 +414,8 @@
                                                         <constraint firstAttribute="width" constant="24" id="TuH-OP-biS"/>
                                                     </constraints>
                                                     <state key="normal" image="icoSeemore"/>
-                                                    <connections>
-                                                        <segue destination="HZY-Zh-YPI" kind="show" id="iUl-p7-Ce7"/>
-                                                    </connections>
                                                 </button>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="내용을 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="gWb-qb-3bb">
+                                                <textField opaque="NO" tag="1005" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="내용을 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="gWb-qb-3bb">
                                                     <rect key="frame" x="100" y="5.5" width="262" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="262" id="ENd-Lj-tQj"/>
@@ -428,6 +423,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Iai-9K-o8i" id="qeW-v8-t9a"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -455,7 +453,7 @@
                                                     <color key="textColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="사용자명을 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1vZ-7a-a6H">
+                                                <textField opaque="NO" tag="1006" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="사용자명을 입력하세요" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1vZ-7a-a6H">
                                                     <rect key="frame" x="132" y="5.5" width="262" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="E3l-hI-9nz"/>
@@ -463,6 +461,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Iai-9K-o8i" id="cLx-CT-yHn"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -473,12 +474,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Woe-jP-PdA">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.52549019610000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QrU-SI-FKh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="저장하기">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="4EX-gn-SOX" firstAttribute="trailing" secondItem="rHl-oj-LjM" secondAttribute="trailing" id="CwZ-yy-PKB"/>
                             <constraint firstItem="4EX-gn-SOX" firstAttribute="top" secondItem="rHl-oj-LjM" secondAttribute="top" id="LOa-0z-t0g"/>
-                            <constraint firstItem="4EX-gn-SOX" firstAttribute="bottom" secondItem="rHl-oj-LjM" secondAttribute="bottom" id="d8e-IT-7xe"/>
+                            <constraint firstItem="Woe-jP-PdA" firstAttribute="leading" secondItem="rHl-oj-LjM" secondAttribute="leading" id="WqU-ib-TR9"/>
+                            <constraint firstItem="Woe-jP-PdA" firstAttribute="top" secondItem="4EX-gn-SOX" secondAttribute="bottom" id="he2-0i-EJE"/>
+                            <constraint firstItem="Woe-jP-PdA" firstAttribute="trailing" secondItem="rHl-oj-LjM" secondAttribute="trailing" id="ioG-mc-LTz"/>
+                            <constraint firstItem="rHl-oj-LjM" firstAttribute="bottom" secondItem="Woe-jP-PdA" secondAttribute="bottom" id="uHB-JU-5wr"/>
                             <constraint firstItem="4EX-gn-SOX" firstAttribute="leading" secondItem="rHl-oj-LjM" secondAttribute="leading" id="yVZ-uN-dqE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rHl-oj-LjM"/>
@@ -532,22 +547,22 @@
             <objects>
                 <viewController storyboardIdentifier="UseUsageViewController_sid" id="HZY-Zh-YPI" customClass="UseUsageViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3eq-oS-Slb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5e7-HS-mde">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UseListCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UseListCell" id="bZj-SF-6yC" customClass="UseListCell" customModule="BizplayReceipt" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bZj-SF-6yC" id="kU9-Ak-wxN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEk-9C-1AF">
-                                                    <rect key="frame" x="20" y="11" width="165" height="21.5"/>
+                                                    <rect key="frame" x="20" y="11" width="165" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="xg5-x4-bIk"/>
                                                     </constraints>
@@ -567,14 +582,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UseUsageCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UseUsageCell" id="Sda-kN-VFH" customClass="UseUsageCell" customModule="BizplayReceipt" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="71" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sda-kN-VFH" id="68c-yc-wqE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9D-PQ-4tL">
-                                                    <rect key="frame" x="20" y="11" width="165" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="165" height="21.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="g5q-n1-rVN"/>
                                                     </constraints>
@@ -612,7 +627,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ClC-4Y-eZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8611.5942028985519" y="-236.38392857142856"/>
+            <point key="canvasLocation" x="8372" y="-236"/>
         </scene>
         <!--More View Controller-->
         <scene sceneID="vxR-zq-9Ll">

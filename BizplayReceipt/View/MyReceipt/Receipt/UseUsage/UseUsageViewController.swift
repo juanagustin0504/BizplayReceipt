@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol UseUsageDelegate: class {
+    func didSelect(name: String)
+}
+
 class UseUsageViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -17,6 +21,8 @@ class UseUsageViewController: UIViewController {
     var isLatestAvailable: Bool = false
     
     let useUsageViewModel = UseUsageViewModel()
+    weak var delegate: UseUsageDelegate?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +62,13 @@ class UseUsageViewController: UIViewController {
                     self.alertMessage(title: "알림", message: error?.localizedDescription, action: nil)
                 }
             }
+            
+            DispatchQueue.main.async {
+//                self.tableView.delegate = self
+//                self.tableView.dataSource = self
+                self.tableView.reloadData()
+            }
+            
         }
         
     }
@@ -138,8 +151,16 @@ extension UseUsageViewController: UITableViewDataSource {
         }
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var name: String = ""
+        if indexPath.section == 0 {
+            name = useListCells[indexPath.row].name
+        } else {
+            name = useUsageCells[indexPath.row].name
+        }
+        self.dismiss(animated: true) {
+            self.delegate?.didSelect(name: name)
+        }
+    }
     
 }
