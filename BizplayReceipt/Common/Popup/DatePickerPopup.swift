@@ -35,8 +35,9 @@ class DatePickerPopup: UIViewController {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.delegate?.saveDate(dateTime: dateTime)
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) {
+            self.delegate?.saveDate(dateTime: self.dateTime)
+        }
     }
 
     /*

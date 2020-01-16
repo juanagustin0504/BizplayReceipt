@@ -79,20 +79,6 @@ class FillOutReceiptViewController: UIViewController {
         userNm.text    = ShareInstance.manager.USER_NM
     }
     
-    @IBAction func presentDatePopup(_ sender: UIButton) {
-        let vc = self.PopupVC(storyboard: "PopupSB", identifier: "DatePickerPopup_sid") as! DatePickerPopup
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overCurrentContext
-        vc.delegate = self
-        self.present(vc, animated: true )
-    }
-}
-
-extension FillOutReceiptViewController: DatePickerPopupDelegate {
-    func saveDate(dateTime: String) {
-        self.dateTimeStr = dateTime
-        tableView.reloadData()
-    }
 }
 
 extension FillOutReceiptViewController: UITableViewDelegate {
@@ -122,13 +108,11 @@ extension FillOutReceiptViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UseDateTimeCell", for: indexPath) as? UseDateTimeCell else {
                 return UITableViewCell()
             }
-            cell.lblDate.text = self.dateTimeStr
             return cell
         } else if ourObj.title == "USE_USAG_YN" {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UsageCell", for: indexPath) as? UsageCell else {
                 return UITableViewCell()
             }
-            
             return cell
         } else if ourObj.title == "CONTENT_YN" {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContentCell", for: indexPath) as? ContentCell else {
@@ -143,6 +127,14 @@ extension FillOutReceiptViewController: UITableViewDataSource {
         }
     }
     
+    private func presentDatePopup() {
+        let vc = self.PopupVC(storyboard: "PopupSB", identifier: "DatePickerPopup_sid") as! DatePickerPopup
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.delegate = self
+        self.present(vc, animated: true )
+    }
+    
     private func gotoUsage() {
         let useUsageVc = self.storyboard?.instantiateViewController(withIdentifier: "UseUsageViewController_sid") as! UseUsageViewController
         useUsageVc.delegate = self
@@ -153,8 +145,8 @@ extension FillOutReceiptViewController: UITableViewDataSource {
     private func gotoContent() {
         let contentVc = self.storyboard?.instantiateViewController(withIdentifier: "ContentViewController_sid") as! ContentViewController
         contentVc.delegate = self
-        let nav = UINavigationController(rootViewController: contentVc)
-        self.present(nav, animated: true)
+//        let nav = UINavigationController(rootViewController: contentVc)
+        self.present(contentVc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -256,31 +248,20 @@ extension FillOutReceiptViewController: UIImagePickerControllerDelegate, UINavig
     }
 }
 
-extension FillOutReceiptViewController: UseUsageDelegate {
-    func didSelect(name: String) {
-        if let infoTF = self.tableView.viewWithTag(1005) as? UITextField {
-            infoTF.text = name
+extension FillOutReceiptViewController: DatePickerPopupDelegate {
+    func saveDate(dateTime: String) {
+        if let infoTF = self.tableView.viewWithTag(1003) as? UITextField {
+            infoTF.text = dateTime
         }
     }
 }
 
-extension FillOutReceiptViewController: UITextFieldDelegate {
-    
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        
-        if textField.tag == 1004 { // 용도
-            gotoUsage()
-            return false
+extension FillOutReceiptViewController: UseUsageDelegate {
+    func didSelect(name: String) {
+        if let infoTF = self.tableView.viewWithTag(1004) as? UITextField {
+            infoTF.text = name
         }
-        
-        if textField.tag == 1005 { //내용
-            gotoContent()
-            return false
-        }
-        
-        return true
     }
-    
 }
 
 extension FillOutReceiptViewController: ContentDelegate {
@@ -290,5 +271,26 @@ extension FillOutReceiptViewController: ContentDelegate {
             infoTF.text = content
         }
     }
+}
+
+extension FillOutReceiptViewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        if textField.tag == 1003 { // 날짜
+            presentDatePopup()
+            return false
+        } else if textField.tag == 1004 { // 용도
+            gotoUsage()
+            return false
+        } else if textField.tag == 1005 { //내용
+            gotoContent()
+            return false
+        }
+        
+        return true
+    }
     
 }
+
+

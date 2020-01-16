@@ -14,24 +14,37 @@ protocol ContentDelegate: class {
 
 class ContentViewController: UIViewController {
     
-    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var btnComplete: UIBarButtonItem!
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var textView: UITextView!
     
     weak var delegate: ContentDelegate?
     
+    let phColor: UIColor? = .lightGray
+    
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.backgroundColor = UIColor(hexString: "5384ED")
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = false
-
-        self.navigationController?.navigationBar.tintColor = .white
+        textView.textColor = .lightGray
+        textView.text = "내용을 입력하세요"
+        textView.autocapitalizationType = .words
+        textView.isScrollEnabled = false
+        textView.delegate = self
     }
 
-    @IBAction func completed() {
-        dismiss(animated: true) {
-            self.delegate?.didSelect(content: self.textField.text!)
+    @IBAction func completed(_ sender: UIButton) {
+        self.dismiss(animated: true) {
+            if self.textView.text == "내용을 입력하세요" {
+                self.delegate?.didSelect(content: "")
+            } else {
+                self.delegate?.didSelect(content: self.textView.text!)
+            }
+            
         }
     }
+    
+    @IBAction func close(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     /*
     // MARK: - Navigation
@@ -43,4 +56,20 @@ class ContentViewController: UIViewController {
     }
     */
 
+}
+
+extension ContentViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == phColor && textView.isFirstResponder {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing (_ textView: UITextView) {
+        if textView.text.isEmpty || textView.text == "" {
+            textView.textColor = .lightGray
+            textView.text = "내용을 입력하세요"
+        }
+    }
 }
