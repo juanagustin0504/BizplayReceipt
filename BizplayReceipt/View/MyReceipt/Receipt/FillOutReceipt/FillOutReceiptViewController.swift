@@ -19,6 +19,7 @@ class FillOutReceiptViewController: UIViewController {
     @IBOutlet weak var userNm: UILabel!
     
     let inputItemSettingViewModel = InputItemSettingViewModel()
+    let uploadPhotoViewModel      = UploadPhotoViewModel()
     let imagePicker: UIImagePickerController! = UIImagePickerController()
     //    var cells = [(title : "BZAQ_YN", placeHolder : "사용처"),
     //                 (title : "AMT_YN" , placeHolder : "사용금액"),
@@ -78,6 +79,40 @@ class FillOutReceiptViewController: UIViewController {
         companyNm.text = ShareInstance.manager.BIZ_NM
         userNm.text    = ShareInstance.manager.USER_NM
     }
+    
+    @IBAction func saveReceipt(_ sender: UIButton) {
+        
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd_HHmmss"
+        
+        let randomNumber = arc4random_uniform(1000)
+        let fileName = dateFormatter.string(from: currentDate) + "_\(randomNumber)" + ".jpg"
+        print(fileName)
+        
+        guard let fileData = imageView.image?.jpegData(compressionQuality: 1.0) else {
+            return
+        }
+        
+        uploadPhotoViewModel.request_SCMS_METC_C002(FILE_NM: fileName, FILE_DATA: fileData) { (error) in
+            if error == nil {
+                let data = self.uploadPhotoViewModel.responseData
+                
+            } else {
+                DispatchQueue.main.async {
+                    self.alertMessage(title: "알림", message: error?.localizedDescription, action: nil)
+                }
+                
+            }
+
+        }
+        
+    }
+    
+    func saveReceiptValue() {
+        
+    }
+    
     
 }
 
@@ -283,7 +318,7 @@ extension FillOutReceiptViewController: UITextFieldDelegate {
         } else if textField.tag == 1004 { // 용도
             gotoUsage()
             return false
-        } else if textField.tag == 1005 { //내용
+        } else if textField.tag == 1005 { // 내용
             gotoContent()
             return false
         }

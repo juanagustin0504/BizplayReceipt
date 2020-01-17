@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -53,6 +53,11 @@
 		76C09FB023A77C1F0015AA42 /* PWSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C09FAF23A77C1F0015AA42 /* PWSearchViewController.swift */; };
 		76D0B97923B1ECE90002410E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B97823B1ECE90002410E /* NotificationViewController.swift */; };
 		76D0B97B23B1ECFE0002410E /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B97A23B1ECFE0002410E /* MoreViewController.swift */; };
+		76FDD25323D1348B00946E71 /* UploadPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FDD25223D1348B00946E71 /* UploadPhotoModel.swift */; };
+		76FDD25523D1355700946E71 /* UploadPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FDD25423D1355700946E71 /* UploadPhotoViewModel.swift */; };
+		76FDD25B23D171AB00946E71 /* ReceiptDetailSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76FDD25A23D171AB00946E71 /* ReceiptDetailSB.storyboard */; };
+		76FDD25D23D171D100946E71 /* ReceiptDetailSavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FDD25C23D171D100946E71 /* ReceiptDetailSavedViewController.swift */; };
+		76FDD25F23D1881A00946E71 /* ReceiptDetailSavedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FDD25E23D1881A00946E71 /* ReceiptDetailSavedCell.swift */; };
 		F45D07C05B421EF21BCA972D /* Pods_BizplayReceipt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D643558C25618C56A7C62FA /* Pods_BizplayReceipt.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +113,11 @@
 		76C09FAF23A77C1F0015AA42 /* PWSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWSearchViewController.swift; sourceTree = "<group>"; };
 		76D0B97823B1ECE90002410E /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		76D0B97A23B1ECFE0002410E /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		76FDD25223D1348B00946E71 /* UploadPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoModel.swift; sourceTree = "<group>"; };
+		76FDD25423D1355700946E71 /* UploadPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoViewModel.swift; sourceTree = "<group>"; };
+		76FDD25A23D171AB00946E71 /* ReceiptDetailSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReceiptDetailSB.storyboard; sourceTree = "<group>"; };
+		76FDD25C23D171D100946E71 /* ReceiptDetailSavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailSavedViewController.swift; sourceTree = "<group>"; };
+		76FDD25E23D1881A00946E71 /* ReceiptDetailSavedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailSavedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +158,8 @@
 			children = (
 				7660181823BD7CD900BA3BEF /* FillOutReceiptViewController.swift */,
 				7660181F23BDDFED00BA3BEF /* ReceiptTableViewCell.swift */,
+				7673FA5223CBEF83008817B9 /* UseUsage */,
+				7673FA5523CBF0C4008817B9 /* Content */,
 			);
 			path = FillOutReceipt;
 			sourceTree = "<group>";
@@ -162,8 +174,7 @@
 				7604001823B5EB1C00705CB7 /* ReceiptListItemCell.swift */,
 				764D4D5623B20B3600F1E2F1 /* WENavigationController.swift */,
 				7660181E23BDDFA200BA3BEF /* FillOutReceipt */,
-				7673FA5223CBEF83008817B9 /* UseUsage */,
-				7673FA5523CBF0C4008817B9 /* Content */,
+				76FDD25923D1716000946E71 /* ReceiptDetail */,
 			);
 			path = Receipt;
 			sourceTree = "<group>";
@@ -215,6 +226,7 @@
 			children = (
 				767AC97D23BB2CEB00B85135 /* ReceiptViewModel.swift */,
 				7673FA5A23CC337F008817B9 /* UseUsageViewModel.swift */,
+				76FDD25423D1355700946E71 /* UploadPhotoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -269,6 +281,7 @@
 				76A07BB823A9DE0700CFB20B /* MGViewController.swift */,
 				767AC97A23BB2BC500B85135 /* ReceiptModel.swift */,
 				7673FA5823CC30D6008817B9 /* UseUsageModel.swift */,
+				76FDD25223D1348B00946E71 /* UploadPhotoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,6 +342,16 @@
 				7673FA4F23CBEED9008817B9 /* Receipt */,
 			);
 			path = MyReceipt;
+			sourceTree = "<group>";
+		};
+		76FDD25923D1716000946E71 /* ReceiptDetail */ = {
+			isa = PBXGroup;
+			children = (
+				76FDD25A23D171AB00946E71 /* ReceiptDetailSB.storyboard */,
+				76FDD25C23D171D100946E71 /* ReceiptDetailSavedViewController.swift */,
+				76FDD25E23D1881A00946E71 /* ReceiptDetailSavedCell.swift */,
+			);
+			path = ReceiptDetail;
 			sourceTree = "<group>";
 		};
 		7BC079D4165257C1B473686B /* Frameworks */ = {
@@ -403,6 +426,7 @@
 				769C240923A750DF00D92396 /* GoogleService-Info.plist in Resources */,
 				769C23FE23A74F8300D92396 /* Assets.xcassets in Resources */,
 				76454CF623B07DDA00E4A1DF /* PopupSB.storyboard in Resources */,
+				76FDD25B23D171AB00946E71 /* ReceiptDetailSB.storyboard in Resources */,
 				769C23FC23A74F8200D92396 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				763FEDE023C80829000D5BB1 /* DatePickerPopup.swift in Sources */,
+				76FDD25F23D1881A00946E71 /* ReceiptDetailSavedCell.swift in Sources */,
 				76C09FA023A7648B0015AA42 /* CustomFont.swift in Sources */,
 				7660181923BD7CD900BA3BEF /* FillOutReceiptViewController.swift in Sources */,
 				767AC96923BACF0700B85135 /* ReceiptViewController.swift in Sources */,
@@ -448,6 +473,7 @@
 				76A07BB923A9DE0700CFB20B /* MGModel.swift in Sources */,
 				767AC96D23BAE29900B85135 /* EctReceiptPopup.swift in Sources */,
 				76A07BBA23A9DE0700CFB20B /* MGViewModel.swift in Sources */,
+				76FDD25D23D171D100946E71 /* ReceiptDetailSavedViewController.swift in Sources */,
 				7660182023BDDFED00BA3BEF /* ReceiptTableViewCell.swift in Sources */,
 				767AC97623BB25B900B85135 /* InputItemSettingViewModel.swift in Sources */,
 				76454CF423B07DCA00E4A1DF /* CompanySelectionPopup.swift in Sources */,
@@ -459,7 +485,9 @@
 				767AC97E23BB2CEB00B85135 /* ReceiptViewModel.swift in Sources */,
 				76C09FB023A77C1F0015AA42 /* PWSearchViewController.swift in Sources */,
 				76A07BC623A9DE3D00CFB20B /* Extension.swift in Sources */,
+				76FDD25523D1355700946E71 /* UploadPhotoViewModel.swift in Sources */,
 				76A07BBB23A9DE0700CFB20B /* MGViewController.swift in Sources */,
+				76FDD25323D1348B00946E71 /* UploadPhotoModel.swift in Sources */,
 				76454CF823B07F1C00E4A1DF /* CompanyCustomCell.swift in Sources */,
 				76A07BCA23A9DE3D00CFB20B /* Request.swift in Sources */,
 				76D0B97923B1ECE90002410E /* NotificationViewController.swift in Sources */,

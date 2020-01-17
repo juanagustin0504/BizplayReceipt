@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Receipt Detail Saved View Controller-->
+        <scene sceneID="5oo-CC-L5s">
+            <objects>
+                <viewController storyboardIdentifier="ReceiptDetailSavedViewController_sid" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Rb-Tt-i5P" customClass="ReceiptDetailSavedViewController" customModule="BizplayReceipt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dNT-E3-1Ht">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1QH-J5-QDT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="5nV-nd-OF5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4O-ys-yNQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyL-tE-Jjj">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="56"/>
+                                        <state key="normal" image="mainCloseIcon"/>
+                                        <connections>
+                                            <action selector="closeReceipt:" destination="6Rb-Tt-i5P" eventType="touchUpInside" id="BjW-qy-hFF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영수증" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gs-Eo-805">
+                                        <rect key="frame" x="51" y="18" width="45" height="21"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9na-Yd-oA2">
+                                        <rect key="frame" x="370" y="0.0" width="44" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="8ug-1h-zEl"/>
+                                        </constraints>
+                                        <state key="normal" image="btnOption"/>
+                                        <connections>
+                                            <action selector="showOption:" destination="6Rb-Tt-i5P" eventType="touchUpInside" id="KSz-Ja-Ixv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.51764705879999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9na-Yd-oA2" secondAttribute="bottom" id="CeJ-zB-r95"/>
+                                    <constraint firstItem="GyL-tE-Jjj" firstAttribute="leading" secondItem="v4O-ys-yNQ" secondAttribute="leading" id="J64-h0-s4r"/>
+                                    <constraint firstAttribute="bottom" secondItem="GyL-tE-Jjj" secondAttribute="bottom" id="K9z-2L-ENk"/>
+                                    <constraint firstAttribute="bottom" secondItem="8gs-Eo-805" secondAttribute="bottom" constant="17" id="MTc-cK-C0b"/>
+                                    <constraint firstItem="8gs-Eo-805" firstAttribute="top" secondItem="v4O-ys-yNQ" secondAttribute="top" constant="18" id="MeS-Kg-Tuf"/>
+                                    <constraint firstItem="8gs-Eo-805" firstAttribute="leading" secondItem="GyL-tE-Jjj" secondAttribute="trailing" id="RWE-aW-aeh"/>
+                                    <constraint firstAttribute="trailing" secondItem="9na-Yd-oA2" secondAttribute="trailing" id="Y8f-qB-cQn"/>
+                                    <constraint firstItem="GyL-tE-Jjj" firstAttribute="top" secondItem="v4O-ys-yNQ" secondAttribute="top" id="ajb-f5-6KB"/>
+                                    <constraint firstAttribute="height" constant="56" id="fJ4-7v-4Du"/>
+                                    <constraint firstItem="9na-Yd-oA2" firstAttribute="top" secondItem="v4O-ys-yNQ" secondAttribute="top" id="fS0-uR-HwJ"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HiT-gP-f4T">
+                                <rect key="frame" x="57" y="157" width="300" height="616"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RegisteredTimeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RegisteredTimeCell" rowHeight="30" id="65G-qG-MgJ" customClass="RegisteredTimeCell" customModule="BizplayReceipt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="300" height="30"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="65G-qG-MgJ" id="Hnf-CY-BVF">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018년 6월 20일 18:43" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJo-Dz-dqG">
+                                                    <rect key="frame" x="16" y="11" width="124.5" height="8"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <color key="textColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tJo-Dz-dqG" firstAttribute="top" secondItem="Hnf-CY-BVF" secondAttribute="topMargin" id="6tv-nW-OP6"/>
+                                                <constraint firstItem="tJo-Dz-dqG" firstAttribute="leading" secondItem="Hnf-CY-BVF" secondAttribute="leadingMargin" id="F9O-cS-k70"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tJo-Dz-dqG" secondAttribute="bottom" id="LkL-ga-rwK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="regTime" destination="tJo-Dz-dqG" id="J3v-f9-CNg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BizAccountCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BizAccountCell" rowHeight="60" id="vq2-fy-Ayz" customClass="BizAccountCell" customModule="BizplayReceipt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="58" width="300" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vq2-fy-Ayz" id="bZF-3V-D1B">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오피스문구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlY-IV-enU">
+                                                    <rect key="frame" x="20" y="20" width="78" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qlY-IV-enU" firstAttribute="leading" secondItem="bZF-3V-D1B" secondAttribute="leading" constant="20" symbolic="YES" id="BTs-rt-zVs"/>
+                                                <constraint firstItem="qlY-IV-enU" firstAttribute="top" secondItem="bZF-3V-D1B" secondAttribute="top" constant="20" symbolic="YES" id="dS2-UM-RkL"/>
+                                                <constraint firstAttribute="bottom" secondItem="qlY-IV-enU" secondAttribute="bottom" constant="20" symbolic="YES" id="obJ-Cl-pll"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bizNm" destination="qlY-IV-enU" id="ff9-BZ-Dh0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CommonCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommonCell" id="V07-Ev-0om" customClass="CommonCell" customModule="BizplayReceipt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="118" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V07-Ev-0om" id="yVb-g5-ydU">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bno-Vl-5Dv">
+                                                    <rect key="frame" x="31" y="20.5" width="3" height="3"/>
+                                                    <color key="backgroundColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="3" id="IGW-Dj-qpW"/>
+                                                        <constraint firstAttribute="height" constant="3" id="NXD-jy-9R8"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사업장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBE-Jh-1r1">
+                                                    <rect key="frame" x="46" y="15" width="32" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.24313725489999999" green="0.2666666667" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="웹케시(주)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFS-1j-77S">
+                                                    <rect key="frame" x="123" y="14.5" width="50" height="15"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.24313725489999999" green="0.2666666667" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VBE-Jh-1r1" firstAttribute="leading" secondItem="yVb-g5-ydU" secondAttribute="leadingMargin" constant="30" id="5ir-tT-xt9"/>
+                                                <constraint firstItem="RFS-1j-77S" firstAttribute="leading" secondItem="VBE-Jh-1r1" secondAttribute="trailing" constant="45" id="9Ug-eu-n0S"/>
+                                                <constraint firstItem="Bno-Vl-5Dv" firstAttribute="centerY" secondItem="yVb-g5-ydU" secondAttribute="centerY" id="Vrr-cQ-Mtf"/>
+                                                <constraint firstItem="RFS-1j-77S" firstAttribute="centerY" secondItem="yVb-g5-ydU" secondAttribute="centerY" id="cl0-HW-56e"/>
+                                                <constraint firstItem="Bno-Vl-5Dv" firstAttribute="leading" secondItem="yVb-g5-ydU" secondAttribute="leadingMargin" constant="15" id="o52-tF-fcM"/>
+                                                <constraint firstItem="VBE-Jh-1r1" firstAttribute="centerY" secondItem="yVb-g5-ydU" secondAttribute="centerY" id="o9h-tQ-1qb"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="RFS-1j-77S" secondAttribute="trailing" constant="111" id="sLc-Ua-48i"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="title" destination="VBE-Jh-1r1" id="fwJ-x7-qfE"/>
+                                            <outlet property="value" destination="RFS-1j-77S" id="OaH-WS-eVu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AttachedPhotoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttachedPhotoCell" id="lJg-kw-1jm" customClass="AttachedPhotoCell">
+                                        <rect key="frame" x="0.0" y="162" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lJg-kw-1jm" id="djG-gr-tz2">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="첨부사진" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us8-uF-t7x">
+                                                    <rect key="frame" x="16" y="11" width="52" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <color key="textColor" red="0.24313725489999999" green="0.2666666667" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDR-7I-aHB">
+                                                    <rect key="frame" x="82" y="9" width="12" height="25.5"/>
+                                                    <state key="normal" image="dropDownGreyIcon"/>
+                                                    <connections>
+                                                        <action selector="showPhotoDetail:" destination="lJg-kw-1jm" eventType="touchUpInside" id="VUS-AH-MRd"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Us8-uF-t7x" secondAttribute="bottom" id="LYi-5A-Oxp"/>
+                                                <constraint firstItem="GDR-7I-aHB" firstAttribute="leading" secondItem="Us8-uF-t7x" secondAttribute="trailing" constant="14" id="Q1a-Pg-mwg"/>
+                                                <constraint firstAttribute="bottom" secondItem="GDR-7I-aHB" secondAttribute="bottom" constant="9.5" id="VAj-Nm-CTv"/>
+                                                <constraint firstItem="GDR-7I-aHB" firstAttribute="top" secondItem="djG-gr-tz2" secondAttribute="top" constant="9" id="hiT-Et-sD0"/>
+                                                <constraint firstItem="Us8-uF-t7x" firstAttribute="top" secondItem="djG-gr-tz2" secondAttribute="topMargin" id="rNz-1j-GMN"/>
+                                                <constraint firstItem="Us8-uF-t7x" firstAttribute="leading" secondItem="djG-gr-tz2" secondAttribute="leadingMargin" id="zvM-BI-sft"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AttachedPhotoDetailCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttachedPhotoDetailCell" rowHeight="300" id="mcM-zq-ssA" customClass="AttachedPhotoDetailCell" customModule="BizplayReceipt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="206" width="300" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mcM-zq-ssA" id="KFc-zU-J6Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rBT-IH-iro">
+                                                    <rect key="frame" x="16" y="11" width="268" height="278"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="rBT-IH-iro" secondAttribute="height" multiplier="134:139" id="EJn-4I-lWM"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rBT-IH-iro" firstAttribute="leading" secondItem="KFc-zU-J6Y" secondAttribute="leadingMargin" id="2Vv-I5-WEb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rBT-IH-iro" secondAttribute="trailing" id="7T5-dQ-Usq"/>
+                                                <constraint firstItem="rBT-IH-iro" firstAttribute="top" secondItem="KFc-zU-J6Y" secondAttribute="topMargin" id="d3X-DR-iMl"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rBT-IH-iro" secondAttribute="bottom" id="z6j-hm-emX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageView" destination="rBT-IH-iro" id="GrO-Bx-wep"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ContentDetailCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContentDetailCell" rowHeight="252" id="m5V-aP-zKs" customClass="ContentDetailCell" customModule="BizplayReceipt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="506" width="300" height="252"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m5V-aP-zKs" id="a2d-8P-rbt">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="252"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nc0-nf-7DN">
+                                                    <rect key="frame" x="31" y="26" width="3" height="3"/>
+                                                    <color key="backgroundColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="3" id="EB3-Qb-wkr"/>
+                                                        <constraint firstAttribute="height" constant="3" id="F01-Z2-nWG"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhu-l7-eS0">
+                                                    <rect key="frame" x="46" y="20" width="21" height="15"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.38431372549019605" green="0.38431372549019605" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7aS-E2-qnS">
+                                                    <rect key="frame" x="38" y="43" width="224" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <string key="text">파일철, 모나미볼펜, 풀, 스테이플러, 클립
+칼판, 칼, 쇠철자 구매</string>
+                                                    <color key="textColor" red="0.24313725489999999" green="0.2666666667" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zhu-l7-eS0" firstAttribute="leading" secondItem="a2d-8P-rbt" secondAttribute="leadingMargin" constant="30" id="4gT-UY-xpY"/>
+                                                <constraint firstItem="nc0-nf-7DN" firstAttribute="leading" secondItem="a2d-8P-rbt" secondAttribute="leadingMargin" constant="15" id="dbB-tj-bYd"/>
+                                                <constraint firstItem="zhu-l7-eS0" firstAttribute="top" secondItem="a2d-8P-rbt" secondAttribute="topMargin" constant="9" id="lVs-A3-dpN"/>
+                                                <constraint firstItem="nc0-nf-7DN" firstAttribute="top" secondItem="a2d-8P-rbt" secondAttribute="topMargin" constant="15" id="t65-Eh-8do"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textContent" destination="7aS-E2-qnS" id="JNH-vC-cX9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vU-Ud-Vdo">
+                                <rect key="frame" x="0.0" y="806" width="414" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.51764705879999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title="영수증 제출하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="commitReceipt:" destination="6Rb-Tt-i5P" eventType="touchUpInside" id="nXP-pL-xnp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.93725490199999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HiT-gP-f4T" firstAttribute="leading" secondItem="WgH-hC-Bsw" secondAttribute="leading" constant="57" id="5Co-rO-Tte"/>
+                            <constraint firstAttribute="trailing" secondItem="1QH-J5-QDT" secondAttribute="trailing" id="65q-zE-Y4a"/>
+                            <constraint firstItem="1QH-J5-QDT" firstAttribute="leading" secondItem="dNT-E3-1Ht" secondAttribute="leading" id="6Pv-UQ-Ceg"/>
+                            <constraint firstItem="HiT-gP-f4T" firstAttribute="top" secondItem="v4O-ys-yNQ" secondAttribute="bottom" constant="57" id="8gw-Gc-QED"/>
+                            <constraint firstItem="v4O-ys-yNQ" firstAttribute="trailing" secondItem="WgH-hC-Bsw" secondAttribute="trailing" id="Fs3-mP-e7k"/>
+                            <constraint firstItem="WgH-hC-Bsw" firstAttribute="trailing" secondItem="HiT-gP-f4T" secondAttribute="trailing" constant="57" id="kgm-VB-qxQ"/>
+                            <constraint firstItem="v4O-ys-yNQ" firstAttribute="top" secondItem="WgH-hC-Bsw" secondAttribute="top" id="msu-qt-V6u"/>
+                            <constraint firstItem="1QH-J5-QDT" firstAttribute="top" secondItem="dNT-E3-1Ht" secondAttribute="top" id="qx8-3o-RGf"/>
+                            <constraint firstItem="v4O-ys-yNQ" firstAttribute="leading" secondItem="WgH-hC-Bsw" secondAttribute="leading" id="rmy-4o-yzA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WgH-hC-Bsw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEf-OS-CIu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940.57971014492762" y="125.89285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btnOption" width="44" height="44"/>
+        <image name="dropDownGreyIcon" width="12" height="7"/>
+        <image name="mainCloseIcon" width="51" height="38"/>
+    </resources>
+</document>
